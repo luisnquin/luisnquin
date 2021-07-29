@@ -1,16 +1,46 @@
-### Hi there 👋
+## Lenguajes
 
-<!--
-**luisnquin/luisnquin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- Python
+  - Estructuras de datos
+  - Algoritmos de ordenamiento
+  - Manejo de Librerías como:
+    - datetime
+    - random
+    - pandas
+    - numpy
+    - sqlite3
+    - tkinter
+    - os
+- C++
 
-Here are some ideas to get you started:
+  - Estructuras de datos
+  - Algoritmos de ordenamiento
+  - Manejo de librerías como:
+    - iostream
+    - stdlib.h
+    - conio.h
+    - string.h
+    - locale.h
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- SQL
+
+  - MySQL Workbench
+  - MySQL (terminal)
+  - Consultas
+  - SQLite3
+  - Tablas
+
+- HTML
+
+  - Conocimientos generales
+
+- CSS
+
+  - Conocimientos mínimos
+
+## Herramientas de desarrollo
+
+- PyCharm
+- Dev-C++
+- Visual Studio Code
+- MySQL and MySQL Workbench
