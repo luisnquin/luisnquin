@@ -38,6 +38,10 @@
 
   - Conocimientos mínimos
 
+##Herramientas de control de versiones:
+- Git
+- GitHub
+
 ## Herramientas de desarrollo
 
 - PyCharm
