@@ -38,7 +38,7 @@
 
   - Conocimientos mínimos
 
-##Herramientas de control de versiones:
+## Herramientas de control de versiones:
 - Git
 - GitHub
 
