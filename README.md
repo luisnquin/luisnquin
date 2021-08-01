@@ -47,4 +47,5 @@
 - PyCharm
 - Dev-C++
 - Visual Studio Code
+- Sublime Text 3
 - MySQL and MySQL Workbench
