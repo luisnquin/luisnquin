@@ -36,7 +36,7 @@
 
 - CSS
 
-  - Conocimientos mínimos
+  - Conocimientos generales
 
 ## Herramientas de control de versiones:
 - Git
