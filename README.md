@@ -21,6 +21,7 @@
     - conio.h
     - string.h
     - locale.h
+    - math.h
 
 - SQL
 
