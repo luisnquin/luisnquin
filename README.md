@@ -6,11 +6,11 @@
   - Experience in libraries like:
     - datetime
     - sqlite3
-    - tkinter
     - random
-    - shutil
     - pandas
     - numpy
+    - tkinter
+    - shutil
     - os
 - C++
 
