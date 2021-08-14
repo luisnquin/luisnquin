@@ -3,24 +3,25 @@
 - Python
   - Estructuras de datos
   - Algoritmos de ordenamiento
-  - Manejo de Librerías como:
+  - Experiencia en Librerías como:
     - datetime
-    - random
-    - pandas
-    - numpy
     - sqlite3
     - tkinter
+    - random
+    - shutil
+    - pandas
+    - numpy
     - os
 - C++
 
   - Estructuras de datos
   - Algoritmos de ordenamiento
-  - Manejo de librerías como:
+  - Experiencia en librerías como:
     - iostream
     - stdlib.h
-    - conio.h
     - string.h
     - locale.h
+    - conio.h
     - math.h
 
 - SQL
