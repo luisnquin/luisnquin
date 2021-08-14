@@ -51,3 +51,8 @@
 - Sublime Text 3
 - PyCharm
 - Dev-C++
+
+
+# Projects why I am proud of myself:
+
+Nothing.
