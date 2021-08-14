@@ -1,9 +1,9 @@
-## Lenguajes
+## Languages
 
 - Python
-  - Estructuras de datos
-  - Algoritmos de ordenamiento
-  - Experiencia en Librerías como:
+  - Data Structures
+  - Sorting algorithms
+  - Experience in libraries like:
     - datetime
     - sqlite3
     - tkinter
@@ -14,9 +14,9 @@
     - os
 - C++
 
-  - Estructuras de datos
-  - Algoritmos de ordenamiento
-  - Experiencia en librerías como:
+  - Data Structures
+  - Sorting algorithms
+  - Experiencie in libraries like:
     - iostream
     - stdlib.h
     - string.h
@@ -28,23 +28,23 @@
 
   - MySQL Workbench
   - MySQL (terminal)
-  - Consultas
   - SQLite3
-  - Tablas
+  - Queries
+  - Tables
 
 - HTML
 
-  - Conocimientos generales
+  - General Knowledges
 
 - CSS
 
-  - Conocimientos generales
+  - General Knowledges
 
-## Herramientas de control de versiones:
+## Tools of Versions Controls:
 - Git
 - GitHub
 
-## Herramientas de desarrollo
+## DevTools
 
 - PyCharm
 - Dev-C++
