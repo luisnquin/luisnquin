@@ -40,6 +40,8 @@
 
   - General Knowledges
 
+## Design patterns:
+
 ## Tools of Versions Controls:
 - GitHub
 - Git
