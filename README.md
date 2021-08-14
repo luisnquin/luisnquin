@@ -46,8 +46,8 @@
 
 ## DevTools
 
-- PyCharm
-- Dev-C++
+- MySQL and MySQL Workbench
 - Visual Studio Code
 - Sublime Text 3
-- MySQL and MySQL Workbench
+- PyCharm
+- Dev-C++
