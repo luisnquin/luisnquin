@@ -5,10 +5,10 @@
   - Sorting algorithms
   - Experience in libraries like:
     - datetime
-    - sqlite3
     - random
     - pandas
     - numpy
+    - sqlite3
     - tkinter
     - shutil
     - os
@@ -18,18 +18,18 @@
   - Sorting algorithms
   - Experiencie in libraries like:
     - iostream
-    - stdlib.h
-    - string.h
     - locale.h
+    - string.h
     - conio.h
+    - stdlib.h
     - math.h
 
 - SQL
 
   - MySQL Workbench
   - MySQL (terminal)
-  - SQLite3
   - Queries
+  - SQLite3
   - Tables
 
 - HTML
@@ -41,8 +41,8 @@
   - General Knowledges
 
 ## Tools of Versions Controls:
-- Git
 - GitHub
+- Git
 
 ## DevTools
 
