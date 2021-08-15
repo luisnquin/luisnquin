@@ -57,4 +57,23 @@
 
 # Projects why I am proud of myself:
 
-None.
+## A funny Keylogger(Irony):
+https://github.com/luisnquin/A-funny-Keylogger
+
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/swSj9GP/245245.jpg" alt="245245" border="0"></a>
+
+## LocalBackup:
+https://github.com/luisnquin/LocalBackup
+
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/8NtVGns/54.jpg" alt="54" border="0"></a>
+
+## DeepCleaner:
+https://github.com/luisnquin/DeepCleaner
+
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/zhb09jQ/Captura.jpg" alt="Captura" border="0"></a>
+
+
+Why these? Because are very useful, if you want to live without wast many time, these programs are for you.
