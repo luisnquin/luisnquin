@@ -32,11 +32,7 @@
   - SQLite3
   - Tables
 
-- HTML
-
-  - General Knowledges
-
-- CSS
+- HTML & CSS
 
   - General Knowledges
 
