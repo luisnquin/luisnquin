@@ -13,7 +13,6 @@
     - shutil
     - os
 - C++
-
   - Data Structures
   - Sorting algorithms
   - Experiencie in libraries like:
@@ -23,7 +22,8 @@
     - conio.h
     - stdlib.h
     - math.h
-
+- JavaScript
+  - General Knowledges for now
 - SQL
 
   - MySQL Workbench
@@ -34,7 +34,7 @@
 
 - HTML & CSS
 
-  - General Knowledges
+  - General Knowledges for now
 
 ## Design patterns:
 
