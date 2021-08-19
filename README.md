@@ -12,6 +12,8 @@
     - tkinter
     - shutil
     - os
+- JavaScript
+  - General Knowledges for now
 - C++
   - Data Structures
   - Sorting algorithms
@@ -22,8 +24,6 @@
     - conio.h
     - stdlib.h
     - math.h
-- JavaScript
-  - General Knowledges for now
 - SQL
 
   - MySQL Workbench
