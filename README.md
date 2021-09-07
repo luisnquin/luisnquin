@@ -4,7 +4,7 @@
   - Data Structures
   - Sorting algorithms
   - Experience in libraries like:
-    - psychopg2
+    - psycopg2
     - datetime
     - pymysql
     - random
