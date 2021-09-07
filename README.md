@@ -1,6 +1,6 @@
 ## Languages
 
-- Python
+- <b>Python</b>
   - Data Structures
   - Sorting algorithms
   - Experience in libraries like:
@@ -13,9 +13,9 @@
     - tkinter
     - shutil
     - os
-- JavaScript
-  - General Knowledges for now
-- C++
+- <b>JavaScript</b>
+  - Fundamentals
+- <b>C++</b>
   - Data Structures
   - Sorting algorithms
   - Experiencie in libraries like:
@@ -25,7 +25,7 @@
     - conio.h
     - stdlib.h
     - math.h
-- SQL
+- <b>SQL</b>
 
   - MySQL Workbench
   - MySQL (terminal)
@@ -33,7 +33,7 @@
   - SQLite3
   - Tables
 
-- HTML & CSS
+- <b>HTML & CSS</b>
 
   - General Knowledges for now
 
@@ -50,4 +50,5 @@
 - Sublime Text 3
 - PyCharm
 - Dev-C++
+- Terminal
 
