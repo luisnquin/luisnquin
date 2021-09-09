@@ -3,6 +3,7 @@
 - <b>Python</b>
   - Data Structures
   - Sorting algorithms
+  - Context Management
   - Experience in libraries like:
     - psycopg2
     - datetime
