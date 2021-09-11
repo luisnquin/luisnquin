@@ -53,10 +53,10 @@
 
 ## DevTools
 
-- MySQL and MySQL Workbench
+- MySQL(Terminal & Workbench), PostgreSQL, SQLite3
 - Visual Studio Code
 - Sublime Text 3
-- PyCharm
 - Dev-C++
+- PyCharm
 - Terminal
-
+- NodeJS
