@@ -16,6 +16,8 @@
     - shutil
     - plyer
     - os
+  - Frameworks
+    - Django
 - <b>JavaScript</b>
   - Fundamentals
 - <b>C++</b>
@@ -41,6 +43,7 @@
   - General Knowledges for now
 
 ## Design patterns:
+-MVT(from Django)
 
 ## Tools of Versions Controls:
 - GitHub
