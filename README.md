@@ -45,7 +45,7 @@
   - General Knowledges for now
 
 ## Design patterns:
--MVT(from Django)
+- MVT(from Django)
 
 ## Tools of Versions Controls:
 - GitHub
