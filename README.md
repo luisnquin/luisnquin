@@ -35,6 +35,7 @@
 
   - MySQL Workbench
   - MySQL (terminal)
+  - PostgreSQL
   - Queries
   - SQLite3
   - Tables
