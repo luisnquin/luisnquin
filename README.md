@@ -1,5 +1,8 @@
 ## Languages
 
+
+- <b>Frameworks</b>
+  - Django
 - <b>Python</b>
   - Data Structures
   - Sorting algorithms
@@ -16,8 +19,6 @@
     - shutil
     - plyer
     - os
-  - Frameworks
-    - Django
 - <b>JavaScript</b>
   - Fundamentals
 - <b>C++</b>
