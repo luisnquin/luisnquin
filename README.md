@@ -44,6 +44,9 @@
 
   - General Knowledges for now
 
+## Deployment Automation Systems
+- Docker
+
 ## Design patterns:
 - MVT(from Django)
 
