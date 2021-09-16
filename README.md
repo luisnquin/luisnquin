@@ -1,8 +1,5 @@
 ## Languages
 
-
-- <b>Frameworks</b>
-  - Django
 - <b>Python</b>
   - Data Structures
   - Sorting algorithms
@@ -43,6 +40,9 @@
 - <b>HTML & CSS</b>
 
   - General Knowledges for now
+
+## Frameworks
+- Django
 
 ## Deployment Automation Systems
 - Docker
