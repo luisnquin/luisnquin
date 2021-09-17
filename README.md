@@ -1,7 +1,6 @@
 ## Languages
 
 - <b>Python</b>
-  - Data Structures
   - Sorting algorithms
   - Context Management
   - Experience in libraries like:
@@ -19,7 +18,6 @@
 - <b>JavaScript</b>
   - Fundamentals
 - <b>C++</b>
-  - Data Structures
   - Sorting algorithms
   - Experiencie in libraries like:
     - iostream
