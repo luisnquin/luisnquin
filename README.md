@@ -61,3 +61,4 @@
 - PyCharm
 - Terminal
 - NodeJS
+- LiteIDE
