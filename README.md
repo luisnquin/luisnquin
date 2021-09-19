@@ -15,6 +15,13 @@
     - shutil
     - plyer
     - os
+
+- <b>Go</b>
+  - Package Management
+  - Concurrency
+  - Closures
+  - Slices
+  - Maps
 - <b>JavaScript</b>
   - Fundamentals
 - <b>C++</b>
