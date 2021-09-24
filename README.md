@@ -22,17 +22,7 @@
   - Closures
   - Slices
   - Maps
-- <b>JavaScript</b>
-  - Fundamentals
-- <b>C++</b>
-  - Sorting algorithms
-  - Experiencie in libraries like:
-    - iostream
-    - locale.h
-    - string.h
-    - conio.h
-    - stdlib.h
-    - math.h
+ 
 - <b>SQL</b>
 
   - MySQL Workbench
@@ -43,17 +33,20 @@
   - Tables
 
 - <b>HTML & CSS</b>
-
   - General Knowledges for now
+  
+- <b>JavaScript</b>
+  - Fundamentals
+- <b>C++</b>
+  - Fundamentals
+- <b>PowerShell</b>
+  - Fundamentals
 
 ## Frameworks
 - Django
 
 ## Deployment Automation Systems
 - Docker
-
-## Design patterns:
-- MVT(from Django)
 
 ## Tools of Versions Controls:
 - GitHub
@@ -64,6 +57,7 @@
 - MySQL(Terminal & Workbench), PostgreSQL, SQLite3
 - Visual Studio Code
 - Sublime Text 3
+- PowerShell
 - Dev-C++
 - PyCharm
 - Terminal
