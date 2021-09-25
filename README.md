@@ -27,6 +27,7 @@
 
   - MySQL Workbench
   - MySQL (terminal)
+  - CRUD Operations
   - PostgreSQL
   - Queries
   - SQLite3
