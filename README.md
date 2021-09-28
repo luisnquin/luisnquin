@@ -33,6 +33,10 @@
   - SQLite3
   - Tables
 
+- <b>noSQL</b>
+  - CRUD Operations
+  - mongoDB
+
 - <b>HTML & CSS</b>
   - General Knowledges for now
   
