@@ -3,7 +3,7 @@
 - <b>Python</b>
   - Sorting algorithms
   - Context Management
-  - Experience in libraries like:
+  - Experience in libraries like(it's not all):
     - psycopg2
     - datetime
     - pymysql
