@@ -33,15 +33,14 @@
   
 
 - <b>noSQL</b>
-  - Collection manipulation
   - CRUD Operations
+  - Collection manipulation
   - DBMS:
     - mongoDB shell
   
 
 - <b>HTML & CSS</b>
-  - General Knowledges for now
-  
+  - General Knowledges
 - <b>JavaScript</b>
   - Fundamentals
 - <b>C++</b>
@@ -53,7 +52,7 @@
 - Django
 
 ## Deployment Automation Systems
-- Docker
+- Docker, concepts and commands(no implementation).
 
 ## Tools of Versions Controls:
 - GitHub
@@ -65,6 +64,7 @@
 - Visual Studio Code
 - Sublime Text 3
 - PowerShell
+- mongoDB
 - Dev-C++
 - PyCharm
 - Terminal
