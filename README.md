@@ -24,18 +24,20 @@
   - Maps
  
 - <b>SQL</b>
-
-  - MySQL Workbench
-  - MySQL (terminal)
   - CRUD Operations
-  - PostgreSQL
-  - Queries
-  - SQLite3
-  - Tables
+  - Table manipulation
+  - DBMS:
+    - MySQL Workbench & shell
+    - PostgreSQL
+    - SQLite3
+  
 
 - <b>noSQL</b>
+  - Collection manipulation
   - CRUD Operations
-  - mongoDB
+  - DBMS:
+    - mongoDB shell
+  
 
 - <b>HTML & CSS</b>
   - General Knowledges for now
