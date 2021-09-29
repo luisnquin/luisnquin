@@ -1,72 +1,8 @@
-## Languages
+<br>
+<img src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&count_private=true" width="500" height="auto"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&layout=compact/" width="208" height="auto"/>
 
-- <b>Python</b>
-  - Sorting algorithms
-  - Context Management
-  - Experience in libraries like(it's not all):
-    - psycopg2
-    - datetime
-    - pymysql
-    - random
-    - pandas
-    - numpy
-    - sqlite3
-    - tkinter
-    - shutil
-    - plyer
-    - os
+<a href="https://www.youtube.com/channel/UC2W6vIOuSd7UAAsnOpL-c8A" target="_blank"><img src="https://i.ibb.co/YBc2kC3/youtube-icon.png" alt="youtube-icon" width=45></a>
+<a href="https://twitter.com/sixmonths2020" target="_blank"><img src="https://i.ibb.co/JKXbCB4/twitter-icon.png" alt="twitter-icon" width=50></a>
+<a href=# target="_blank"><img src="https://i.ibb.co/SVcgwTy/website-icon.png" alt="website-icon" width=45></a>
 
-- <b>Go</b>
-  - Package Management
-  - Concurrency
-  - Closures
-  - Slices
-  - Maps
- 
-- <b>SQL</b>
-  - CRUD Operations
-  - Table manipulation
-  - DBMS:
-    - MySQL Workbench & shell
-    - PostgreSQL
-    - SQLite3
-  
-
-- <b>noSQL</b>
-  - CRUD Operations
-  - Collection manipulation
-  - DBMS:
-    - mongoDB shell
-  
-
-- <b>HTML & CSS</b>
-  - General Knowledges
-- <b>JavaScript</b>
-  - Fundamentals
-- <b>C++</b>
-  - Fundamentals
-- <b>PowerShell</b>
-  - Fundamentals
-
-## Frameworks
-- Django
-
-## Deployment Automation Systems
-- Docker, concepts and commands(no implementation).
-
-## Tools of Versions Controls:
-- GitHub
-- Git
-
-## DevTools
-
-- MySQL(Terminal & Workbench), PostgreSQL, SQLite3
-- Visual Studio Code
-- Sublime Text 3
-- PowerShell
-- mongoDB
-- Dev-C++
-- PyCharm
-- Terminal
-- NodeJS
-- LiteIDE
