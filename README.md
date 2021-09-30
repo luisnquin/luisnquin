@@ -8,33 +8,35 @@
   
 </p>
                                                                                                                                       
-    package main
+```go
+package main
 
-    import "fmt"
+import "fmt"
 
-    func main() {
-      type stack_one struct{ first, second, third string }
-      type stack_two struct{ first, second string }
-      type stack_three struct{ first, second, third string }
+func main() {
+	type stack_one struct{ first, second, third string }
+	type stack_two struct{ first, second string }
+	type stack_three struct{ first, second, third string }
 
-      type Programmer struct {
-        fullname, email string
-        frontend        stack_one
-        backend         stack_two
-        databases       stack_three
-      }
+	type Programmer struct {
+		fullname, email string
+		frontend        stack_one
+		backend         stack_two
+		databases       stack_three
+	}
 
-      frtnd := stack_one{"HTML", "CSS", "JavaScript"}
-      bcknd := stack_two{"Django", "Flask"}
-      dtbss := stack_three{"MySQL", "PostgreSQL", "mongoDB"}
+	frtnd := stack_one{"HTML", "CSS", "JavaScript"}
+	bcknd := stack_two{"Django", "Flask"}
+	dtbss := stack_three{"MySQL", "PostgreSQL", "mongoDB"}
 
-      Me := Programmer{
-        fullname:  "Luis Quiñones Requelme",
-        email:     "lpaandres2020@gmail.com",
-        frontend:  frtnd,
-        backend:   bcknd,
-        databases: dtbss,
-      }
+	Me := Programmer{
+		fullname:  "Luis Quiñones Requelme",
+		email:     "lpaandres2020@gmail.com",
+		frontend:  frtnd,
+		backend:   bcknd,
+		databases: dtbss,
+	}
 
-      fmt.Println(Me)
-    }
+	fmt.Println(Me)
+}
+```
