@@ -1,7 +1,7 @@
 <br>
 <p float="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&count_private=true width="520" height="auto"/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&layout=compact/" width="208" height="auto"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&count_private=true width="520" height="auto"/>
 </p>
 
 <a href="https://www.youtube.com/channel/UC2W6vIOuSd7UAAsnOpL-c8A" target="_blank"><img src="https://i.ibb.co/FmKm31t/youtube-background-gray-rounded.png" alt="youtube-icon" width=45></a>
