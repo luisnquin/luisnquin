@@ -1,6 +1,8 @@
 <a href="https://www.youtube.com/channel/UC2W6vIOuSd7UAAsnOpL-c8A" target="_blank"><img src="https://i.ibb.co/FmKm31t/youtube-background-gray-rounded.png" alt="youtube-icon" width=45></a>
 <a href="https://twitter.com/sixmonths2020" target="_blank"><img src="https://i.ibb.co/kGTj9nC/twitter-background-gray-rounded.png" alt="twitter-icon" width=45></a>
 <a href=# target="_blank"><img src="https://i.ibb.co/9tZ1Jzw/website-background-gray-rounded.png" alt="website-icon" width=45></a>
+<a href="www.pinterest.com/luisnquin"><img src="https://i.ibb.co/SP5kdWr/pinterest-background-gray-rounded.png" alt="pinterest-background-gray-rounded" width=45></a>
+<a href="https://www.instagram.com/luisnquin/"><img src="https://i.ibb.co/nBP9M5c/instagram-background-gray-rounded.png" alt="instagram-background-gray-rounded" width=45></a>
 <br>
 <p float="left">
   <a  href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=dracula">
