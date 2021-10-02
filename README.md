@@ -3,7 +3,7 @@
 <a href=# target="_blank"><img src="https://i.ibb.co/Kj5LvTM/website-background-gray-rounded.png" alt="website-icon" width=45></a>
 <a href="https://www.pinterest.com/luisnquin/_saved/"><img src="https://i.ibb.co/6vrnXyR/pinterest-background-gray-rounded.png" alt="pinterest-background-gray-rounded" width=45></a>
 <a href="https://www.instagram.com/luisnquin/"><img src="https://i.ibb.co/vXqkQLc/instagram-background-gray-rounded.png" alt="instagram-background-gray-rounded" width=45></a>
-<a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" alt="linkedin-background-gray-rounded" border="0"></a>
+<a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" alt="linkedin-background-gray-rounded" width=45></a>
 <br>
 <p float="left">
   <a  href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=dracula">
