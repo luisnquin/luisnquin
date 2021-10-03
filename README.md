@@ -5,6 +5,7 @@
 <a href="https://www.instagram.com/luisnquin/"><img src="https://i.ibb.co/vXqkQLc/instagram-background-gray-rounded.png" width=45></a>
 <a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" width=45></a>
 <br>
+<a href=#><img src="https://i.ibb.co/9YdS1h8/image-3.png" width=150></a>
 <p float="left">
   <a  href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=dracula">
   <a href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&hide=html,scss,css,shell&langs_count=10&layout=compact&theme=dracula">
