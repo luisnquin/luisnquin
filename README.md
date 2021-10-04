@@ -6,7 +6,7 @@
 <a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" width=45></a>
 <br>
 <p float="left">
-  <a  href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=dracula">
+  <a  href="https://github.com/luisnquin"><img width="475" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=dracula">
   <a href="https://github.com/luisnquin"><img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&hide=html,scss,css,shell&langs_count=10&layout=compact&theme=dracula">
 </p>
                                                                                                                                       
