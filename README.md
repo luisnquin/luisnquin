@@ -15,34 +15,25 @@ package main
 
 import "fmt"
 
+type programmer struct {
+	fullname, email                     string
+	frontend, backend, databases, extra []string
+}
+
+func (p programmer) String() string {
+	return fmt.Sprintf("Data:\n> %s\n> %s\n\n%v %v %v %v", p.fullname, p.email, p.frontend, p.backend, p.databases, p.extra)
+}
+
 func main() {
-	type stack_one struct{ first, second, third string }
-	type stack_two struct{ first, second string }
-	type stack_three struct{ first, second, third string }
-	type stack_four struct{ first, second, third string }
-
-	type Programmer struct {
-		fullname, email string
-		frontend        stack_one
-		backend         stack_two
-		databases       stack_three
-		extra           stack_four
-	}
-
-	frtnd := stack_one{"HTML", "CSS", "JavaScript"}
-	bcknd := stack_two{"Django", "Flask"}
-	dtbss := stack_three{"MySQL", "PostgreSQL", "mongoDB"}
-	xtr := stack_four{"PowerShell", "C++", "Docker"}
-
-	Me := Programmer{
+	me := programmer{
 		fullname:  "Luis Quiñones Requelme",
 		email:     "lpaandres2020@gmail.com",
-		frontend:  frtnd,
-		backend:   bcknd,
-		databases: dtbss,
-		extra:     xtr,
+		frontend:  []string{"HTML", "CSS"},
+		backend:   []string{"Django, Flask, Go"},
+		databases: []string{"MySQL", "PostgreSQL", "mongoDB"},
+		extra:     []string{"PowerShell", "C++", "Docker"},
 	}
 
-	fmt.Println(Me)
+	fmt.Println(me)
 }
 ```
