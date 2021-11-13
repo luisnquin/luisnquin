@@ -1,6 +1,6 @@
-<a href="https://www.youtube.com/channel/UC2W6vIOuSd7UAAsnOpL-c8A" target="_blank"><img src="https://i.ibb.co/HFLvw99/youtube-background-gray-rounded.png" width=45></a>
+<a href="https://www.youtube.com/channel/skuldd" target="_blank"><img src="https://i.ibb.co/HFLvw99/youtube-background-gray-rounded.png" width=45></a>
 <a href="https://twitter.com/sixmonths2020" target="_blank"><img src="https://i.ibb.co/MPSLnVd/twitter-background-gray-rounded.png" width=45></a>
-<a href=# target="_blank"><img src="https://i.ibb.co/Kj5LvTM/website-background-gray-rounded.png" width=45></a>
+<a href="luisnquin.github.io" target="_blank"><img src="https://i.ibb.co/Kj5LvTM/website-background-gray-rounded.png" width=45></a>
 <a href="https://www.pinterest.com/luisnquin/_saved/"><img src="https://i.ibb.co/6vrnXyR/pinterest-background-gray-rounded.png" width=45></a>
 <a href="https://www.instagram.com/luisnquin/"><img src="https://i.ibb.co/vXqkQLc/instagram-background-gray-rounded.png" width=45></a>
 <a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" width=45></a>
