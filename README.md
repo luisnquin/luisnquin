@@ -1,7 +1,6 @@
 <a href="https://www.youtube.com/channel/skuldd" target="_blank"><img src="https://i.ibb.co/HFLvw99/youtube-background-gray-rounded.png" width=45></a>
 <a href="https://twitter.com/sixmonths2020" target="_blank"><img src="https://i.ibb.co/MPSLnVd/twitter-background-gray-rounded.png" width=45></a>
 <a href="https://luisnquin.github.io" target="_blank"><img src="https://i.ibb.co/Kj5LvTM/website-background-gray-rounded.png" width=45></a>
-<a href="https://www.pinterest.com/luisnquin/_saved/"><img src="https://i.ibb.co/6vrnXyR/pinterest-background-gray-rounded.png" width=45></a>
 <a href="https://www.instagram.com/luisnquin/"><img src="https://i.ibb.co/vXqkQLc/instagram-background-gray-rounded.png" width=45></a>
 <a href="https://www.linkedin.com/in/luis-quinones-requelme/"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" width=45></a>
 <br>
@@ -28,10 +27,10 @@ func main() {
 	me := programmer{
 		fullname:  "Luis Quiñones Requelme",
 		email:     "lpaandres2020@gmail.com",
-		frontend:  []string{"HTML", "CSS"},
-		backend:   []string{"Django, Flask, Go"},
+		frontend:  []string{"HTML", "CSS", "JavaScript"},
+		backend:   []string{"Django", "Flask", "FastAPI", "Echo", "Go"},
 		databases: []string{"MySQL", "PostgreSQL", "mongoDB"},
-		extra:     []string{"PowerShell", "C++", "Docker"},
+		extra:     []string{"PowerShell", "Sass"},
 	}
 
 	fmt.Println(me)
