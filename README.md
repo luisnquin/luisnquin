@@ -15,22 +15,26 @@ package main
 import "fmt"
 
 type programmer struct {
-	fullname, email                     string
-	frontend, backend, databases, extra []string
+	fullname, email    string
+	s1, s2, s3, s4, s5 []string
 }
 
 func (p programmer) String() string {
-	return fmt.Sprintf("Data:\n> %s\n> %s\n\n%v %v %v %v", p.fullname, p.email, p.frontend, p.backend, p.databases, p.extra)
+	return fmt.Sprintf(
+		"\n> %s\n> %s\n\nStack: [\n\t%v,\n\t%v,\n\t%v,\n\t%v,\n\t%v,\n]", 
+		p.fullname, p.email, p.s1, p.s2, p.s3, p.s4, p.s5,
+	)
 }
 
 func main() {
 	me := programmer{
-		fullname:  "Luis Quiñones Requelme",
-		email:     "lpaandres2020@gmail.com",
-		frontend:  []string{"HTML", "CSS", "JavaScript"},
-		backend:   []string{"Django", "Flask", "FastAPI", "Echo", "Go"},
-		databases: []string{"MySQL", "PostgreSQL", "mongoDB"},
-		extra:     []string{"PowerShell", "Sass"},
+		fullname: "Luis Quiñones Requelme",
+		email:    "lpaandres2020@gmail.com",
+		s1:       []string{"HTML", "SCSS", "JavaScript"},
+		s2:       []string{"Python", "Go"},
+		s3:       []string{"Django, FastAPI, Echo, Fiber"},
+		s4:       []string{"GORM", "SQLAlchemy"},
+		s5:       []string{"MySQL", "PostgreSQL", "mongoDB"},
 	}
 
 	fmt.Println(me)
