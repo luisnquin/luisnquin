@@ -9,37 +9,20 @@
   <a href="https://github.com/luisnquin"><img width="375" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&hide=html,scss,css,shell&langs_count=10&layout=compact&theme=tokyonight">
 </p>
                                                                                                                                       
-```go
-package main
-
-import "fmt"
-
-type programmer struct {
-	fullname, email    string
-	s1, s2, s3, s4, s5 []string
-}
-
-func (p programmer) String() string {
-	return fmt.Sprintf(
-		"\n> %s\n> %s\n\nStack: [\n\t%v,\n\t%v,\n\t%v,\n\t%v,\n\t%v,\n]", 
-		p.fullname, p.email, p.s1, p.s2, p.s3, p.s4, p.s5,
-	)
-}
-
-func main() {
-	me := programmer{
-		fullname: "Luis Quiñones Requelme",
-		email:    "lpaandres2020@gmail.com",
-		s1:       []string{"HTML", "SCSS", "JavaScript"},
-		s2:       []string{"Python", "Go"},
-		s3:       []string{"Django, FastAPI, Echo, Fiber"},
-		s4:       []string{"GORM", "SQLAlchemy"},
-		s5:       []string{"MySQL", "PostgreSQL", "mongoDB"},
+```typescript
+{
+	fullname: "Luis Quiñones Requelme",
+	email:    "lpaandres2020@gmail.com",
+	os: "Kali Linux",
+	stack: {
+		frontend: ["HTML", "SCSS", "JavaScript", "TypeScript"],
+		backend: ["Python", "Go"],
+		frameworks: ["Django", "FastAPI", "Echo", "Fiber"],
+		orms: ["GORM", "SQLAlchemy"],
+		databases: ["MySQL", "PostgreSQL", "mongoDB"]  
 	}
-
-	fmt.Println(me)
 }
 ```
 <p align="center">
 	<a href="https://gist.github.com/luisnquin" target='_blank'><img src='https://i.postimg.cc/4dwRrRgK/gist.png' alt='gist' width=120/></a>
-<p>
+</p>
