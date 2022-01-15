@@ -5,8 +5,8 @@
 <a href="https://www.linkedin.com/in/luis-quinones-requelme/" target="_blank"><img src="https://i.ibb.co/6FYs12R/linkedin-background-gray-rounded.png" width=45></a>
 <br>
 <p float="left">
-  <a  href="https://github.com/luisnquin"><img width="446" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=tokyonight">
-  <a href="https://github.com/luisnquin"><img width="375" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&hide=html,scss,css,shell&langs_count=10&layout=compact&theme=tokyonight">
+  <a  href="https://github.com/luisnquin"><img width="446" src="https://github-readme-stats.vercel.app/api?username=luisnquin&show_icons=true&theme=radical">
+  <a href="https://github.com/luisnquin"><img width="375" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luisnquin&hide=html,scss,css,shell&langs_count=10&layout=compact&theme=radical">
 </p>
 
 ### Languages and technologies
