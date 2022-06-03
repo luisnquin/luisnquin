@@ -25,21 +25,7 @@
 {
 	"fullname": "Luis Quiñones Requelme",
 	"email":    "lpaandres2020@gmail.com",
-	"os": "Kali",
-	"stack": {
-		"frontend": [
-			"HTML & CSS", "JavaScript"
-		],
-		"backend": [
-			"Python", "Go", "NodeJS"
-		],
-		"frameworks": [
-			"Django", "FastAPI", "Echo", "Fiber"
-		],
-		"databases": [
-			"PostgreSQL", "MySQL", "mongoDB"
-		]  
-	}
+	"os": "NixOS"
 }
 ```
   
