@@ -23,9 +23,8 @@
 
 ```javascript
 {
-	"fullname": "Luis Quiñones Requelme",
-	"email":    "lpaandres2020@gmail.com",
-	"os": "NixOS"
+	"os": "NixOS",
+	"mainTools: ["Go", "Python", "Docker", "PostgreSQL"]
 }
 ```
   
