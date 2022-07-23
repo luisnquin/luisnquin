@@ -1,27 +1,58 @@
 'use strict'
 
 window.onload = () => {
-	fetch('https://api.github.com/zen', {
-		method: 'GET'
-	})
-		.then((res) => res.text())
-		.then((body) => console.log(body))
-		.catch((err) => console.error('failed to fetch: ' + err.message))
+	const yesterdayDt = new Date().setDate(new Date().getDate() - 1)
+	const lastTimeSaved = localStorage.getItem('lastSaveDt')
+	let commit
 
-	fetch('https://api.github.com/repos/luisnquin/luisnquin/commits', {
-		method: 'GET'
-	})
-		.then((res) => res.json())
-		.then((body) => {
-			const dt = new Date(body[0].commit.committer.date).toLocaleDateString('en-US', {
-				weekday: 'long',
-				year: 'numeric',
-				month: 'long',
-				day: 'numeric'
+	if (lastTimeSaved === null || new Date(lastTimeSaved) < yesterdayDt) {
+		try {
+			commit = fetchLastCommit()
+			commit.then((commit) => {
+				saveCommitInLocalStorage(commit)
 			})
-			const author = body[0].author.login
+		} catch (err) {
+			console.error('failed to fetch: ' + err)
+		}
+	} else {
+		commit = {
+			lastAuthor: localStorage.getItem('lastAuthor'),
+			lastDate: localStorage.getItem('lastDate')
+		}
+	}
 
-			console.log(`Repository of page last updated by ${author} at ${dt}`)
-		})
-		.catch((err) => console.error('failed to fetch: ' + err.message))
+	console.log(lastUpdateInfo(commit.lastAuthor, commit.lastDate))
+}
+
+function saveCommitInLocalStorage(commit) {
+	localStorage.setItem('lastAuthor', commit.lastAuthor)
+	localStorage.setItem('lastDate', commit.lastDate)
+	localStorage.setItem('lastSaveDt', new Date().toISOString())
+}
+
+async function fetchLastCommit() {
+	const response = await fetch('https://api.github.com/repos/luisnquin/luisnquin/commits')
+	if (!response.ok) {
+		throw new Error('response is not ok')
+	} else if (response.status != 200) {
+		throw new Error(`unexpected status ${response.status}`)
+	}
+
+	const body = await response.json()
+
+	return {
+		lastAuthor: body[0].author.login,
+		lastDate: body[0].commit.committer.date
+	}
+}
+
+function lastUpdateInfo(author, stringDt) {
+	stringDt = new Date(stringDt).toLocaleDateString('en-US', {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	})
+
+	return `Repository of page last updated by '${author}' at ${stringDt}`
 }
