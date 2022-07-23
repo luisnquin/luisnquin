@@ -44,7 +44,7 @@ main #refs-bar .ref {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 4px 5px;
+	padding: 4px 15px;
 	gap: 5px;
 	border-radius: 5px;
 	text-decoration: none;
