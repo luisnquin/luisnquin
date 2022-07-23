@@ -63,7 +63,15 @@ main #refs-bar .ref:hover {
 }
 
 main #refs-bar .ref img {
-	width: 28px;
+	width: 27px;
+}
+
+main #refs-bar .ref #linkedin-img {
+	width: 24px;
+}
+
+main #refs-bar .ref #portfolio-img {
+	width: 20px;
 }
 
 @media (min-width: 1000px) {
