@@ -54,5 +54,5 @@ function lastUpdateInfo(author, stringDt) {
 		day: 'numeric'
 	})
 
-	return `Repository of page last updated by '${author}' at ${stringDt}`
+	return `Repository of page last updated by '${author}' at ${stringDt}, you can visit it in https://github.com/luisnquin/luisnquin/.`
 }
