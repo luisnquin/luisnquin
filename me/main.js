@@ -1,28 +1,26 @@
 'use strict'
 
-window.onload = () => {
-	const yesterdayDt = new Date().setDate(new Date().getDate() - 1)
-	const lastTimeSaved = localStorage.getItem('lastSaveDt')
-	let commit
+const yesterdayDt = new Date().setDate(new Date().getDate() - 1)
+const lastTimeSaved = localStorage.getItem('lastSaveDt')
+let commit
 
-	if (lastTimeSaved === null || new Date(lastTimeSaved) < yesterdayDt) {
-		try {
-			commit = fetchLastCommit()
-			commit.then((commit) => {
-				saveCommitInLocalStorage(commit)
-			})
-		} catch (err) {
-			console.error('failed to fetch: ' + err)
-		}
-	} else {
-		commit = {
-			lastAuthor: localStorage.getItem('lastAuthor'),
-			lastDate: localStorage.getItem('lastDate')
-		}
+if (lastTimeSaved === null || new Date(lastTimeSaved) < yesterdayDt) {
+	try {
+		commit = fetchLastCommit()
+		commit.then((commit) => {
+			saveCommitInLocalStorage(commit)
+		})
+	} catch (err) {
+		console.error('failed to fetch: ' + err)
 	}
-
-	console.log(lastUpdateInfo(commit.lastAuthor, commit.lastDate))
+} else {
+	commit = {
+		lastAuthor: localStorage.getItem('lastAuthor'),
+		lastDate: localStorage.getItem('lastDate')
+	}
 }
+
+console.log(lastUpdateInfo(commit.lastAuthor, commit.lastDate))
 
 function saveCommitInLocalStorage(commit) {
 	localStorage.setItem('lastAuthor', commit.lastAuthor)
@@ -54,5 +52,5 @@ function lastUpdateInfo(author, stringDt) {
 		day: 'numeric'
 	})
 
-	return `Repository of page last updated by '${author}' at ${stringDt}, you can visit it in https://github.com/luisnquin/luisnquin/.`
+	return `Repository of page last updated by '${author}' at ${stringDt}. You can visit it in https://github.com/luisnquin/luisnquin/.`
 }
