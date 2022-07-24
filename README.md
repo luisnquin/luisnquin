@@ -1,6 +1,6 @@
 
 
-<p align="center"><strong>Desarrollador Backend en Go</strong>.<br />Medios de contacto 👇</p>
+<p align="center"><strong>Desarrollador Backend en Go</strong>.<br /></p>
 <p align="center">
   <a href="https://twitter.com/luisnquin" target="_blank">
     <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="luisnquin" height="28px" width="28px" />
