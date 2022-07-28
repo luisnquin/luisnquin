@@ -1,15 +1,9 @@
-@font-face {
-	font-family: 'Rubik';
-	src: url('/assets/Rubik-Regular.ttf');
-}
-
 * {
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	font-family: 'Rubik', sans-serif;
 	background-color: #24292f;
 	color: #ededed;
 }
@@ -36,11 +30,7 @@ main #refs-bar {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
-	/*
-	    border-bottom: #ededed dashed 1px;
-	    width: min-content;
-        padding-bottom: 5px;
-    */
+	max-width: min-content;
 }
 
 main #refs-bar .ref {
@@ -61,18 +51,6 @@ main #refs-bar .ref:hover {
 	color: #ededed;
 	background-color: #39414a;
 	transition: all 300ms linear;
-}
-
-main #refs-bar .ref img {
-	width: 27px;
-}
-
-main #refs-bar .ref #linkedin-img {
-	width: 24px;
-}
-
-main #refs-bar .ref #portfolio-img {
-	width: 25px;
 }
 
 @media (min-width: 1000px) {
