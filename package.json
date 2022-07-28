@@ -1,10 +1,7 @@
 {
 	"name": "luisnquin",
 	"version": "1.0.0",
-	"description": "Yes",
-	"scripts": {
-		"public": "cp -r ./src/* ./public/"
-	},
+	"description": "¿¿¿¿¿¿¿¿¿¿¿¿",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/luisnquin/luisnquin.git"
