@@ -3,7 +3,14 @@
 	margin: 0;
 }
 
+@font-face {
+	font-family: 'Rubik';
+	src: url('./assets/Rubik-Regular.ttf');
+	font-display: fallback;
+}
+
 body {
+	font-family: 'Rubik', sans-serif;
 	background-color: #24292f;
 	color: #ededed;
 }
