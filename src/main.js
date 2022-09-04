@@ -1,5 +1,7 @@
 'use strict'
 
+import './styles.css'
+
 window.onload = () => {
 	loadPageInfo().then(console.log).catch(console.error)
 }
