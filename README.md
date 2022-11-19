@@ -1,9 +1,8 @@
 #
 
 ```javascript
-{
-    "os": "NixOS"
+const me = {
+    "os": "NixOS",
+    "tps": "🤨"
 }
 ```
-
-💐 Yes that's all...
