@@ -1,8 +1,10 @@
-#
+# Who I am?
 
-```javascript
-const me = {
-    "os": "NixOS",
-    "tps": "🤨"
+```nix
+{
+  me = rec {
+    os = "NixOS";
+    tps = "🤨";
+  };
 }
 ```
