@@ -72,7 +72,7 @@ let tpl = `Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
 I'm a ${magicMagenta(data.job.title)} at ${linker(
 	companyColor(data.job.company),
 	data.job.url
-)} which is localed in ${sparkOfLife(data.job.location)}
+)} which is located in ${sparkOfLife(data.job.location)}
 
 I really like open source stuff and things that make me feel more comfortable, apparently an ${infiniteWord} journey
 
