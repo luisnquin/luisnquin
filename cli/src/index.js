@@ -4,6 +4,7 @@
 import linker from 'terminal-link'
 import imager from 'terminal-image'
 import cl from 'cli-color'
+import path from 'path'
 
 const data = {
 	userName: 'luisnquin',
@@ -88,10 +89,16 @@ Have a nice day :)
 `
 
 console.log(
-	await imager.file('./assets/funny-dog.jpg', {
-		width: 45,
-		height: 30,
-	})
+	await imager.file(
+		path.resolve(
+			new URL(import.meta.url).pathname,
+			'../../assets/funny-dog.jpg'
+		),
+		{
+			width: 45,
+			height: 30,
+		}
+	)
 )
 
 console.log(tpl)
