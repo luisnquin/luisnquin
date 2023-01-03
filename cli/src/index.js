@@ -30,7 +30,7 @@ const data = {
 		},
 		{
 			label: cl.xterm(110)('Portfolio'),
-			url: 'about:blank',
+			url: 'https://example.com',
 		},
 		{
 			url: 'https://luisquinones.me',
