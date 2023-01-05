@@ -20,16 +20,10 @@
 		"type": "git",
 		"url": "git+https://github.com/luisnquin/luisnquin.git"
 	},
-	"keywords": [
-		"greeting",
-		"cli",
-		"me"
-	],
 	"author": "luisnquin",
 	"contributors": [
 		"luisnquin"
 	],
-	"type": "module",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/luisnquin/luisnquin/issues"
