@@ -59,11 +59,15 @@ const skyBlue = cl.xterm(86)
 const applyRandomColor = (item) =>
 	cl.xterm(Math.floor(Math.random() * 256))(item)
 
+const prettyJoin = (items) =>
+	items.slice(0, -1).join(', ') + ' and ' + items.slice(-1)
+
 // Complex text
 const favoriteAndPretty = {
-	technologies: data.favoriteTechnologies.map(applyRandomColor).join(', '),
-	hobbies: data.hobbies.map(applyRandomColor).join(', '),
+	technologies: prettyJoin(data.favoriteTechnologies.map(applyRandomColor)),
+	hobbies: prettyJoin(data.hobbies.map(applyRandomColor)),
 }
+
 const infiniteWord = infiniteBlue('infinite')
 
 let tpl = `Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
