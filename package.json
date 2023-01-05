@@ -1,39 +1,42 @@
 {
 	"name": "luisnquin",
-	"version": "1.0.0",
-	"description": "¿¿¿",
+	"version": "1.6.2",
+	"description": "Info about me",
+	"workspaces": [
+		"cli",
+		"web"
+	],
 	"scripts": {
-		"deploy": "npm run build && firebase deploy",
-		"build": "webpack --mode=production && rm ./public/assets/*.ttf",
-		"dev": "webpack-dev-server --mode=development"
+		"build": "npm run build --workspace web",
+		"publish:cli": "npm publish --workspace cli",
+		"publish:web": "npm run deploy --workspace web",
+		"dev:web": "npm run dev --workspace web",
+		"dev:cli": "npm run dev --workspace cli"
+	},
+	"bin": {
+		"luisnquin": "./cli/src/index.js"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/luisnquin/luisnquin.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"greeting",
+		"cli",
+		"me"
+	],
 	"author": "luisnquin",
 	"contributors": [
 		"luisnquin"
 	],
-	"license": "ISC",
+	"type": "module",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/luisnquin/luisnquin/issues"
 	},
 	"homepage": "https://github.com/luisnquin/luisnquin#readme",
 	"devDependencies": {
-		"@babel/core": "7.18.13",
-		"@babel/preset-env": "7.18.10",
-		"babel-loader": "8.2.5",
-		"copy-webpack-plugin": "11.0.0",
-		"css-loader": "6.7.1",
-		"eslint": "8.20.0",
-		"html-webpack-plugin": "5.5.0",
-		"mini-css-extract-plugin": "2.6.1",
 		"prettier": "2.7.1",
-		"style-loader": "3.3.1",
-		"webpack": "5.74.0",
-		"webpack-cli": "4.10.0",
-		"webpack-dev-server": "4.10.1"
+		"eslint": "8.20.0"
 	}
 }
