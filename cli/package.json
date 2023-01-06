@@ -1,35 +1,35 @@
 {
-  "name": "luisnquin",
-  "version": "1.6.2",
-  "description": "Info about me",
-  "main": "src/index.js",
-  "scripts": {
-    "dev": "node --watch ./src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luisnquin/luisnquin.git"
-  },
-  "bin": {
-    "luisnquin": "./src/index.js"
-  },
-  "keywords": [
-    "greeting",
-    "cli",
-    "me"
-  ],
-  "type": "module",
-  "author": "luisnquin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/luisnquin/luisnquin/issues"
-  },
-  "homepage": "https://github.com/luisnquin/luisnquin#readme",
-  "dependencies": {
-    "cli-color": "2.0.3",
-    "path": "0.12.7",
-    "terminal-image": "2.0.0",
-    "terminal-link": "3.0.0",
-    "window-size": "1.1.1"
-  }
+	"name": "luisnquin",
+	"version": "1.6.2",
+	"description": "Info about me",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "node --watch ./src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luisnquin/luisnquin.git"
+	},
+	"bin": {
+		"luisnquin": "./src/index.js"
+	},
+	"keywords": [
+		"greeting",
+		"cli",
+		"me"
+	],
+	"type": "module",
+	"author": "luisnquin",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/luisnquin/luisnquin/issues"
+	},
+	"homepage": "https://github.com/luisnquin/luisnquin#readme",
+	"dependencies": {
+		"cli-color": "2.0.3",
+		"path": "0.12.7",
+		"terminal-image": "2.0.0",
+		"terminal-link": "3.0.0",
+		"window-size": "1.1.1"
+	}
 }
