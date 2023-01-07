@@ -87,6 +87,8 @@ const prettyChanges = [
 		deletions: Math.floor(Math.random() * 40),
 	},
 ]
+	.filter((item) => item.additions != 0 || item.deletions != 0)
+	.sort(() => Math.random() - 0.5)
 	.map((item) => {
 		return `${item.name} | ${item.additions + item.deletions} ${
 			cl.xterm(82)('+'.repeat(item.additions)) +
