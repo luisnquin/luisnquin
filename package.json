@@ -1,6 +1,6 @@
 {
 	"name": "luisnquin",
-	"version": "1.6.2",
+	"version": "1.7.0",
 	"description": "Info about me",
 	"workspaces": [
 		"cli",

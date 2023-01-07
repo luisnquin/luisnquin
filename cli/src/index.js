@@ -70,6 +70,31 @@ const favoriteAndPretty = {
 
 const infiniteWord = infiniteBlue('infinite')
 
+const prettyChanges = [
+	{
+		name: 'the-blender.txt',
+		additions: Math.floor(Math.random() * 70),
+		deletions: Math.floor(Math.random() * 40),
+	},
+	{
+		name: 'bonsai.zip' + '     ',
+		additions: Math.floor(Math.random() * 70),
+		deletions: Math.floor(Math.random() * 40),
+	},
+	{
+		name: '.microwaverc' + '   ',
+		additions: Math.floor(Math.random() * 70),
+		deletions: Math.floor(Math.random() * 40),
+	},
+]
+	.map((item) => {
+		return `${item.name} | ${item.additions + item.deletions} ${
+			cl.xterm(82)('+'.repeat(item.additions)) +
+			cl.xterm(196)('-'.repeat(item.deletions))
+		}`
+	})
+	.join('\n')
+
 let tpl = `Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
 	data.fullName
 } ${intensePink('||')} ${data.userName} 🫐
@@ -85,6 +110,8 @@ I really like open source stuff and things that make me feel more comfortable, a
 Between other things I really like are ${
 	favoriteAndPretty.hobbies
 }, and technologies like ${favoriteAndPretty.technologies}
+
+${prettyChanges}
 
 Social media:
  - ${data.socialMedia.map((item) => linker(item.label, item.url)).join('\n - ')}
