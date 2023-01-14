@@ -1,6 +1,6 @@
 {
 	"name": "luisnquin",
-	"version": "1.8.0",
+	"version": "1.9.0",
 	"description": "Info about me",
 	"main": "src/index.js",
 	"scripts": {

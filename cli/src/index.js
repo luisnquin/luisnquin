@@ -5,6 +5,7 @@ import linker from 'terminal-link'
 import imager from 'terminal-image'
 import cl from 'cli-color'
 import path from 'path'
+import crypto from 'crypto'
 
 const data = {
 	userName: 'luisnquin',
@@ -55,14 +56,25 @@ const infiniteBlue = cl.xterm(33)
 const intensePink = cl.xterm(197)
 const skyBlue = cl.xterm(86)
 
-//Well, it only works if there is no color defined (maybe because the new color is just a wrapper?) but it's useful for me.
-const applyRandomColor = (item) =>
-	cl.xterm(Math.floor(Math.random() * 256))(item)
+const sleep = (ms) => {
+	return new Promise((resolve) => setTimeout(resolve, ms))
+}
 
 const prettyJoin = (items) =>
 	items.slice(0, -1).join(', ') + ' and ' + items.slice(-1)
 
-// Complex text
+const getRandomGitHash = () => {
+	return crypto
+		.createHash('sha1')
+		.update(crypto.pseudoRandomBytes(20))
+		.digest('hex')
+		.slice(0, 7)
+}
+
+//Well, it only works if there is no color defined (maybe because the new color is just a wrapper?) but it's useful for me.
+const applyRandomColor = (item) =>
+	cl.xterm(Math.floor(Math.random() * 256))(item)
+
 const favoriteAndPretty = {
 	technologies: prettyJoin(data.favoriteTechnologies.map(applyRandomColor)),
 	hobbies: prettyJoin(data.hobbies.map(applyRandomColor)),
@@ -70,7 +82,7 @@ const favoriteAndPretty = {
 
 const infiniteWord = infiniteBlue('infinite')
 
-const prettyChanges = [
+const changesList = [
 	{
 		name: 'the-blender.txt',
 		additions: Math.floor(Math.random() * 70),
@@ -87,51 +99,90 @@ const prettyChanges = [
 		deletions: Math.floor(Math.random() * 40),
 	},
 ]
-	.filter((item) => item.additions != 0 || item.deletions != 0)
-	.sort(() => Math.random() - 0.5)
-	.map((item) => {
-		return `${item.name} | ${item.additions + item.deletions} ${
-			cl.xterm(82)('+'.repeat(item.additions)) +
-			cl.xterm(196)('-'.repeat(item.deletions))
-		}`
-	})
-	.join('\n')
 
-let tpl = `Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
-	data.fullName
-} ${intensePink('||')} ${data.userName} 🫐
-I'm a ${magicMagenta(data.job.title)} at ${linker(
-	companyColor(data.job.company),
-	data.job.url
-)} which is located in ${sparkOfLife(data.job.location)}
+const biggestChange = changesList
+	.sort((a, b) =>
+		a.additions + a.deletions < b.additions + b.deletions ? 1 : -1
+	)
+	.at(0)
+
+const gitPullProcess = async () => {
+	const hashFrom = getRandomGitHash()
+	const hashTo = getRandomGitHash()
+
+	console.log(`\nFrom github:luisnquin/luisnquin ${cl.xterm(196)(
+		'(simulated)'
+	)}
+ * branch            main       -> FETCH_HEAD
+   ${hashFrom}..${hashTo}  main       -> origin/main`)
+
+	await sleep(500)
+
+	console.log(`Updating ${getRandomGitHash()}..${getRandomGitHash()}
+Fast-forward`)
+
+	await sleep(800)
+
+	changesList
+		.filter((change) => change.additions != 0 || change.deletions != 0)
+		.sort(() => Math.random() - 0.5)
+		.map((change) => {
+			const distantSum = `${
+				change.additions + change.deletions
+			}`.padStart(3, '  ')
+
+			console.log(
+				`${change.name} | ${distantSum} ${
+					cl.xterm(40)('+'.repeat(change.additions)) +
+					cl.xterm(197)('-'.repeat(change.deletions))
+				}`
+			)
+		})
+
+	console.log(
+		`${changesList.length} files changed, ${biggestChange.additions} insertions(+), ${biggestChange.deletions} deletions(-)`
+	)
+
+	await sleep(400)
+}
+
+const main = async () => {
+	console.log(
+		await imager.file(
+			path.resolve(
+				new URL(import.meta.url).pathname,
+				'../../assets/funny-dog.jpg'
+			),
+			{
+				width: 45,
+				height: 30,
+			}
+		)
+	)
+
+	const prettyCompany = linker(companyColor(data.job.company), data.job.url)
+	const hobbies = favoriteAndPretty.hobbies
+	const technologies = favoriteAndPretty.technologies
+
+	console.log(`Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
+		data.fullName
+	} ${intensePink('||')} ${data.userName} 🫐
+I'm a ${magicMagenta(
+		data.job.title
+	)} at ${prettyCompany} which is located in ${sparkOfLife(data.job.location)}
 
 I really like open source stuff and things that make me feel more comfortable, apparently an ${infiniteWord} journey
 
 ... wait what, the reason why ${infiniteWord} is blue? It's poetic but I googled it
 
-Between other things I really like are ${
-	favoriteAndPretty.hobbies
-}, and technologies like ${favoriteAndPretty.technologies}
+Between other things I really like are ${hobbies}, and technologies like ${technologies}`)
 
-${prettyChanges}
+	await gitPullProcess()
 
-Social media:
+	console.log(`\nSocial media:
  - ${data.socialMedia.map((item) => linker(item.label, item.url)).join('\n - ')}
 
-Have a nice day :)
-`
+Have a nice day :)`)
+}
 
-console.log(
-	await imager.file(
-		path.resolve(
-			new URL(import.meta.url).pathname,
-			'../../assets/funny-dog.jpg'
-		),
-		{
-			width: 45,
-			height: 30,
-		}
-	)
-)
-
-console.log(tpl)
+await main()
