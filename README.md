@@ -13,7 +13,9 @@
     {
       me = rec {
         os = "NixOS";
-        tps = "🤨";
+        betd = "🌂";
+        # We don't fix the cause, we count panics
+        kernelPanicsCounter = 3;
       };
     }
     ```
