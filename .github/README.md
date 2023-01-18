@@ -4,7 +4,7 @@
 
     ```bash
     # Displays info about me
-    $ npx luisnquin
+    $ npx luisnquin@latest
     ```
 
 - Or just read this:
