@@ -16,6 +16,7 @@
     ```nix
     {
       me = rec {
+        matrix = "@luisnquin:matrix.org";
         os = "NixOS";
         betd = "🌂";
         # We don't fix the cause, we count panics
