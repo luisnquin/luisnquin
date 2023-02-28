@@ -1,28 +1,28 @@
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 13px;
-    background-color: rgba(22, 21, 21, 0.89);
-    border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 13px;
+	background-color: rgba(22, 21, 21, 0.89);
+	border-radius: 5px;
 }
 
 .arrow_right {
-    filter: brightness(150%);
+	filter: brightness(150%);
 }
 
 .copy_to_clipboard {
-    filter: brightness(80%);
+	filter: brightness(80%);
 }
 
 .copy_to_clipboard:hover {
-    cursor: pointer;
-    filter: brightness(100%);
+	cursor: pointer;
+	filter: brightness(100%);
 }
 
 .text {
-    color: #fff;
-    font-family: Menlo Regular;
-    font-weight: lighter;
+	color: #fff;
+	font-family: Menlo Regular;
+	font-weight: lighter;
 }

@@ -4,14 +4,14 @@
 
 ## whoami
 
-- Execute
+-   Execute
 
     ```bash
     # Displays info about me
     $ npx luisnquin@latest
     ```
 
-- Or just read this:
+-   Or just read this:
 
     ```nix
     {
