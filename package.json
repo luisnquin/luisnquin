@@ -14,7 +14,8 @@
 		"build:me.web": "npm run build --workspace me/web",
 		"dev:portfolio": "npm run dev --workspace portfolio",
 		"dev:me.web": "npm run dev --workspace me/web",
-		"dev:me.cli": "npm run dev --workspace me/cli"
+		"dev:me.cli": "npm run dev --workspace me/cli",
+		"style": "prettier -w . >/dev/null"
 	},
 	"bin": {
 		"luisnquin": "./me/cli/src/index.js"
