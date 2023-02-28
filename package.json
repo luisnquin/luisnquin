@@ -3,18 +3,18 @@
 	"version": "1.9.0",
 	"description": "Info about me",
 	"workspaces": [
-		"cli",
-		"web"
+		"me/cli",
+		"me/web"
 	],
 	"scripts": {
-		"build": "npm run build --workspace web",
-		"publish:cli": "npm publish --workspace cli",
-		"publish:web": "npm run deploy --workspace web",
-		"dev:web": "npm run dev --workspace web",
-		"dev:cli": "npm run dev --workspace cli"
+		"publish:me.web": "npm run deploy --workspace me/web",
+		"publish:me.cli": "npm publish --workspace me/cli",
+		"build:me.web": "npm run build --workspace me/web",
+		"dev:me.web": "npm run dev --workspace me/web",
+		"dev:me.cli": "npm run dev --workspace me/cli"
 	},
 	"bin": {
-		"luisnquin": "./cli/src/index.js"
+		"luisnquin": "./me/cli/src/index.js"
 	},
 	"repository": {
 		"type": "git",
