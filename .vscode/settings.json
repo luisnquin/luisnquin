@@ -2,7 +2,7 @@
 	"material-icon-theme.folders.associations": {
 		"linker": "Connection",
 		"portfolio": "Delta",
-		"me": "Stack",
-		"cv": "Admin"
+		"resume": "Admin",
+		"me": "Stack"
 	}
 }
