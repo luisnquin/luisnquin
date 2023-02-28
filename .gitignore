@@ -1,2 +1,4 @@
 node_modules/
-web/public/*
+me/web/public/*
+.firebase/
+firebase-debug.log
