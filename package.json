@@ -3,13 +3,16 @@
 	"version": "1.9.0",
 	"description": "Info about me",
 	"workspaces": [
+		"portfolio",
 		"me/cli",
 		"me/web"
 	],
 	"scripts": {
 		"publish:me.web": "npm run deploy --workspace me/web",
 		"publish:me.cli": "npm publish --workspace me/cli",
+		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
+		"dev:portfolio": "npm run dev --workspace portfolio",
 		"dev:me.web": "npm run dev --workspace me/web",
 		"dev:me.cli": "npm run dev --workspace me/cli"
 	},
@@ -30,7 +33,8 @@
 	},
 	"homepage": "https://github.com/luisnquin/luisnquin#readme",
 	"devDependencies": {
+		"eslint": "8.20.0",
 		"prettier": "2.7.1",
-		"eslint": "8.20.0"
+		"standard": "^17.0.0"
 	}
 }

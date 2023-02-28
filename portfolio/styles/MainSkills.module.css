@@ -1,0 +1,7 @@
+.SkillLogo {
+    transition: all .2s ease-in-out;
+}
+
+.SkillLogo:hover {
+    transform: scale(1.1);
+}

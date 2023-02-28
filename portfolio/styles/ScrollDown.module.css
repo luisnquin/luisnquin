@@ -1,0 +1,14 @@
+.scroll_down {
+    animation: fade 1s infinite;
+    font-family: 'FiraCode Regular';
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
