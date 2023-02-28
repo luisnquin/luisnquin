@@ -1,6 +1,8 @@
 {
 	"material-icon-theme.folders.associations": {
 		"linker": "Connection",
-		"me": "Admin"
+		"portfolio": "Shared",
+		"me": "Admin",
+		"cv": "Docs"
 	}
 }
