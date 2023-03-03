@@ -8,8 +8,9 @@
 		"me/web"
 	],
 	"scripts": {
-		"publish:me.web": "npm run deploy --workspace me/web",
-		"publish:me.cli": "npm publish --workspace me/cli",
+		"deploy:me.web": "npm run deploy --workspace me/web",
+		"deploy:me.cli": "npm publish --workspace me/cli",
+		"deploy:cv": "bash ./resume/upload.sh",
 		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
 		"dev:portfolio": "npm run dev --workspace portfolio",
