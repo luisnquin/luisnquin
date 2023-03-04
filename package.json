@@ -13,6 +13,7 @@
 		"deploy:cv": "bash ./resume/upload.sh",
 		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
+		"dev:resume": "(cd ./resume; air)",
 		"dev:portfolio": "npm run dev --workspace portfolio",
 		"dev:me.web": "npm run dev --workspace me/web",
 		"dev:me.cli": "npm run dev --workspace me/cli",
