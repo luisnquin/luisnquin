@@ -11,5 +11,10 @@
 	},
 	"dependencies": {
 		"astro": "^2.0.17"
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^5.54.0",
+		"eslint-plugin-astro": "^0.23.0",
+		"eslint-plugin-jsx-a11y": "^6.7.1"
 	}
 }
