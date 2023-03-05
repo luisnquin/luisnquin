@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/go-pdf/fpdf v0.6.0
+	github.com/goccy/go-json v0.10.0
 	github.com/gookit/color v1.5.2
 )
 
