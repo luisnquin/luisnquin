@@ -4,5 +4,12 @@
 		"portfolio": "Delta",
 		"resume": "Admin",
 		"me": "Stack"
+	},
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.formatOnType": false
 	}
 }
