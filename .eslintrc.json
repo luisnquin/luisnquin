@@ -4,9 +4,10 @@
 		"es2021": true,
 		"node": true
 	},
+	"settings": {},
 	"extends": [
 		"eslint:recommended",
-		"plugin:react/recommended",
+		// "plugin:react/recommended",
 		"./linker/.eslintrc.json"
 	],
 	"parserOptions": {
@@ -17,13 +18,14 @@
 		}
 	},
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": ["warn", "tab"],
 		"linebreak-style": ["error", "unix"],
+		"no-unused-vars": "warn",
 		"quotes": ["error", "single"],
 		"semi": ["error", "never"],
 		"react/react-in-jsx-scope": "off",
-		"react/prop-types": "off",
-		"react/no-unknown-property": ["off", { "ignore": ["astro"] }],
-		"react/no-unescaped-entities": ["off", { "forbid": [">", "}"] }]
+		"react/prop-types": "off"
+		//"react/no-unknown-property": ["off", { "ignore": ["astro"] }],
+		//"react/no-unescaped-entities": ["off", { "forbid": [">", "}"] }]
 	}
 }
