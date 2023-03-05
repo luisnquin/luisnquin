@@ -50,7 +50,7 @@ upload_to_s3() {
 main() {
     echo "starting task to upload resume assets to S3 bucket '$S3_BUCKET'..."
 
-    target_directory="./resume/assets"
+    target_directory="./resume/out"
     set -e
 
     for file_path in "$target_directory"/*; do
