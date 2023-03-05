@@ -1,21 +1,21 @@
 name: Resume
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - resume/assets/**
+    push:
+        branches:
+            - main
+        paths:
+            - resume/assets/**
 
 jobs:
-  upload:
-    runs-on: ubuntu-20.04
-    env:
-      AWS_ACCESS_SECRET: "${{ secrets.AWS_ACCESS_SECRET }}"
-      AWS_ACCESS_KEY: "${{ secrets.AWS_ACCESS_KEY }}"
-      S3_BUCKET: luisnquin-hole
-      S3_ACL: x-amz-acl:public-read
-      S3_BUCKET_PATH: /resume/
-    steps:
-      - uses: actions/checkout@v3
-      - run: sh ./resume/upload.sh
+    upload:
+        runs-on: ubuntu-20.04
+        env:
+            AWS_ACCESS_SECRET: '${{ secrets.AWS_ACCESS_SECRET }}'
+            AWS_ACCESS_KEY: '${{ secrets.AWS_ACCESS_KEY }}'
+            S3_BUCKET: luisnquin-hole
+            S3_ACL: x-amz-acl:public-read
+            S3_BUCKET_PATH: /resume/
+        steps:
+            - uses: actions/checkout@v3
+            - run: sh ./resume/upload.sh
