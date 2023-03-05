@@ -8,16 +8,28 @@ import (
 )
 
 type Writer struct {
-	writer *fpdf.Fpdf
+	pdf    *fpdf.Fpdf
+	writer io.Writer
+
+	beforeX, beforeY float64
 }
 
-func NewWriter() Writer {
-	writer := fpdf.New(pdfutil.Portrait, pdfutil.Millimeter, pdfutil.Letter, ".")
-	writer.AddPage()
+func NewWriter(w io.Writer) Writer {
+	fpdf := fpdf.New(pdfutil.Portrait, pdfutil.Millimeter, pdfutil.Letter, ".")
+	fpdf.AddPage()
 
 	return Writer{
-		writer: writer,
+		pdf:    fpdf,
+		writer: w,
 	}
+}
+
+func (w Writer) Flush() error {
+	return w.pdf.Output(w.writer)
+}
+
+func (w *Writer) AddY(y float64) {
+	w.beforeY += y
 }
 
 func (w Writer) SetLine(x1, y1, x2, y2 float64, opts ...Option) {
@@ -28,14 +40,15 @@ func (w Writer) SetLine(x1, y1, x2, y2 float64, opts ...Option) {
 	}
 
 	if len(o.drawRGB) == 3 {
-		w.writer.SetDrawColor(o.drawRGB[0], o.drawRGB[1], o.drawRGB[2])
-		defer w.writer.SetDrawColor(0, 0, 0)
+		w.pdf.SetDrawColor(o.drawRGB[0], o.drawRGB[1], o.drawRGB[2])
+		defer w.pdf.SetDrawColor(0, 0, 0)
 	}
 
-	w.writer.Line(x1, y1, x2, y2)
+	w.pdf.Line(x1, y1, x2, y2)
 }
 
-func (w Writer) SetText(text string, x, y float64, opts ...Option) {
+//nolint:funlen
+func (w *Writer) SetText(text string, x, movementToY float64, opts ...Option) {
 	var o options
 
 	for _, opt := range opts {
@@ -43,43 +56,72 @@ func (w Writer) SetText(text string, x, y float64, opts ...Option) {
 	}
 
 	if o.wordSpacing != 0 {
-		w.writer.SetWordSpacing(o.wordSpacing)
-		defer w.writer.SetWordSpacing(0)
+		w.pdf.SetWordSpacing(o.wordSpacing)
+		defer w.pdf.SetWordSpacing(0)
 	}
 
 	if len(o.fillRGB) == 3 {
-		w.writer.SetFillColor(o.fillRGB[0], o.fillRGB[1], o.fillRGB[2])
-		defer w.writer.SetFillColor(0, 0, 0)
+		w.pdf.SetFillColor(o.fillRGB[0], o.fillRGB[1], o.fillRGB[2])
+		defer w.pdf.SetFillColor(0, 0, 0)
 	}
 
 	if len(o.textRGB) == 3 {
-		w.writer.SetTextColor(o.textRGB[0], o.textRGB[1], o.textRGB[2])
-		defer w.writer.SetTextColor(0, 0, 0)
+		w.pdf.SetTextColor(o.textRGB[0], o.textRGB[1], o.textRGB[2])
+		defer w.pdf.SetTextColor(0, 0, 0)
 	}
 
 	if o.charsLimit == 0 {
 		o.charsLimit = 200
 	}
 
+	if o.fontSize != 0 {
+		oldSize, _ := w.pdf.GetFontSize()
+		w.pdf.SetFontSize(o.fontSize)
+
+		defer w.pdf.SetFontSize(oldSize)
+	}
+
+	if o.fontStyle != "" {
+		w.pdf.SetFontStyle(o.fontStyle)
+		defer w.pdf.SetFontStyle(pdfutil.Regular)
+	}
+
+	if o.useX {
+		x += w.beforeX
+	}
+
+	w.beforeY += movementToY
+
 	if len(text) > int(o.charsLimit) {
 		compensation := float64(0)
 
-		for _, line := range w.writer.SplitText(text, o.charsLimit) {
-			w.writer.SetXY(x, y+compensation)
-			w.writer.Cell(0, 0, line)
+		lines := w.pdf.SplitText(text, o.charsLimit)
+
+		for _, line := range lines {
+			w.pdf.SetXY(x, w.beforeY+compensation)
+			w.pdf.Cell(0, 0, line)
 
 			compensation += 5
 		}
-	} else {
-		w.writer.SetXY(x, y)
-		w.writer.Cell(0, 0, text)
+
+		w.beforeX = x + float64(len(lines[len(lines)-1]))
+		w.beforeY += compensation
+
+		return
 	}
+
+	if o.useLink {
+		linkId := w.pdf.AddLink()
+		w.pdf.SetLink(linkId, w.beforeY, 1)
+		w.pdf.Link(x, w.beforeY, 1, 1, linkId)
+	}
+
+	w.pdf.SetXY(x, w.beforeY)
+	w.pdf.Cell(0, 0, text)
+
+	w.beforeX = x + float64(len(text)*2)
 }
 
 func (w Writer) SetFont(familyStr, styleStr string, size float64) {
-	w.writer.SetFont(familyStr, styleStr, size)
-}
-
-func (p Writer) OutTo(w io.Writer) error {
-	return p.writer.Output(w)
+	w.pdf.SetFont(familyStr, styleStr, size)
 }
