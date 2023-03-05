@@ -20,7 +20,7 @@
 		"dev:me.web": "npm run dev --workspace me/web",
 		"dev:me.cli": "npm run dev --workspace me/cli",
 		"dev:linker": "npm run dev --workspace linker",
-		"style": "prettier -w . >/dev/null"
+		"style": "prettier -w .>/dev/null && gofumpt -w ."
 	},
 	"bin": {
 		"luisnquin": "./me/cli/src/index.js"
