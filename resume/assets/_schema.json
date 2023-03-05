@@ -1,0 +1,72 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"type": "object",
+	"properties": {
+		"fullName": {
+			"type": "string"
+		},
+		"selfDescription": {
+			"type": "string"
+		},
+		"contact": {
+			"type": "object",
+			"properties": {
+				"email": {
+					"type": "string"
+				},
+				"web": {
+					"type": "string"
+				},
+				"phoneNumber": {
+					"type": "string"
+				}
+			}
+		},
+		"hardSkills": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"softSkills": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"jobExperiences": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"position": {
+						"type": "string"
+					},
+					"company": {
+						"type": "string"
+					},
+					"fromToLabel": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"hobbies": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"label": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}
