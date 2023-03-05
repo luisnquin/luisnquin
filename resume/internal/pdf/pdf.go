@@ -47,11 +47,6 @@ func (p PDF) SetText(text string, x, y float64, opts ...Option) {
 		defer p.writer.SetWordSpacing(0)
 	}
 
-	// if len(o.drawRGB) == 3 {
-	// 	p.writer.SetDrawColor(o.drawRGB[0], o.drawRGB[1], o.drawRGB[2])
-	// 	defer p.writer.SetDrawColor(0, 0, 0)
-	// }
-
 	if len(o.fillRGB) == 3 {
 		p.writer.SetFillColor(o.fillRGB[0], o.fillRGB[1], o.fillRGB[2])
 		defer p.writer.SetFillColor(0, 0, 0)
@@ -62,10 +57,14 @@ func (p PDF) SetText(text string, x, y float64, opts ...Option) {
 		defer p.writer.SetTextColor(0, 0, 0)
 	}
 
-	if len(text) > 200 {
+	if o.charsLimit == 0 {
+		o.charsLimit = 200
+	}
+
+	if len(text) > int(o.charsLimit) {
 		compensation := float64(0)
 
-		for _, line := range p.writer.SplitText(text, 200) {
+		for _, line := range p.writer.SplitText(text, o.charsLimit) {
 			p.writer.SetXY(x, y+compensation)
 			p.writer.Cell(0, 0, line)
 

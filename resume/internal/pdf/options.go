@@ -6,7 +6,7 @@ type Option func(*options)
 
 type options struct {
 	drawRGB, fillRGB, textRGB []int
-	wordSpacing               float64
+	wordSpacing, charsLimit   float64
 }
 
 func WithSpaceSize(spaceSize float64) Option {
@@ -30,5 +30,11 @@ func WithFillColor(hex string) Option {
 func WithTextColor(hex string) Option {
 	return func(o *options) {
 		o.textRGB = color.HEX(hex).Values()
+	}
+}
+
+func WithCharsLimit(limit float64) Option {
+	return func(o *options) {
+		o.charsLimit = limit
 	}
 }
