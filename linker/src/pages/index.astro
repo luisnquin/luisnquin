@@ -1,6 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import Link from '../components/Link.astro'
+
+const links = [
+	{
+		href: 'https://github.com/luisnquin',
+		label: 'GitHub',
+		backgroundColor: '#fafafa',
+		imagePath: '/github-512-512.png',
+		color: '#333',
+	},
+	{
+		href: 'https://gitlab.com/luisnquin',
+		label: 'GitLab',
+		backgroundColor: '#7759C2',
+		imagePath: '/gitlab-512-512.png',
+		color: '#D1D0D3',
+	},
+]
 ---
 
 <Layout title="Welcome to Astro.">
@@ -12,6 +30,11 @@ import Card from '../components/Card.astro'
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
 			above.
 		</p>
+
+		<section id="links">
+			{links.map((item) => <Link {...item} />)}
+		</section>
+
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -79,5 +102,12 @@ import Card from '../components/Card.astro'
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+
+	#links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
 	}
 </style>
