@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	writer := pdf.NewWriter(pdfutil.Portrait, pdfutil.Millimeter, pdfutil.Letter)
+	writer := pdf.NewWriter()
 
 	writer.SetFont("Arial", pdfutil.Bold, 20)
 	writer.SetText("Luis Quinones Requelme", 11, 15) // ! fix

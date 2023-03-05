@@ -4,14 +4,15 @@ import (
 	"io"
 
 	"github.com/go-pdf/fpdf"
+	"github.com/luisnquin/luisnquin/resume/internal/pdfutil"
 )
 
 type PDF struct {
 	writer *fpdf.Fpdf
 }
 
-func NewWriter(orientationStr, unitStr, sizeStr string) PDF {
-	writer := fpdf.New(orientationStr, unitStr, sizeStr, ".")
+func NewWriter() PDF {
+	writer := fpdf.New(pdfutil.Portrait, pdfutil.Millimeter, pdfutil.Letter, ".")
 	writer.AddPage()
 
 	return PDF{
@@ -61,8 +62,19 @@ func (p PDF) SetText(text string, x, y float64, opts ...Option) {
 		defer p.writer.SetTextColor(0, 0, 0)
 	}
 
-	p.writer.SetXY(x, y)
-	p.writer.Cell(0, 0, text)
+	if len(text) > 200 {
+		compensation := float64(0)
+
+		for _, line := range p.writer.SplitText(text, 200) {
+			p.writer.SetXY(x, y+compensation)
+			p.writer.Cell(0, 0, line)
+
+			compensation += 5
+		}
+	} else {
+		p.writer.SetXY(x, y)
+		p.writer.Cell(0, 0, text)
+	}
 }
 
 func (p PDF) SetFont(familyStr, styleStr string, size float64) {
