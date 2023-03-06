@@ -3,36 +3,57 @@ export interface Props {
 	href: string
 	label: string
 	imagePath: string
-	backgroundColor: string
-	color: string
+	brandColor: string
 }
 
-const { href, label, imagePath, backgroundColor, color } = Astro.props
-
-const inlineStyles = `background-color: ${backgroundColor}; color: ${color};`
+const { href, label, brandColor, imagePath } = Astro.props
 ---
 
-<a class="link" href={href} target="_blank" style={inlineStyles}
-	><img src={imagePath} /> {label}</a
+<a
+	class="link"
+	href={href}
+	target="_blank"
+	title="Ninym"
+	data-tooltip-placement="bottom"><img src={imagePath} /> {label}</a
 >
 
-<style>
+<style define:vars={{ brandColor }}>
+	:root {
+		--white: #f7f7f7;
+		--black: #333333;
+	}
+
 	.link {
-		padding: 10px 8px;
-		border-radius: 5px;
+		padding: 5px 6px;
+		border-radius: 3px;
+		color: var(--white);
+		border: 1px solid rgba(76, 61, 82, 25%);
 		text-decoration: none;
-		text-decoration: '';
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
 			0 2px 4px -2px rgba(0, 0, 0, 0.1);
+		opacity: 0.9;
 	}
 
 	.link:hover {
 		cursor: pointer;
+		background-color: var(--white);
+		color: var(--black);
+		animation: fade 0.5s forwards;
 	}
 
 	.link img {
 		position: relative;
 		top: 4px;
 		width: 20px;
+	}
+
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 0.4;
+		}
 	}
 </style>
