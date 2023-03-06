@@ -6,7 +6,8 @@
 		"portfolio",
 		"me/cli",
 		"me/web",
-		"linker"
+		"linker",
+		"resume"
 	],
 	"scripts": {
 		"deploy:me.web": "npm run deploy --workspace me/web",
@@ -14,9 +15,10 @@
 		"deploy:cv": "bash ./resume/upload.sh",
 		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
+		"build:resume": "npm run build --workspace resume",
 		"build:linker": "npm run build --workspace linker",
-		"dev:resume": "(cd ./resume; air)",
 		"dev:portfolio": "npm run dev --workspace portfolio",
+		"dev:resume": "npm run dev --workspace resume",
 		"dev:me.web": "npm run dev --workspace me/web",
 		"dev:me.cli": "npm run dev --workspace me/cli",
 		"dev:linker": "npm run dev --workspace linker",

@@ -1,0 +1,11 @@
+{
+	"name": "resume",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "air",
+		"build": "mkdir -p ./build/ && go build -o ./build/resumer ./cmd/ && ./build/resumer"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

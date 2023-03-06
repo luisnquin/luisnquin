@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 
@@ -11,6 +12,11 @@ import (
 )
 
 func main() {
+	dev := flag.Bool("dev", false, "runs the program in development mode")
+	flag.Parse()
+
+	fmt.Println(dev)
+
 	f, err := os.Create("./build/resume.pdf")
 	try(err)
 
