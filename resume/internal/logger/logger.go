@@ -1,13 +1,23 @@
+//nolint:gochecknoglobals,gochecknoinits
 package logger
 
 import (
 	"os"
+	"time"
 
 	"github.com/rs/zerolog"
 )
 
-//nolint:gochecknoglobals
-var logger = zerolog.New(os.Stderr)
+var logger zerolog.Logger
+
+func init() {
+	logger = zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.RFC3339}).
+		Level(zerolog.TraceLevel).
+		With().
+		Timestamp().
+		Caller().
+		Logger()
+}
 
 // Err starts a new message with error level with err as a field if not nil or
 // with info level if err is nil.
