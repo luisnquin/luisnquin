@@ -43,12 +43,14 @@ delete_from_s3() {
 }
 
 upload_to_s3() {
-    if [ "$1" = "" ]; then
+    if [ "$2" = "" ]; then
         echo "missing file path"
         return 1
     fi
 
-    file_path=$1
+    target_directory=$1
+    file_path=$2
+
     file_name="$(basename "$file_path")"
 
     storage_class="x-amz-storage-class:STANDARD"
@@ -65,7 +67,7 @@ upload_to_s3() {
         -H "Date: $date" \
         -H "$S3_ACL" \
         -H "$storage_class" \
-        "https://$S3_BUCKET.s3.amazonaws.com$S3_BUCKET_PATH$file_name"
+        "https://$S3_BUCKET.s3.amazonaws.com$target_directory$file_name"
 }
 
 main() {
@@ -83,7 +85,7 @@ main() {
 
     for file_path in "$target_directory"/*; do
         echo "uploading file '$file_path' to S3 bucket '$S3_BUCKET'..."
-        upload_to_s3 "$file_path"
+        upload_to_s3 "$S3_BUCKET_PATH" "$file_path"
     done
 
     echo "done"
