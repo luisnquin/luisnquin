@@ -21,6 +21,27 @@ elif [ "$S3_ACL" = "" ]; then
     exit 1
 fi
 
+delete_from_s3() {
+    if [ "$1" = "" ]; then
+        echo "missing path"
+        return 1
+    fi
+
+    path=$1
+
+    date_header="x-amz-date:$(date -R)"
+
+    sig_string="DELETE\n\n\n\n$date_header\n/$S3_BUCKET$path"
+    signature=$(printf "$sig_string" | openssl sha1 -hmac "$AWS_ACCESS_SECRET" -binary | base64)
+
+    curl -f -X DELETE \
+        -H "Authorization: AWS ${AWS_ACCESS_KEY}:$signature" \
+        -H "User-Agent: dotnet" \
+        -H "$date_header" \
+        -H "Host: $S3_BUCKET.s3.amazonaws.com" \
+        "https://$S3_BUCKET.s3.amazonaws.com$path"
+}
+
 upload_to_s3() {
     if [ "$1" = "" ]; then
         echo "missing file path"
@@ -52,6 +73,13 @@ main() {
 
     target_directory="./resume/out"
     set -e
+
+    echo "cleaning '$S3_BUCKET_PATH' directory..."
+
+    # TODO: list objects request
+    # Ref: https://docs.aws.amazon.com/AmazonS3/latest/userguide/RESTAuthentication.html
+    delete_from_s3 "${S3_BUCKET_PATH}luis-quinones.pdf"
+    delete_from_s3 "${S3_BUCKET_PATH}luis-quinones.png"
 
     for file_path in "$target_directory"/*; do
         echo "uploading file '$file_path' to S3 bucket '$S3_BUCKET'..."
