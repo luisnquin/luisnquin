@@ -3,6 +3,8 @@
 		"linker": "Connection",
 		"portfolio": "Delta",
 		"resume": "Admin",
+		"pdfutil": "Utils",
+		"logger": "Log",
 		"me": "Stack"
 	},
 	"[astro]": {

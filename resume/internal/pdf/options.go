@@ -12,8 +12,8 @@ type options struct {
 	drawRGB, fillRGB, textRGB         []int
 	wordSpacing, charsLimit, fontSize float64
 
-	fontStyle     string
-	useX, useLink bool
+	fontStyle string
+	useX      bool
 }
 
 func WithSpaceSize(spaceSize float64) Option {
@@ -61,12 +61,6 @@ func WithFontStyle(styles ...string) Option {
 func WithCharsLimit(limit float64) Option {
 	return func(o *options) {
 		o.charsLimit = limit
-	}
-}
-
-func IsLink() Option {
-	return func(o *options) {
-		o.useLink = true
 	}
 }
 

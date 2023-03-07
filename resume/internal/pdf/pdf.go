@@ -11,7 +11,7 @@ type Writer struct {
 	pdf    *fpdf.Fpdf
 	writer io.Writer
 
-	beforeX, beforeY float64
+	globalX, globalY float64
 }
 
 func NewWriter(w io.Writer) Writer {
@@ -29,7 +29,11 @@ func (w Writer) Flush() error {
 }
 
 func (w *Writer) AddY(y float64) {
-	w.beforeY += y
+	w.globalY += y
+}
+
+func (w Writer) SetFont(familyStr, styleStr string, size float64) {
+	w.pdf.SetFont(familyStr, styleStr, size)
 }
 
 func (w Writer) SetLine(x1, y1, x2, y2 float64, opts ...Option) {
@@ -47,9 +51,65 @@ func (w Writer) SetLine(x1, y1, x2, y2 float64, opts ...Option) {
 	w.pdf.Line(x1, y1, x2, y2)
 }
 
-//nolint:funlen
+func (w *Writer) SetLink(link, displayedText string, x, movementToY float64, opts ...Option) {
+	options, after := w.useOptions(opts...)
+
+	for _, action := range after {
+		defer action()
+	}
+
+	if options.useX {
+		x += w.globalX
+	}
+
+	w.globalY += movementToY
+	w.pdf.SetXY(x, w.globalY)
+	w.pdf.WriteLinkString(0, displayedText, link)
+	w.globalX = x + float64(len(displayedText)*2)
+}
+
 func (w *Writer) SetText(text string, x, movementToY float64, opts ...Option) {
-	var o options
+	options, after := w.useOptions(opts...)
+
+	for _, action := range after {
+		defer action()
+	}
+
+	if options.useX {
+		x += w.globalX
+	}
+
+	w.globalY += movementToY
+
+	if len(text) > int(options.charsLimit) {
+		compensation := float64(0)
+
+		lines := w.pdf.SplitText(text, options.charsLimit)
+
+		for _, line := range lines {
+			w.pdf.SetXY(x, w.globalY+compensation)
+			w.pdf.Cell(0, 0, line)
+
+			compensation += 5
+		}
+
+		w.globalX = x + float64(len(lines[len(lines)-1]))
+		w.globalY += compensation
+
+		return
+	}
+
+	w.pdf.SetXY(x, w.globalY)
+	w.pdf.Cell(0, 0, text)
+
+	w.globalX = x + float64(len(text)*2)
+}
+
+func (w Writer) useOptions(opts ...Option) (*options, []func()) {
+	var (
+		o     options
+		after []func()
+	)
 
 	for _, opt := range opts {
 		opt(&o)
@@ -57,17 +117,20 @@ func (w *Writer) SetText(text string, x, movementToY float64, opts ...Option) {
 
 	if o.wordSpacing != 0 {
 		w.pdf.SetWordSpacing(o.wordSpacing)
-		defer w.pdf.SetWordSpacing(0)
+
+		after = append(after, func() { w.pdf.SetWordSpacing(0) })
 	}
 
 	if len(o.fillRGB) == 3 {
 		w.pdf.SetFillColor(o.fillRGB[0], o.fillRGB[1], o.fillRGB[2])
-		defer w.pdf.SetFillColor(0, 0, 0)
+
+		after = append(after, func() { w.pdf.SetFillColor(0, 0, 0) })
 	}
 
 	if len(o.textRGB) == 3 {
 		w.pdf.SetTextColor(o.textRGB[0], o.textRGB[1], o.textRGB[2])
-		defer w.pdf.SetTextColor(0, 0, 0)
+
+		after = append(after, func() { w.pdf.SetTextColor(0, 0, 0) })
 	}
 
 	if o.charsLimit == 0 {
@@ -78,50 +141,14 @@ func (w *Writer) SetText(text string, x, movementToY float64, opts ...Option) {
 		oldSize, _ := w.pdf.GetFontSize()
 		w.pdf.SetFontSize(o.fontSize)
 
-		defer w.pdf.SetFontSize(oldSize)
+		after = append(after, func() { w.pdf.SetFontSize(oldSize) })
 	}
 
 	if o.fontStyle != "" {
 		w.pdf.SetFontStyle(o.fontStyle)
-		defer w.pdf.SetFontStyle(pdfutil.Regular)
+
+		after = append(after, func() { w.pdf.SetFontStyle(pdfutil.Regular) })
 	}
 
-	if o.useX {
-		x += w.beforeX
-	}
-
-	w.beforeY += movementToY
-
-	if len(text) > int(o.charsLimit) {
-		compensation := float64(0)
-
-		lines := w.pdf.SplitText(text, o.charsLimit)
-
-		for _, line := range lines {
-			w.pdf.SetXY(x, w.beforeY+compensation)
-			w.pdf.Cell(0, 0, line)
-
-			compensation += 5
-		}
-
-		w.beforeX = x + float64(len(lines[len(lines)-1]))
-		w.beforeY += compensation
-
-		return
-	}
-
-	if o.useLink {
-		linkId := w.pdf.AddLink()
-		w.pdf.SetLink(linkId, w.beforeY, 1)
-		w.pdf.Link(x, w.beforeY, 1, 1, linkId)
-	}
-
-	w.pdf.SetXY(x, w.beforeY)
-	w.pdf.Cell(0, 0, text)
-
-	w.beforeX = x + float64(len(text)*2)
-}
-
-func (w Writer) SetFont(familyStr, styleStr string, size float64) {
-	w.pdf.SetFont(familyStr, styleStr, size)
+	return &o, after
 }

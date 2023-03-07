@@ -1,5 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema",
+	"title": "User info schema",
 	"type": "object",
 	"properties": {
 		"fullName": {
@@ -8,19 +9,34 @@
 		"selfDescription": {
 			"type": "string"
 		},
+		"positionTitle": {
+			"type": "string"
+		},
 		"contact": {
 			"type": "object",
 			"properties": {
 				"email": {
 					"type": "string"
 				},
-				"web": {
-					"type": "string"
-				},
 				"phoneNumber": {
 					"type": "string"
+				},
+				"links": {
+					"type": "object",
+					"properties": {
+						"linkedIn": {
+							"type": "string"
+						},
+						"github": {
+							"type": "string"
+						},
+						"web": {
+							"type": "string"
+						}
+					}
 				}
-			}
+			},
+			"required": ["github"]
 		},
 		"hardSkills": {
 			"type": "array",

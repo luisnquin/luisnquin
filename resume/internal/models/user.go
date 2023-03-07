@@ -3,6 +3,7 @@ package models
 type (
 	UserInfo struct {
 		FullName        string          `json:"fullName"`
+		PositionTitle   string          `json:"positionTitle"`
 		SelfDescription string          `json:"selfDescription"`
 		Contact         Contact         `json:"contact"`
 		HardSkills      []string        `json:"hardSkills"`
@@ -13,8 +14,14 @@ type (
 
 	Contact struct {
 		Email       string `json:"email"`
-		Web         string `json:"web"`
+		Links       Links  `json:"links"`
 		PhoneNumber string `json:"phoneNumber"`
+	}
+
+	Links struct {
+		GitHub   string `json:"github"`
+		LinkedIn string `json:"linkedIn"`
+		Web      string `json:"web"`
 	}
 
 	JobExperience struct {

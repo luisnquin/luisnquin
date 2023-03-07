@@ -1,11 +1,16 @@
 {
 	"schema": "./_schema.json",
 	"fullName": "Luis Quinones Requelme",
+	"positionTitle": "Backend Developer",
 	"selfDescription": "With one year of experience, I have a background in software development and a passion for creating solutions that improve work processes and operations. I am highly dedicated and strive to continuously improve my skills and knowledge. I have experience working with SaaS servers and deploying, monitoring, and auditing software. Additionally, I have founded and managed a local company, I was focused on web page development and marketing. I am a collaborative problem-solver with a creative mindset and a commitment to transparency and diplomacy.",
 	"contact": {
 		"email": "lpaandres2020@gmail.com",
-		"web": "https://luisquinones.me",
-		"phoneNumber": "+51 912052391"
+		"phoneNumber": "+51 912052391",
+		"links": {
+			"github": "https://github.com/luisnquin",
+			"linkedIn": "https://linkedin.com/in/luisnquin",
+			"web": "https://luisquinones.me"
+		}
 	},
 	"hardSkills": [
 		"Go",
