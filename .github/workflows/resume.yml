@@ -5,7 +5,7 @@ on:
         branches:
             - main
         paths:
-            - resume/assets/**
+            - resume/out/**
 
 jobs:
     upload:
