@@ -6,28 +6,32 @@ import (
 	"net/url"
 	"os"
 
+	"github.com/go-cmd/cmd"
 	"github.com/goccy/go-json"
 	"github.com/luisnquin/luisnquin/resume/internal/logger"
 	"github.com/luisnquin/luisnquin/resume/internal/models"
 	"github.com/luisnquin/luisnquin/resume/internal/pdf"
 	"github.com/luisnquin/luisnquin/resume/internal/pdfutil"
+	"github.com/mitchellh/go-ps"
 )
 
 func main() {
 	dev := flag.Bool("dev", false, "runs the program in development mode")
 	flag.Parse()
 
-	targetFilePath := "./out/luis-quinones.pdf"
+	filePath := "./out/luis-quinones.pdf"
 
 	if *dev {
 		logger.Info().Msgf("started in development mode")
 
-		targetFilePath = "./build/resume.pdf"
+		filePath = "./build/resume.pdf"
+
+		openZathuraIfIsNotOpen(filePath)
 	}
 
-	logger.Trace().Str("file", targetFilePath).Msg("file created")
+	logger.Trace().Str("file", filePath).Msg("file created")
 
-	f, err := os.Create(targetFilePath)
+	f, err := os.Create(filePath)
 	try(err)
 
 	defer f.Close()
@@ -39,10 +43,12 @@ func main() {
 
 	try(json.Unmarshal(userInfo, owner))
 
-	try(generate(pdf.NewWriter(f), owner))
+	try(generatePdf(pdf.NewWriter(f), owner))
+
+	logger.Trace().Msg("pdf successfully generated")
 }
 
-func generate(writer pdf.Writer, owner *models.UserInfo) error {
+func generatePdf(writer pdf.Writer, owner *models.UserInfo) error {
 	writer.SetFont("Arial", pdfutil.Bold, 20)
 	writer.SetText(owner.FullName, 11, 15)
 	// Sad fact
@@ -101,6 +107,31 @@ func generate(writer pdf.Writer, owner *models.UserInfo) error {
 	}
 
 	return writer.Flush()
+}
+
+func openZathuraIfIsNotOpen(filePath string) {
+	processes, err := ps.Processes()
+	try(err)
+
+	found := false
+
+	for _, proc := range processes {
+		if proc.Executable() == ".zathura-wrappe" {
+			found = true
+
+			break
+		}
+	}
+
+	if !found {
+		logger.Info().Msg("zathura process not found, a new one will be created")
+
+		zathura := cmd.NewCmd("zathura", filePath)
+		zathura.Start()
+		logger.Info().Strs("cmd", zathura.Args).Msg("zathura has been started")
+	} else {
+		logger.Info().Msg("zathura is already running")
+	}
 }
 
 func try(err error) {
