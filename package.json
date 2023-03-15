@@ -12,10 +12,9 @@
 	"scripts": {
 		"deploy:me.web": "npm run deploy --workspace me/web",
 		"deploy:me.cli": "npm publish --workspace me/cli",
-		"deploy:cv": "bash ./resume/upload.sh",
+		"deploy:resume": "npm run deploy --workspace resume",
 		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
-		"build:resume": "npm run build --workspace resume",
 		"build:linker": "npm run build --workspace linker",
 		"dev:portfolio": "npm run dev --workspace portfolio",
 		"dev:resume": "npm run dev --workspace resume",
