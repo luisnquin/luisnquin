@@ -1,6 +1,6 @@
 name: Stylint
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
     eslint:
@@ -12,6 +12,16 @@ jobs:
                   node-version: "18"
             - run: npm ci
             - run: npx eslint .
+
+    prettier:
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "18"
+            - run: npm ci
+            - run: npx prettier --check "**/*.{js,json}"
 
     golangci:
         runs-on: ubuntu-20.04
@@ -27,12 +37,19 @@ jobs:
                   args: --issues-exit-code=1
                   working-directory: resume
 
-    prettier:
-        runs-on: ubuntu-20.04
+    gofumpt:
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-go@v3
               with:
-                  node-version: "18"
-            - run: npm ci
-            - run: npx prettier --check "**/*.{js,json}"
+                  go-version: ">=1.19.0"
+            - run: go install mvdan.cc/gofumpt@latest
+            - name: Check code format
+              run: |
+                  output=$(gofumpt -l -w -s .)
+                  if [ -n "$output" ]; then
+                      echo "Code format errors detected:"
+                      echo "$output"
+                      exit 1
+                  fi
