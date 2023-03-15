@@ -76,7 +76,7 @@ main() {
     target_directory="./resume/build/outputs"
     set -e
 
-    echo "cleaning '$S3_BUCKET_PATH' directory..."
+    echo "cleaning '$S3_BUCKET_PATH' S3 directory..."
 
     # TODO: list objects request
     # Ref: https://docs.aws.amazon.com/AmazonS3/latest/userguide/RESTAuthentication.html
