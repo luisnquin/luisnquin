@@ -18,4 +18,4 @@ jobs:
             S3_BUCKET_PATH: /resume/
         steps:
             - uses: actions/checkout@v3
-            - run: sh ./resume/upload.sh
+            - run: sh ./resume/scripts/upload.sh
