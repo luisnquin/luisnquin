@@ -2,6 +2,7 @@
 	"material-icon-theme.folders.associations": {
 		"linker": "Connection",
 		"portfolio": "Delta",
+		"outputs": "Dist",
 		"resume": "Admin",
 		"pdfutil": "Utils",
 		"logger": "Log",
