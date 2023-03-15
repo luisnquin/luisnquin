@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema",
-	"title": "User info schema",
+	"title": "CV info schema",
 	"type": "object",
 	"properties": {
 		"fullName": {
@@ -33,10 +33,11 @@
 						"web": {
 							"type": "string"
 						}
-					}
+					},
+					"required": ["github", "linkedIn", "web"]
 				}
 			},
-			"required": ["github"]
+			"required": ["email", "links", "phoneNumber"]
 		},
 		"hardSkills": {
 			"type": "array",

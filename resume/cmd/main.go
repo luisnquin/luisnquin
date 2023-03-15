@@ -1,13 +1,14 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"net/url"
 	"os"
 
 	"github.com/go-cmd/cmd"
-	"github.com/goccy/go-json"
 	"github.com/luisnquin/luisnquin/resume/internal/logger"
 	"github.com/luisnquin/luisnquin/resume/internal/models"
 	"github.com/luisnquin/luisnquin/resume/internal/pdf"
@@ -19,36 +20,72 @@ func main() {
 	dev := flag.Bool("dev", false, "runs the program in development mode")
 	flag.Parse()
 
-	filePath := "./out/luis-quinones.pdf"
-
-	if *dev {
-		logger.Info().Msgf("started in development mode")
-
-		filePath = "./build/resume.pdf"
-
-		openZathuraIfIsNotOpen(filePath)
+	inputFile := flag.Arg(0) // TODO: how to process batch
+	if inputFile == "" {
+		logger.Fatal().Msg("input file not specified")
 	}
 
-	logger.Trace().Str("file", filePath).Msg("file created")
+	logger.Trace().Str("input file", inputFile).Send()
 
-	f, err := os.Create(filePath)
+	if _, err := os.Stat(inputFile); err != nil {
+		logger.Fatal().Err(err).Send()
+	}
+
+	outputFile := flag.Arg(1)
+	if outputFile == "" {
+		logger.Fatal().Msg("output file not specified")
+	}
+
+	logger.Trace().Str("output file", outputFile).Send()
+
+	if *dev {
+		logger.Info().Msgf("in development mode")
+
+		process(inputFile, outputFile, true)
+	} else {
+		process(inputFile, outputFile, false)
+	}
+}
+
+func process(inputFile, outputFile string, openIfNeeded bool) {
+	f, err := os.Create(outputFile)
 	try(err)
 
 	defer f.Close()
 
-	userInfo, err := os.ReadFile("./assets/user_info.json")
-	try(err)
+	logger.Trace().Str("file", outputFile).Msg("file created")
 
-	owner := new(models.UserInfo)
+	if openIfNeeded {
+		openZathuraIfNeeded(outputFile)
+	}
 
-	try(json.Unmarshal(userInfo, owner))
+	userInfo, err := readUserInfo(inputFile)
+	if err != nil {
+		logger.Fatal().Err(err).Msg("while trying to input file")
+	}
 
-	try(generatePdf(pdf.NewWriter(f), owner))
+	try(generatePdf(f, userInfo))
 
 	logger.Trace().Msg("pdf successfully generated")
 }
 
-func generatePdf(writer pdf.Writer, owner *models.UserInfo) error {
+func usage() {
+}
+
+func readUserInfo(inputFile string) (*models.UserInfo, error) {
+	data, err := os.ReadFile(inputFile)
+	if err != nil {
+		logger.Fatal().Err(err).Msg("unexpected error reading input file")
+	}
+
+	userInfo := new(models.UserInfo)
+
+	return userInfo, json.Unmarshal(data, userInfo)
+}
+
+func generatePdf(w io.Writer, owner *models.UserInfo) error {
+	writer := pdf.NewWriter(w)
+
 	writer.SetFont("Arial", pdfutil.Bold, 20)
 	writer.SetText(owner.FullName, 11, 15)
 	// Sad fact
@@ -109,7 +146,7 @@ func generatePdf(writer pdf.Writer, owner *models.UserInfo) error {
 	return writer.Flush()
 }
 
-func openZathuraIfIsNotOpen(filePath string) {
+func openZathuraIfNeeded(filePath string) {
 	processes, err := ps.Processes()
 	try(err)
 
