@@ -5,17 +5,29 @@ on:
         branches:
             - main
         paths:
-            - resume/out/**
+            - resume/**
 
 jobs:
     upload:
         runs-on: ubuntu-20.04
         env:
-            AWS_ACCESS_SECRET: '${{ secrets.AWS_ACCESS_SECRET }}'
-            AWS_ACCESS_KEY: '${{ secrets.AWS_ACCESS_KEY }}'
+            AWS_ACCESS_SECRET: "${{ secrets.AWS_ACCESS_SECRET }}"
+            AWS_ACCESS_KEY: "${{ secrets.AWS_ACCESS_KEY }}"
             S3_BUCKET: luisnquin-hole
             S3_ACL: x-amz-acl:public-read
             S3_BUCKET_PATH: /resume/
         steps:
             - uses: actions/checkout@v3
+            - name: Set up Go
+              uses: actions/setup-go@v3
+              with:
+                  cache-dependency-path: ./go.sum
+                  go-version-file: ./go.mod
+                  go-version: ">=1.20.0"
+                  check-latest: false
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+            - run: npm run build:resume
+            - run: npm run start:resume
             - run: sh ./resume/scripts/upload.sh

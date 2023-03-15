@@ -15,12 +15,14 @@
 		"deploy:resume": "npm run deploy --workspace resume",
 		"build:portfolio": "npm run build --workspace portfolio",
 		"build:me.web": "npm run build --workspace me/web",
+		"build:resume": "npm run build --workspace resume",
 		"build:linker": "npm run build --workspace linker",
 		"dev:portfolio": "npm run dev --workspace portfolio",
 		"dev:resume": "npm run dev --workspace resume",
 		"dev:me.web": "npm run dev --workspace me/web",
 		"dev:me.cli": "npm run dev --workspace me/cli",
 		"dev:linker": "npm run dev --workspace linker",
+		"start:resume": "npm run start --workspace resume",
 		"style": "prettier -w .>/dev/null && gofumpt -w ."
 	},
 	"bin": {

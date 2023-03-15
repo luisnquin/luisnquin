@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/url"
 	"os"
+	"path/filepath"
 
 	"github.com/go-cmd/cmd"
 	"github.com/luisnquin/luisnquin/resume/internal/logger"
@@ -48,6 +49,8 @@ func main() {
 }
 
 func process(inputFile, outputFile string, openIfNeeded bool) {
+	try(os.MkdirAll(filepath.Dir(outputFile), 0o700))
+
 	f, err := os.Create(outputFile)
 	try(err)
 

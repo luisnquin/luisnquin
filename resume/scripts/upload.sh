@@ -73,7 +73,7 @@ upload_to_s3() {
 main() {
     echo "starting task to upload resume assets to S3 bucket '$S3_BUCKET'..."
 
-    target_directory="./resume/out"
+    target_directory="./resume/build/outputs"
     set -e
 
     echo "cleaning '$S3_BUCKET_PATH' directory..."

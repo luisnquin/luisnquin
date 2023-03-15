@@ -2,6 +2,8 @@
 	"name": "resume",
 	"version": "1.0.0",
 	"scripts": {
+		"build": "mkdir -p ./build/ && go build -o ./build/resumer ./cmd/",
+		"start": "./build/resumer ./configs/main.json ./build/outputs/luis-quinones.pdf",
 		"deploy": "bash ./scripts/upload.sh",
 		"dev": "air"
 	},
