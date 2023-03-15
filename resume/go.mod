@@ -5,7 +5,6 @@ go 1.20
 require (
 	github.com/go-cmd/cmd v1.4.1
 	github.com/go-pdf/fpdf v0.6.0
-	github.com/goccy/go-json v0.10.0
 	github.com/gookit/color v1.5.2
 	github.com/mitchellh/go-ps v1.0.0
 	github.com/rs/zerolog v1.29.0
