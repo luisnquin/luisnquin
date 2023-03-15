@@ -38,7 +38,7 @@ jobs:
                   working-directory: resume
 
     gofumpt:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-go@v3
@@ -49,7 +49,7 @@ jobs:
               run: |
                   output=$(gofumpt -l -w -s .)
                   if [ -n "$output" ]; then
-                      echo "Code format errors detected:"
-                      echo "$output"
+                      echo "\033[38;2;217;33;57mCode format errors detected in:"
+                      echo "$output\033[0m"
                       exit 1
                   fi
