@@ -14,13 +14,19 @@
 - Or just read this:
 
     ```nix
-    {
+    {pkgs}: {
       me = rec {
         matrix = "@luisnquin:matrix.org";
         os = "NixOS";
         betd = "🌂";
         # We don't fix the cause, we count panics
         kernelPanicsCounter = 3;
+        targetLanguages = with pkgs; [
+          go
+          nodejs # Indirect
+          rustc
+          vlang
+        ];
       };
     }
     ```
