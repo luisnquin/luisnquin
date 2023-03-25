@@ -66,8 +66,8 @@ function prettyLastCommit({ lastAuthor, lastDate }) {
 	lastDate = new Date(lastDate).toLocaleDateString('en-US', {
 		weekday: 'long',
 		year: 'numeric',
-		month: 'long',
 		day: 'numeric',
+		month: 'long',
 	})
 
 	return `Repository of page last updated by '${lastAuthor}' at ${lastDate}. You can visit it in https://github.com/luisnquin/luisnquin/.`
