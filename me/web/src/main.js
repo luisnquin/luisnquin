@@ -3,14 +3,12 @@
 import './styles.css'
 
 window.onload = () => {
-	loadPageInfo().then(console.log).catch(console.error)
+	loadRelatedRepositoryInfo().then(console.log).catch(console.error)
 }
 
-async function loadPageInfo() {
-	const [yesterdayDt, lastSave] = [
-		new Date().setDate(new Date().getDate() - 1),
-		localStorage.getItem('lastSave'),
-	]
+async function loadRelatedRepositoryInfo() {
+	const yesterdayDt = new Date().setDate(new Date().getDate() - 1)
+	const lastSave = localStorage.getItem('lastSave')
 
 	if (lastSave === null || new Date(lastSave) < yesterdayDt) {
 		try {
@@ -23,14 +21,9 @@ async function loadPageInfo() {
 		}
 	}
 
-	const [lastAuthor, lastDate] = [
-		localStorage.getItem('lastAuthor'),
-		localStorage.getItem('lastDate'),
-	]
-
 	return prettyLastCommit({
-		lastAuthor: lastAuthor !== null ? lastAuthor : 'luisnquin',
-		lastDate: lastDate !== null ? lastDate : '0000-00-00T00:00:00Z',
+		lastAuthor: localStorage.getItem('lastAuthor'),
+		lastDate: localStorage.getItem('lastDate'),
 	})
 }
 
@@ -39,9 +32,11 @@ async function getLastCommit() {
 		'https://api.github.com/repos/luisnquin/luisnquin/commits?per_page=1'
 	)
 	if (!response.ok) {
-		throw new Error('response is not ok')
+		throw new Error(
+			`⚠️ request finished with status code ${response.status}`
+		)
 	} else if (response.status != 200) {
-		throw new Error(`unexpected status ${response.status}`)
+		throw new Error(`⚠️ unexpected status code ${response.status}`)
 	}
 
 	const [repo] = await response.json()
@@ -62,7 +57,7 @@ function saveCommitInLocalStorage({ lastAuthor, lastDate }) {
 	localStorage.setItem('lastSave', new Date().toISOString())
 }
 
-function prettyLastCommit({ lastAuthor, lastDate }) {
+function prettyLastCommit({ lastAuthor = 'luisnquin', lastDate = null }) {
 	lastDate = new Date(lastDate).toLocaleDateString('en-US', {
 		weekday: 'long',
 		year: 'numeric',
@@ -70,5 +65,5 @@ function prettyLastCommit({ lastAuthor, lastDate }) {
 		month: 'long',
 	})
 
-	return `Repository of page last updated by '${lastAuthor}' at ${lastDate}. You can visit it in https://github.com/luisnquin/luisnquin/.`
+	return `🦀 Repository of page last updated by '${lastAuthor}' at ${lastDate}. You can visit it in https://github.com/luisnquin/luisnquin.`
 }
