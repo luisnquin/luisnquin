@@ -1,6 +1,6 @@
 'use strict'
 
-import './styles.css'
+import './../css/styles.css'
 
 window.onload = () => {
 	loadRelatedRepositoryInfo().then(console.log).catch(console.error)
