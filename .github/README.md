@@ -17,13 +17,13 @@
     {pkgs}: {
       me = rec {
         matrix = "@luisnquin:matrix.org";
+        born = "November 23, 2002";
         os = "NixOS";
         betd = "🌂";
-        # We don't fix the cause, we count panics
-        kernelPanicsCounter = 3;
+        kernelPanics = 3;
         targetLanguages = with pkgs; [
           go
-          nodejs # Indirect
+          nodejs # indirect
           rustc
           vlang
         ];
