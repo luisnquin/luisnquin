@@ -1,8 +1,8 @@
-# Hmm
+# Hmm 🎋
 
 ![party-gopher](https://media.giphy.com/media/Gh1Jm4GbZU2tH7PHn4/giphy.gif)
 
-## whoami
+## About me
 
 - Execute
 
@@ -21,11 +21,12 @@
         os = "NixOS";
         betd = "🌂";
         kernelPanics = 3;
-        targetLanguages = with pkgs; [
-          go
+        languages = with pkgs; [
+          aspellDicts.en
+          aspellDicts.es
           nodejs # indirect
           rustc
-          vlang
+          go
         ];
       };
     }
