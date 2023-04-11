@@ -14,13 +14,14 @@
 - Or just read this:
 
     ```nix
-    {pkgs}: {
+   {pkgs}: {
       me = rec {
         matrix = "@luisnquin:matrix.org";
         born = "November 23, 2002";
         os = "NixOS";
         betd = "🌂";
         kernelPanics = 3;
+        blueScreens = 6;
         languages = with pkgs; [
           aspellDicts.en
           aspellDicts.es
