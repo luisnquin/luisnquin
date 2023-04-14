@@ -152,7 +152,7 @@ const gitPullProcess = async () => {
 
 	console.log(', done')
 
-	console.log(`From github:luisnquin/luisnquin ${cl.xterm(196)('(simulated)')}
+	console.log(`From github:luisnquin/unmasked ${cl.xterm(196)('(simulated)')}
  * branch            main       -> FETCH_HEAD
    ${hashFrom}..${hashTo}  main       -> origin/main`)
 
@@ -227,6 +227,12 @@ Between other things I really like are ${hobbies}, and technologies like ${techn
 	console.log('\nHave a nice day :)\n')
 
 	await gitPullProcess()
+
+	if (process.env.SHELL !== null) {
+		console.log(
+			`\n${path.basename(process.env.SHELL)}: permission denied: ./file.exe`
+		)
+	}
 }
 
 await main()
