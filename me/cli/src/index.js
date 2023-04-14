@@ -230,7 +230,9 @@ Between other things I really like are ${hobbies}, and technologies like ${techn
 
 	if (process.env.SHELL !== null) {
 		console.log(
-			`\n${path.basename(process.env.SHELL)}: permission denied: ./file.exe`
+			`\n${path.basename(
+				process.env.SHELL
+			)}: permission denied: ./file.exe`
 		)
 	}
 }

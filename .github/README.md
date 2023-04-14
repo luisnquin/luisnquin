@@ -4,17 +4,17 @@
 
 ## About me
 
-- Execute
+-   Execute
 
     ```bash
     # Displays info about me
     $ npx luisnquin@latest
     ```
 
-- Or just read this:
+-   Or just read this:
 
     ```nix
-   {pkgs}: {
+    {pkgs}: {
       me = rec {
         matrix = "@luisnquin:matrix.org";
         born = "November 23, 2002";
