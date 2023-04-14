@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 'use strict'
 
-import linker from 'terminal-link'
+import TypeWriter from 'node-typewriter'
 import imager from 'terminal-image'
+import linker from 'terminal-link'
+import crypto from 'crypto'
 import cl from 'cli-color'
 import path from 'path'
-import crypto from 'crypto'
 
 const data = {
 	userName: 'luisnquin',
-	fullName: 'Luis Quiñones Requelme',
+	fullName: 'Luis Quiñones',
 	job: {
 		url: 'https://wiserskills.com',
 		location: 'France, Paris',
@@ -30,12 +31,8 @@ const data = {
 			label: cl.xterm(33)('LinkedIn'),
 		},
 		{
-			label: cl.xterm(110)('Portfolio'),
-			url: 'https://example.com',
-		},
-		{
 			url: 'https://luisquinones.me',
-			label: cl.xterm(37)('This but in browser'),
+			label: cl.xterm(37)('About me'),
 		},
 	],
 	favoriteTechnologies: [
@@ -48,7 +45,6 @@ const data = {
 	hobbies: ['Videogames', 'Movies'],
 }
 
-// Some color definitions
 const magicMagenta = cl.xterm(141)
 const companyColor = cl.xterm(214)
 const sparkOfLife = cl.xterm(189)
@@ -94,7 +90,7 @@ const changesList = [
 		deletions: Math.floor(Math.random() * 40),
 	},
 	{
-		name: '.microwaverc' + '   ',
+		name: 'master.exe' + '     ',
 		additions: Math.floor(Math.random() * 70),
 		deletions: Math.floor(Math.random() * 40),
 	},
@@ -107,12 +103,56 @@ const biggestChange = changesList
 	.at(0)
 
 const gitPullProcess = async () => {
-	const hashFrom = getRandomGitHash()
-	const hashTo = getRandomGitHash()
+	const [hashFrom, hashTo] = [getRandomGitHash(), getRandomGitHash()]
 
-	console.log(`\nFrom github:luisnquin/luisnquin ${cl.xterm(196)(
-		'(simulated)'
-	)}
+	for (let index = 1; index <= changesList.length; index++) {
+		await sleep(200)
+		process.stdout.write(`\rremote: Enumerating objects: ${index}`)
+	}
+
+	console.log(', done')
+
+	const simulateProgress = async (leftText, ms = 2) => {
+		for (let i = 0; i <= 100; i++) {
+			await sleep(ms)
+
+			const percentage = Math.round(
+				((i / 100) * 100) / changesList.length / 10
+			)
+
+			process.stdout.write(
+				`\r${leftText}: ${i}% (${percentage}/${changesList.length})`
+			)
+		}
+
+		console.log(', done')
+	}
+
+	await simulateProgress('remote: Counting objects')
+	await simulateProgress('remote: Compressing objects')
+
+	const packageSize = (Math.random() * (1200 - 500) + 0).toFixed(2)
+	let velocity
+
+	for (let i = 0; i <= 100; i++) {
+		await sleep(10)
+
+		const percentage = Math.round(
+			((i / 100) * 100) / changesList.length / 10
+		)
+
+		if (velocity == null || i % 5 == 0) {
+			velocity = (Math.random() * (200 - 0) + 0).toFixed(2)
+		}
+
+		process.stdout.write(
+			`\rUnpacking objects: ${i}% (${percentage}/${changesList.length}), ${packageSize} KiB | ${velocity} KiBs`
+		)
+	}
+
+	console.log(', done')
+
+	console.log(`From github:luisnquin/luisnquin ${cl.xterm(196)('(simulated)')}
  * branch            main       -> FETCH_HEAD
    ${hashFrom}..${hashTo}  main       -> origin/main`)
 
@@ -161,28 +201,32 @@ const main = async () => {
 	)
 
 	const prettyCompany = linker(companyColor(data.job.company), data.job.url)
-	const hobbies = favoriteAndPretty.hobbies
-	const technologies = favoriteAndPretty.technologies
+	const { technologies, hobbies } = favoriteAndPretty
 
-	console.log(`Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
-		data.fullName
-	} ${intensePink('||')} ${data.userName} 🫐
-I'm a ${magicMagenta(
+	await TypeWriter(
+		`Hello ${skyBlue(process.env.USER || 'you')}! My name is ${
+			data.fullName
+		} ${intensePink('||')} ${data.userName} 🫐\n\n`,
+		1200
+	)
+
+	await TypeWriter(`I'm a ${magicMagenta(
 		data.job.title
 	)} at ${prettyCompany} which is located in ${sparkOfLife(data.job.location)}
 
-I really like open source stuff and things that make me feel more comfortable, apparently an ${infiniteWord} journey
+I like open source stuff and things that make me feel more comfortable, apparently an ${infiniteWord} journey
 
-... wait what, the reason why ${infiniteWord} is blue? It's poetic but I googled it
+Between other things I really like are ${hobbies}, and technologies like ${technologies}\n\n`)
 
-Between other things I really like are ${hobbies}, and technologies like ${technologies}`)
+	console.log(
+		`\nSocial media:\n - ${data.socialMedia
+			.map((item) => linker(item.label, item.url))
+			.join('\n - ')}`
+	)
+
+	console.log('\nHave a nice day :)\n')
 
 	await gitPullProcess()
-
-	console.log(`\nSocial media:
- - ${data.socialMedia.map((item) => linker(item.label, item.url)).join('\n - ')}
-
-Have a nice day :)`)
 }
 
 await main()
