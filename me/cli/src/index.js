@@ -90,7 +90,7 @@ const changesList = [
 		deletions: Math.floor(Math.random() * 40),
 	},
 	{
-		name: 'master.exe' + '     ',
+		name: 'file.exe' + '     ',
 		additions: Math.floor(Math.random() * 70),
 		deletions: Math.floor(Math.random() * 40),
 	},
@@ -235,6 +235,8 @@ Between other things I really like are ${hobbies}, and technologies like ${techn
 			)}: permission denied: ./file.exe`
 		)
 	}
+
+	console.log('\ndon\'t misunderstand that ;(')
 }
 
 await main()
