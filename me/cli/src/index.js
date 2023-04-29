@@ -236,7 +236,7 @@ Between other things I really like are ${hobbies}, and technologies like ${techn
 		)
 	}
 
-	console.log('\ndon\'t misunderstand that ;(')
+	console.log('\ndo not misunderstand that ;(')
 }
 
 await main()
