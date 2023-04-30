@@ -18,7 +18,7 @@ jobs:
               with:
                   token: ${{ secrets.NPM_TOKEN }}
                   registry: https://registry.npmjs.org/
-                  package: ./me/cli/package.json
+                  package: ./about-me/cli/package.json
                   check-version: true
                   access: public
                   tag: latest

@@ -17,4 +17,4 @@ jobs:
                   node-version: 16
             - run: npm install
             - run: curl -sL https://firebase.tools | bash
-            - run: npm run deploy:me.web -- --token "$FIREBASE_TOKEN"
+            - run: npm run deploy:about-me.web -- --token "$FIREBASE_TOKEN"
