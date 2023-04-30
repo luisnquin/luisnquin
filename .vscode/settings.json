@@ -2,11 +2,11 @@
 	"material-icon-theme.folders.associations": {
 		"linker": "Connection",
 		"portfolio": "Delta",
+		"about-me": "Stack",
+		"pdfutil": "Utils",
 		"outputs": "Dist",
 		"resume": "Admin",
-		"pdfutil": "Utils",
-		"logger": "Log",
-		"me": "Stack"
+		"logger": "Log"
 	},
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",

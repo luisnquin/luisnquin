@@ -4,12 +4,12 @@ on:
         branches:
             - main
         paths:
-            - me/web/**
+            - about-me/web/**
 jobs:
     deploy:
         runs-on: ubuntu-20.04
         env:
-            FIREBASE_TOKEN: '${{ secrets.FIREBASE_TOKEN }}'
+            FIREBASE_TOKEN: "${{ secrets.FIREBASE_TOKEN }}"
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
