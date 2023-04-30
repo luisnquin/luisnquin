@@ -6,9 +6,8 @@
 	},
 	"settings": {},
 	"extends": [
-		"eslint:recommended",
+		"eslint:recommended"
 		// "plugin:react/recommended",
-		"./linker/.eslintrc.json"
 	],
 	"parserOptions": {
 		"ecmaVersion": 2022,
