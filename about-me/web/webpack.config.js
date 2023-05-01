@@ -29,7 +29,7 @@ module.exports = {
 	devServer: {
 		port: 5900,
 		liveReload: true,
-		hot: false
+		hot: false,
 	},
 	plugins: [
 		new HTMLWebPackPlugin({
