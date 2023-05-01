@@ -28,6 +28,8 @@ module.exports = {
 	stats: 'minimal',
 	devServer: {
 		port: 5900,
+		liveReload: true,
+		hot: false
 	},
 	plugins: [
 		new HTMLWebPackPlugin({
