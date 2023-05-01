@@ -67,24 +67,24 @@ main p {
 	gap: 10px;
 }
 
-#contact-means {
+#contact {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
 }
 
-#contact-means ul {
+#contact ul {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	gap: 7px;
 }
 
-#contact-means ul li p {
+#contact ul li p {
 	font-size: large;
 }
 
-#contact-means ul li p a {
+#contact ul li p a {
 	font-size: medium;
 }
 
