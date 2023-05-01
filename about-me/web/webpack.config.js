@@ -25,6 +25,7 @@ module.exports = {
 			},
 		],
 	},
+	stats: 'minimal',
 	devServer: {
 		port: 5900,
 	},
