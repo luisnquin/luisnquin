@@ -21,7 +21,7 @@
         os = "NixOS";
         betd = "🌂";
         kernelPanics = 3;
-        blueScreens = 7;
+        blueScreens = 8;
         languages = with pkgs; [
           aspellDicts.en
           aspellDicts.es
