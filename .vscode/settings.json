@@ -13,5 +13,6 @@
 		"editor.formatOnSave": true,
 		"editor.formatOnSaveMode": "file",
 		"editor.formatOnType": false
-	}
+	},
+	"cSpell.words": ["spicetify"]
 }
