@@ -25,6 +25,7 @@
         languages = with pkgs; [
           aspellDicts.en
           aspellDicts.es
+          python3 # sometimes
           nodejs # indirect
           rustc
           go
