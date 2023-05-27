@@ -27,6 +27,7 @@
           aspellDicts.es
           python3 # sometimes
           nodejs # indirect
+          ocaml
           rustc
           go
         ];
