@@ -1,36 +1,15 @@
-# Hmm
+# About Me
 
-![party-gopher](https://media.giphy.com/media/Gh1Jm4GbZU2tH7PHn4/giphy.gif)
+Hi, my name is Luis Quiñones, as a developer I have a deep appreciation for the art and science of programming. I have dabbled in various programming
+paradigms, exploring their unique features and applications. I appreciate the impact that diversity in every way has in our existence, it allows us
+to constantly innovate and then create a better future.
 
-## About me
+I'm currently interested in things like **LLM's**, **graphics programming** and **cloud computing** but really in how everything's almost totally [wired](https://www.youtube.com/watch?v=0xeGE_5kSI0).
 
-- Execute
+Some things you might expect to be familiar with are: Go, NixOS, Rust, OCaml, AWS, JavaScript, Python and etcétera.
 
-    ```bash
-    # Displays info about me
-    $ npx luisnquin@latest
-    ```
+## Contact
 
-- Or just read this:
-
-    ```nix
-    {pkgs}: {
-      me = rec {
-        matrix = "@luisnquin:matrix.org";
-        born = "November 23, 2002";
-        os = "NixOS";
-        betd = "🌂";
-        kernelPanics = 3;
-        blueScreens = 8;
-        languages = with pkgs; [
-          aspellDicts.en
-          aspellDicts.es
-          python3 # sometimes
-          nodejs # indirect
-          ocaml
-          rustc
-          go
-        ];
-      };
-    }
-    ```
+- Email: <lpaandres2020@gmail.com>
+- Matrix: [@luisnquin:matrix.org](matrix:u/luisnquin:matrix.org)
+- Discord: luisnquin
