@@ -11,4 +11,3 @@ Some things you might expect to be familiar with are: Go, NixOS, Rust, OCaml, AW
 ## Contact
 
 - Email: <lpaandres2020@gmail.com>
-- Matrix: [@luisnquin:matrix.org](matrix:u/luisnquin:matrix.org)
