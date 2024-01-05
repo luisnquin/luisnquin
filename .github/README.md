@@ -1,6 +1,6 @@
 # About Me
 
-Hi, I'm Luis Quiñones, as a developer I have a deep appreciation for the art and science of programming. I've dabbled in various programming paradigms,
+As a developer I have a deep appreciation for the art and science of programming. I've dabbled in various programming paradigms,
 exploring their unique features and applications. I appreciate the impact that diversity in every way has in our existence, it allows us
 to constantly innovate and then create a better future.
 
