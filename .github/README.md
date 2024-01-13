@@ -1,8 +1,7 @@
 Hey
 
 I'm a software developer, some topics I'm interested for are:
-- [Go](https://go.dev/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Go](https://go.dev/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [OCaml](https://ocaml.org/)
 - [Nix & NixOS](https://nixos.org/) ecosystems
 - [Biological Enginnering](https://en.wikipedia.org/wiki/Biological_engineering)
 - [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
