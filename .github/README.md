@@ -1,9 +1,12 @@
-# About Me
+Hey
 
-As a developer I have a deep appreciation for the art and science of programming. I've dabbled in various programming paradigms,
-exploring their unique features and applications. I appreciate the impact that diversity in every way has in our existence, it allows us
-to constantly innovate and then create a better future.
+I'm a software developer, some topics I'm interested for are:
+- [Go](https://go.dev/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Nix & NixOS](https://nixos.org/) ecosystems
+- [Biological Enginnering](https://en.wikipedia.org/wiki/Biological_engineering)
+- [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
+- [Cloud Computing](https://www.redhat.com/en/topics/cloud)
+- [Free Software](https://www.fsf.org/about/what-is-free-software)
 
-I'm currently interested in the **Nix Ecosystem**, **LLM's**, **graphics programming** and **cloud computing** but really in how everything's almost totally [wired](https://www.youtube.com/watch?v=0xeGE_5kSI0).
-
-Some things you might expect to be familiar with are: Go, NixOS, Rust, OCaml, AWS, JavaScript, Python and etcétera.
+In the open-source community, I've contributed to projects that resonate with my passions, including [Nixpkgs](https://github.com/nixos/nixpkgs) and [Home manager](https://github.com/nix-community/home-manager).
