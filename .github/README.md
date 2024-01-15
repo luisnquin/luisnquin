@@ -1,6 +1,6 @@
 Hi
 
-I'm a software developer, some topics I'm interested for are:
+As a software developer, some topics I'm interested for are:
 - [Go](https://go.dev/), [Rust](https://www.rust-lang.org/), [OCaml](https://ocaml.org/) and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) ecosystems
 - [Nix & NixOS](https://nixos.org/)
 - [Biological Enginnering](https://en.wikipedia.org/wiki/Biological_engineering)
