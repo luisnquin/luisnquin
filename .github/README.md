@@ -11,4 +11,4 @@ As a software developer, some topics I'm interested for are:
 
 In the open-source community, I've contributed to projects that resonate with my passions, including [Nixpkgs](https://github.com/nixos/nixpkgs) and [Home manager](https://github.com/nix-community/home-manager).
 
-[![gpg](https://img.shields.io/badge/gpg-0xd6fc92fd3a094af8-313131?style=flat&labelColor=545454&color=313131)](https://github.com/luisnquin.gpg)
+[![pgp](https://img.shields.io/badge/pgp-0xd6fc92fd3a094af8-313131?style=flat&labelColor=545454&color=313131)](https://github.com/luisnquin.gpg)
