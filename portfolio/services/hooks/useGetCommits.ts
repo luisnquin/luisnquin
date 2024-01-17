@@ -1,4 +1,4 @@
-import { UserCommitsInfo } from '../../models/userCommits.model'
+import { UserCommitsInfo } from '../../models/github'
 import { GitHubService } from '../fetchers'
 import { useEffect, useState } from 'react'
 

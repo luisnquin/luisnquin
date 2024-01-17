@@ -1,4 +1,4 @@
-import { UserCommitsInfo } from '../../models/userCommits.model'
+import { UserCommitsInfo } from '../../models/github'
 import { LocalStorageService } from './service'
 
 export function getCommitsInfoFromStore(): Promise<UserCommitsInfo> {

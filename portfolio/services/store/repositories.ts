@@ -1,4 +1,4 @@
-import { Repository } from '../../models/repository.model'
+import { Repository } from '../../models/github/repository.model'
 import { LocalStorageService } from './service'
 
 /**

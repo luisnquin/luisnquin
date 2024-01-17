@@ -1,5 +1,5 @@
-import { UserCommitsInfo } from '../../models/userCommits.model'
-import { Repository } from '../../models/repository.model'
+import { UserCommitsInfo } from '../../models/github'
+import { Repository } from '../../models/github'
 
 class GitHubService {
   baseUrl: string = 'https://api.github.com'
