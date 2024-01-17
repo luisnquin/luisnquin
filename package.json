@@ -1,48 +1,48 @@
 {
-	"name": "luisnquin",
-	"version": "1.9.0",
-	"description": "Info about me",
-	"workspaces": [
-		"portfolio",
-		"about-me/cli",
-		"about-me/web",
-		"resume"
-	],
-	"scripts": {
-		"deploy:about-me.web": "npm run deploy --workspace about-me/web",
-		"deploy:about-me.cli": "npm publish --workspace about-me/cli",
-		"deploy:resume": "npm run deploy --workspace resume",
-		"build:portfolio": "npm run build --workspace portfolio",
-		"build:about-me.web": "npm run build --workspace about-me/web",
-		"build:resume": "npm run build --workspace resume",
-		"dev:portfolio": "npm run dev --workspace portfolio",
-		"dev:resume": "npm run dev --workspace resume",
-		"dev:about-me.web": "npm run dev --workspace about-me/web",
-		"dev:about-me.cli": "npm run dev --workspace about-me/cli",
-		"start:resume": "npm run start --workspace resume",
-		"style": "prettier -w .>/dev/null && gofumpt -w ."
-	},
-	"bin": {
-		"luisnquin": "./me/cli/src/index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/luisnquin/luisnquin.git"
-	},
-	"author": "luisnquin",
-	"contributors": [
-		"luisnquin"
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/luisnquin/luisnquin/issues"
-	},
-	"homepage": "https://github.com/luisnquin/luisnquin#readme",
-	"devDependencies": {
-		"eslint": "8.20.0",
-		"eslint-plugin-react": "^7.32.2",
-		"prettier": "^2.7.1",
-		"prettier-plugin-astro": "^0.8.0",
-		"standard": "^17.0.0"
-	}
+  "name": "luisnquin",
+  "version": "1.9.0",
+  "description": "Info about me",
+  "workspaces": [
+    "portfolio",
+    "about-me/cli",
+    "about-me/web",
+    "resume"
+  ],
+  "scripts": {
+    "deploy:about-me.web": "npm run deploy --workspace about-me/web",
+    "deploy:about-me.cli": "npm publish --workspace about-me/cli",
+    "deploy:resume": "npm run deploy --workspace resume",
+    "build:portfolio": "npm run build --workspace portfolio",
+    "build:about-me.web": "npm run build --workspace about-me/web",
+    "build:resume": "npm run build --workspace resume",
+    "dev:portfolio": "npm run dev --workspace portfolio",
+    "dev:resume": "npm run dev --workspace resume",
+    "dev:about-me.web": "npm run dev --workspace about-me/web",
+    "dev:about-me.cli": "npm run dev --workspace about-me/cli",
+    "start:resume": "npm run start --workspace resume",
+    "style": "prettier -w .>/dev/null && gofumpt -w ."
+  },
+  "bin": {
+    "luisnquin": "./me/cli/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisnquin/luisnquin.git"
+  },
+  "author": "luisnquin",
+  "contributors": [
+    "luisnquin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luisnquin/luisnquin/issues"
+  },
+  "homepage": "https://github.com/luisnquin/luisnquin#readme",
+  "devDependencies": {
+    "eslint": "8.20.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.8.0",
+    "standard": "^17.0.0"
+  }
 }

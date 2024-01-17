@@ -1,18 +1,18 @@
 {
-	"material-icon-theme.folders.associations": {
-		"portfolio": "Delta",
-		"about-me": "Stack",
-		"pdfutil": "Utils",
-		"outputs": "Dist",
-		"resume": "Admin",
-		"logger": "Log"
-	},
-	"[astro]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnPaste": false,
-		"editor.formatOnSave": true,
-		"editor.formatOnSaveMode": "file",
-		"editor.formatOnType": false
-	},
-	"cSpell.words": ["spicetify"]
+  "material-icon-theme.folders.associations": {
+    "portfolio": "Delta",
+    "about-me": "Stack",
+    "pdfutil": "Utils",
+    "outputs": "Dist",
+    "resume": "Admin",
+    "logger": "Log"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false
+  },
+  "cSpell.words": ["spicetify"]
 }
