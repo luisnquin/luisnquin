@@ -1,7 +1,19 @@
 import style from '../styles/MainSkills.module.css'
 import Image from 'next/future/image'
 
-export function MainSkills({ skills }) {
+interface Skill {
+  name: string
+  description: string
+  src: string
+  width?: number
+  height?: number
+}
+
+interface Props {
+  skills: Skill[]
+}
+
+export function MainSkills({ skills }: Props) {
   return (
     <section
       style={{
@@ -27,11 +39,9 @@ export function MainSkills({ skills }) {
         }}
       >
         {skills.map((skill) => {
-          const { name, description, src } = skill
-
           return (
             <div
-              key={name}
+              key={skill.name}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -42,10 +52,10 @@ export function MainSkills({ skills }) {
             >
               <Image
                 className={style.SkillLogo}
-                src={src}
-                alt={name}
-                width={75}
-                height={75}
+                src={skill.src}
+                alt={skill.name}
+                width={skill.width ? skill.width : 75}
+                height={skill.height ? skill.height : 75}
               />
 
               <div
@@ -56,7 +66,7 @@ export function MainSkills({ skills }) {
                   gap: '5px',
                 }}
               >
-                <h4>{name}</h4>
+                <h4>{skill.name}</h4>
                 <p
                   style={{
                     fontWeight: 'bold',
@@ -65,7 +75,7 @@ export function MainSkills({ skills }) {
                     fontSize: 14,
                   }}
                 >
-                  {description}
+                  {skill.description}
                 </p>
               </div>
             </div>
