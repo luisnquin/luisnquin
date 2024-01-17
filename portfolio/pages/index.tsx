@@ -3,10 +3,7 @@ import { useGetCVInfo } from '../services/hooks/useGetCVInfo'
 import { HeroCommand } from '../components/HeroCommand.jsx'
 import { MainSkills } from '../components/MainSkills.jsx'
 import { ScrollDown } from '../components/ScrollDown.jsx'
-import { ToastContainer, toast } from 'react-toastify'
 import styles from '../styles/Home.module.css'
-import 'react-toastify/dist/ReactToastify.css'
-import { useEffect } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
 
@@ -68,17 +65,6 @@ const skills = [
 const jobExperiences = []
 
 export default function Home() {
-	useEffect(() => {
-		const [emoji, eventName] = getDateEvent()
-
-		toast(`Happy ${eventName}! ${emoji}`, {
-			type: 'default',
-			delay: 500,
-			theme: 'light',
-			icon: false,
-		})
-	}, [])
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -119,7 +105,6 @@ export default function Home() {
 			<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{' '}
 			<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{' '}
 			<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-			<ToastContainer limit={1} />
 		</div>
 	)
 }
