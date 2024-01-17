@@ -5,7 +5,7 @@ import { Repository } from './Repository.jsx'
 import { Code } from 'react-content-loader'
 
 export function GithubActivity({ title }) {
-  const { data, err, loading } = useGetRepositories(6)
+  const { data, err, loading } = useGetRepositories('luisnquin', 6)
   if (err) {
     console.error(err)
     return
