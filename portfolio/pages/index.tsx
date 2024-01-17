@@ -3,7 +3,7 @@ import { HeroCommand } from '../components/HeroCommand.jsx'
 import { MainSkills } from '../components/MainSkills.tsx'
 import { ScrollDown } from '../components/ScrollDown.jsx'
 import styles from '../styles/Home.module.css'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Head from 'next/head'
 
 import data from '../data.json' assert { type: 'json' }

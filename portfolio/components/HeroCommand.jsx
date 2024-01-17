@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/HeroCommand.module.css'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 export function HeroCommand({ command }) {
   const [copied, setCopied] = useState(false)

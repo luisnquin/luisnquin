@@ -1,5 +1,5 @@
 import style from '../styles/MainSkills.module.css'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 interface Skill {
   name: string
