@@ -1,6 +1,6 @@
 import { GithubActivity } from '../components/GithubActivity.jsx'
 import { HeroCommand } from '../components/HeroCommand.jsx'
-import { MainSkills } from '../components/MainSkills.jsx'
+import { MainSkills } from '../components/MainSkills.tsx'
 import { ScrollDown } from '../components/ScrollDown.jsx'
 import styles from '../styles/Home.module.css'
 import Image from 'next/future/image'
@@ -58,6 +58,12 @@ const skills = [
     name: 'AWS',
     description: 'Cloud services',
     src: '/aws.png',
+  },
+  {
+    name: 'Nix && NixOS',
+    description: 'Package manager and operative system',
+    src: '/nix.png',
+    width: 65, height: 65,
   },
 ]
 
