@@ -1,10 +1,9 @@
 import { GithubActivity } from '../components/GithubActivity.jsx'
-import { useGetCVInfo } from '../services/hooks/useGetCVInfo'
 import { HeroCommand } from '../components/HeroCommand.jsx'
 import { MainSkills } from '../components/MainSkills.jsx'
 import { ScrollDown } from '../components/ScrollDown.jsx'
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import Head from 'next/head'
 
 // import { JobExperience } from '../components/JobExperience.jsx'

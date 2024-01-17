@@ -3,6 +3,7 @@ import style from '../styles/Repository.module.css'
 import en from 'javascript-time-ago/locale/en'
 import TimeAgo from 'javascript-time-ago'
 import { useState } from 'react'
+import Image from 'next/future/image'
 
 TimeAgo.addLocale(en)
 

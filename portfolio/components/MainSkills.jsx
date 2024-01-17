@@ -1,5 +1,5 @@
 import style from '../styles/MainSkills.module.css'
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 export function MainSkills({ skills }) {
   return (
