@@ -5,12 +5,12 @@ import {
 import { Repository } from '../../models/repository.model'
 import { useState, useEffect } from 'react'
 
-export function useGetRepositories(): {
+export function useGetRepositories(maxCount: number = 6): {
   data: Repository[]
   error: null
   loading: boolean
 } {
-  const url = `https://api.github.com/users/luisnquin/repos?accept=application/vnd.github.v3+json&per_page=6&sort=pushed`
+  const url = `https://api.github.com/users/luisnquin/repos?accept=application/vnd.github.v3+json&per_page=${maxCount}&sort=pushed`
 
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
