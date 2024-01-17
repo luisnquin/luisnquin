@@ -1,4 +1,4 @@
-name: Build portfolio built with Next.js
+name: Portfolio built with Next.js
 
 on: [push, pull_request]
 
