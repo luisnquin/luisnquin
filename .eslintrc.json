@@ -1,30 +1,30 @@
 {
-	"env": {
-		"browser": true,
-		"es2021": true,
-		"node": true
-	},
-	"settings": {},
-	"extends": [
-		"eslint:recommended"
-		// "plugin:react/recommended",
-	],
-	"parserOptions": {
-		"ecmaVersion": 2022,
-		"sourceType": "module",
-		"ecmaFeatures": {
-			"jsx": true
-		}
-	},
-	"rules": {
-		"indent": ["warn", "tab"],
-		"linebreak-style": ["error", "unix"],
-		"no-unused-vars": "warn",
-		"quotes": ["error", "single"],
-		"semi": ["error", "never"],
-		"react/react-in-jsx-scope": "off",
-		"react/prop-types": "off"
-		//"react/no-unknown-property": ["off", { "ignore": ["astro"] }],
-		//"react/no-unescaped-entities": ["off", { "forbid": [">", "}"] }]
-	}
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "settings": {},
+  "extends": [
+    "eslint:recommended"
+    // "plugin:react/recommended",
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "indent": ["warn", 2],
+    "linebreak-style": ["error", "unix"],
+    "no-unused-vars": "warn",
+    "quotes": ["warn", "single"],
+    "semi": ["error", "never"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+    //"react/no-unknown-property": ["off", { "ignore": ["astro"] }],
+    //"react/no-unescaped-entities": ["off", { "forbid": [">", "}"] }]
+  }
 }
