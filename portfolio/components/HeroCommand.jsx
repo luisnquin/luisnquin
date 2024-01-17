@@ -1,10 +1,19 @@
+import { useState } from 'react'
 import styles from '../styles/HeroCommand.module.css'
 import Image from 'next/future/image'
 
 export function HeroCommand({ command }) {
+  const [copied, setCopied] = useState(false)
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(command)
-    // TODO: add tooltip
+
+    if (!copied) {
+      setCopied(true) &&
+        setTimeout(() => {
+          setCopied(false)
+        }, 3000)
+    }
   }
 
   return (
@@ -16,9 +25,10 @@ export function HeroCommand({ command }) {
         height={13}
         className={styles.arrow_right}
       />
+
       <h4 className={styles.text}>{command}</h4>
       <Image
-        src="/copy-to-clipboard.png"
+        src={copied ? '/done.png' : '/copy-to-clipboard.png'}
         alt="copy-to-clipboard"
         width={15}
         height={15}
