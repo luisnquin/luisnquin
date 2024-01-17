@@ -1,7 +1,7 @@
 const token: string = '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'
 
 export function useGetTopLanguage(username: string) {
-	const query = `#graphql
+  const query = `#graphql
         query userInfo($login: String!) {
             user(login: $login) {
                 # fetch only owner repos & not forks
@@ -23,9 +23,9 @@ export function useGetTopLanguage(username: string) {
         }
     `
 
-	useGraphQLToGitHub(query, {
-		username,
-	})
+  useGraphQLToGitHub(query, {
+    username,
+  })
 }
 
 /**
@@ -52,14 +52,14 @@ export function useGetTopLanguage(username: string) {
  */
 
 export function useGraphQLToGitHub(query: string, binds?: object) {
-	fetch('https://api.github.com/graphql', {
-		method: 'POST',
-		headers: {
-			Authorization: `token ${token}`,
-		},
-		body: JSON.stringify({
-			variables: binds,
-			query,
-		}),
-	})
+  fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Authorization: `token ${token}`,
+    },
+    body: JSON.stringify({
+      variables: binds,
+      query,
+    }),
+  })
 }

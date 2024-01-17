@@ -7,16 +7,16 @@ import { LocalStorageService } from './service'
  * @returns
  */
 export function getRepositoriesFromStore(
-	force: boolean
+  force: boolean
 ): Promise<Repository[]> {
-	// TODO: force
-	return LocalStorageService.getItem<Repository[]>('repositories')
+  // TODO: force
+  return LocalStorageService.getItem<Repository[]>('repositories')
 }
 
 export function setRepositoriesInStore(repositories: Repository[]) {
-	return LocalStorageService.setItemWithTTL<Repository[]>(
-		'repositories',
-		repositories,
-		3600
-	)
+  return LocalStorageService.setItemWithTTL<Repository[]>(
+    'repositories',
+    repositories,
+    3600
+  )
 }
