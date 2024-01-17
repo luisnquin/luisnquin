@@ -6,10 +6,10 @@
 
 export function JobExperience({
   companyName,
-  url,
+  // url,
   positionTitle,
-  impact,
-  actions,
+  // impact,
+  // actions,
 }) {
   return (
     <div>
