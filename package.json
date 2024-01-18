@@ -4,22 +4,13 @@
   "description": "Info about me",
   "workspaces": [
     "portfolio",
-    "about-me/cli",
-    "about-me/web",
-    "resume"
+    "cli"
   ],
   "scripts": {
-    "deploy:about-me.web": "npm run deploy --workspace about-me/web",
-    "deploy:about-me.cli": "npm publish --workspace about-me/cli",
-    "deploy:resume": "npm run deploy --workspace resume",
-    "build:portfolio": "npm run build --workspace portfolio",
-    "build:about-me.web": "npm run build --workspace about-me/web",
-    "build:resume": "npm run build --workspace resume",
-    "dev:portfolio": "npm run dev --workspace portfolio",
-    "dev:resume": "npm run dev --workspace resume",
-    "dev:about-me.web": "npm run dev --workspace about-me/web",
-    "dev:about-me.cli": "npm run dev --workspace about-me/cli",
-    "start:resume": "npm run start --workspace resume",
+    "deploy:cli": "npm --workspace cli publish",
+    "dev:cli": "npm --workspace cli run dev",
+    "build:portfolio": "npm --workspace portfolio run build",
+    "dev:portfolio": "npm --workspace portfolio run dev",
     "style": "prettier -w .>/dev/null && gofumpt -w ."
   },
   "bin": {
