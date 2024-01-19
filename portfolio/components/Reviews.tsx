@@ -11,6 +11,7 @@ const msInterval = 3000
 
 export const Reviews = ({ items }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [reverse, setReverse] = useState(false)
   const [pause, setPause] = useState(false)
 
   const getNextIndex = (): number => {
@@ -22,26 +23,24 @@ export const Reviews = ({ items }: Props) => {
     return currentIndex + (1 % items.length)
   }
 
+  const getPrevIndex = (): number => {
+    const nextIndex = currentIndex - 1
+    return nextIndex < 0 ? items.length - 1 : nextIndex
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (!pause) {
-        setCurrentIndex(getNextIndex())
+        setCurrentIndex(reverse ? getPrevIndex() : getNextIndex())
       }
     }, msInterval)
 
     return () => clearInterval(interval)
-  }, [pause, currentIndex, items.length])
+  }, [reverse, pause, currentIndex, items.length])
 
-  const handleLeftKeyAction = () => {
-    const nextIndex = currentIndex - 1
-
-    setCurrentIndex(nextIndex < 0 ? items.length - 1 : nextIndex)
-  }
-
-  const handleRightKeyAction = () => {
-    setCurrentIndex(getNextIndex())
-  }
-
+  const handleLeftKeyAction = () => setCurrentIndex(getPrevIndex())
+  const handleRightKeyAction = () => setCurrentIndex(getNextIndex())
+  const handleReverseAction = () => setReverse(!reverse)
   const handlePlayPauseAction = () => setPause(!pause)
 
   return (
@@ -68,7 +67,7 @@ export const Reviews = ({ items }: Props) => {
               className={styles.review_card_next_index}
               style={pause ? { backgroundColor: '#dedecc' } : {}}
             >
-              {getNextIndex()}
+              {reverse ? getPrevIndex() : getNextIndex()}
               <span>next</span>
             </span>
             <span className={styles.review_card_capacity}>
@@ -93,6 +92,12 @@ export const Reviews = ({ items }: Props) => {
               className={styles.review_card_play_pause}
             >
               {pause ? '⏵' : '⏸'}
+            </button>
+            <button
+              onClick={handleReverseAction}
+              className={styles.review_card_reverse}
+            >
+              
             </button>
           </div>
         </div>
