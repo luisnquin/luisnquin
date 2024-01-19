@@ -1,0 +1,20 @@
+.reviews_container {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.review_card {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: auto;
+    max-width: 70%;
+}
+
+.review_card.active {
+    display: block;
+}
