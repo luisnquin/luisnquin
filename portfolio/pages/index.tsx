@@ -28,6 +28,10 @@ export default function Home() {
         <JobExperiences items={jobExperiences} />
         <Reviews items={reviews} />
       </main>
+
+      <footer>
+        ^^
+      </footer>
     </div>
   )
 }
