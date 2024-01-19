@@ -1,4 +1,5 @@
 import { GithubActivity } from '../components/GithubActivity.jsx'
+import { JobExperiences } from '../components/JobExperiences.tsx'
 import { HeroCommand } from '../components/HeroCommand.jsx'
 import { MainSkills } from '../components/MainSkills.tsx'
 import { ScrollDown } from '../components/ScrollDown.tsx'
@@ -8,7 +9,7 @@ import Head from 'next/head'
 
 import data from '../data.json' assert { type: 'json' }
 
-const { skills } = data
+const { skills, jobExperiences } = data
 
 console.log('$ nao cat answer | grep "49 20 6d 69 73 73 20 79 6f 75"')
 
@@ -74,7 +75,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section id="job-experiences"></section>
+        <JobExperiences jobExperiences={jobExperiences} />
 
         {/* <MainSkills skills={skills} />
         <GithubActivity title="Last activity in GitHub" /> */}

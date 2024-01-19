@@ -13,7 +13,55 @@
       "content": "Aenean efficitur placerat cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet nec risus a mattis. Suspendisse potenti. Proin dapibus eget augue ut porttitor. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ante odio, hendrerit in pulvinar quis, bibendum et velit. Vestibulum efficitur, nibh et pulvinar viverra, tortor massa mattis felis, eget cursus nulla augue at metus. Cras at vulputate dolor. In eu libero et ante sodales eleifend. Nulla vel hendrerit dolor. Cras hendrerit condimentum quam sed varius. Nam rhoncus tempus leo sollicitudin ultrices. Integer sit amet sapien eu enim vestibulum vehicula. Curabitur lectus sapien, dapibus non volutpat non, consequat at arcu."
     }
   ],
-  "jobExperiences": [],
+  "jobExperiences": [
+    {
+      "companyName": "WiserSKILLS",
+      "location": "Paris, France",
+      "positionTitle": "Software Developer",
+      "technologies": [
+        "go",
+        "arangodb",
+        "docker",
+        "kubernetes",
+        "python",
+        "vuejs",
+        "argocd"
+      ],
+      "desc": {
+        "aboutProduct": null,
+        "roleOverview": null,
+        "responsibilities": []
+      },
+      "startDate": "2023-06-01",
+      "endDate": null
+    },
+    {
+      "companyName": "WiserSKILLS",
+      "location": "Paris, France",
+      "positionTitle": "Backend Developer",
+      "technologies": ["go", "arangodb", "vuejs", "docker", "linux"],
+      "desc": {
+        "aboutProduct": null,
+        "roleOverview": null,
+        "responsibilities": []
+      },
+      "startDate": "2022-02-01",
+      "endDate": "2023-06-01"
+    },
+    {
+      "companyName": "Desstorm",
+      "location": "Peru",
+      "positionTitle": "Web Developer",
+      "technologies": ["javascript", "firebase", "css"],
+      "desc": {
+        "aboutProduct": null,
+        "roleOverview": null,
+        "responsibilities": []
+      },
+      "startDate": "2021-10-01",
+      "endDate": "2021-12-01"
+    }
+  ],
   "skills": [
     {
       "name": "Go",
