@@ -13,6 +13,8 @@
     border: 1px solid #ccc;
     padding: 10px;
     max-width: 70%;
+
+    min-height: 10rem;
 }
 
 .review_card.active {
