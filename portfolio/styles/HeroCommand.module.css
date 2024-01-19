@@ -3,9 +3,12 @@
 	flex-direction: row;
 	align-items: center;
 	gap: 8px;
+
 	padding: 12px 13px;
 	background-color: rgba(22, 21, 21, 0.89);
 	border-radius: 5px;
+
+	width: fit-content;
 }
 
 .arrow_right {

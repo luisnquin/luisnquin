@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './../styles/ScrollDown.module.css'
 
-export function ScrollDown() {
+interface Props {
+  className: string
+}
+
+export const ScrollDown = ({ className }: Props) => {
   const [isVisible, setIsVisible] = useState(true)
   const [isHover, setHover] = useState(false)
   const ref = useRef()
@@ -21,13 +25,13 @@ export function ScrollDown() {
   return isVisible ? (
     <span
       ref={ref}
-      className={styles.scroll_down}
+      className={(styles.scroll_down, className)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       [
       {isHover
-        ? `Just follow the instruction, don't hover me 🦭`
+        ? `Just do it, don't hover me 🦭`
         : 'scroll down'}
       ]
     </span>
