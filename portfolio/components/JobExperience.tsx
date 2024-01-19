@@ -58,6 +58,7 @@ export const JobExperience = ({ companyExperience: item }: Props) => {
             return new Date(date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'short',
+              timeZone: 'UTC',
             })
           }
 
