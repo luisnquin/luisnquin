@@ -84,43 +84,31 @@
       ]
     }
   ],
-  "skills": [
+  "technologies": [
     {
-      "name": "Go",
-      "description": "Programming Language",
-      "src": "/go.png"
+      "name": "Programming Languages",
+      "desc": " Go,  Python, 󰛦 TypeScript,  OCaml and  Rust",
+      "iconPath": "/programming-languages.png"
     },
     {
-      "name": "Docker",
-      "description": "Container manager",
-      "src": "/docker.png"
+      "name": "Deployment tools",
+      "desc": "󰡨 Docker, 󱃾 Kubernetes, ArgoCD, etc",
+      "iconPath": "/ci-cd-containerization-tools.png"
     },
     {
-      "name": "ReactJS",
-      "description": "Interface library",
-      "src": "/react.png"
-    },
-    {
-      "name": "NextJS",
-      "description": "ReactJS framework",
-      "src": "/nextjs.png"
-    },
-    {
-      "name": "Linux",
-      "description": "Development-oriented distributions",
-      "src": "/tux.png"
-    },
-    {
-      "name": "AWS",
-      "description": "Cloud services",
-      "src": "/aws.png"
+      "name": "Frontend tools",
+      "desc": " React.js, Next.js and 󰡄 Vue.js",
+      "iconPath": "/frontend-tools.png"
     },
     {
       "name": "Nix && NixOS",
-      "description": "Package manager and operative system",
-      "src": "/nix.png",
-      "width": 65,
-      "height": 65
+      "desc": "󱄅 A reproducible, declarative and reliable package manager and operative system",
+      "iconPath": "/nix-nixos.png"
+    },
+    {
+      "name": "Cloud Computing",
+      "desc": " AWS and 󱇶 Google Cloud Providers",
+      "iconPath": "/cloud-providers.png"
     }
   ]
 }

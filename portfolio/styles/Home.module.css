@@ -3,7 +3,7 @@
 }
 
 .main {
-	width: 45%;
+	width: 50%;
 	overflow: hidden;
 	margin: auto;
 
@@ -12,7 +12,7 @@
 	justify-content: center;
 	align-items: center;
 
-	gap: 5rem;
+	gap: 6rem;
 
 	margin-bottom: 5rem;
 }
