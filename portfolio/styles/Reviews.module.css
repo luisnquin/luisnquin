@@ -7,14 +7,35 @@
     gap: 15px;
 }
 
+
 .review_card {
     display: none;
     border: 1px solid #ccc;
     padding: 10px;
-    margin: auto;
     max-width: 70%;
 }
 
 .review_card.active {
     display: block;
+}
+
+.review_card_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.review_card_control {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+.review_card_index,
+.review_card_arrow_left,
+.review_card_arrow_right,
+.review_card_play_pause {
+    padding: 2px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
 }
