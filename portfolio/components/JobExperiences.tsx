@@ -1,22 +1,22 @@
-import React from 'react'
-import { JobExperience as Experience } from '../models'
+import styles from '../styles/JobExperiences.module.css'
+import { CompanyExperiences } from '../models'
 import { JobExperience } from './JobExperience'
 
 interface Props {
-  jobExperiences: Experience[]
+  items: CompanyExperiences[]
 }
 
-export const JobExperiences = ({ jobExperiences }: Props) => {
+export const JobExperiences = ({ items }: Props) => {
   return (
-    <section id="job-experiences">
-      <div>
+    <section className={styles.job_experiences_section}>
+      <div className={styles.job_experiences_card}>
         <h2>Experience</h2>
 
-        <ul>
-          {jobExperiences.map((experience) => (
+        <ul className={styles.job_experiences_list}>
+          {items.map((experience, i) => (
             <JobExperience
-              experience={experience}
-              key={experience.companyName + '-' + experience.startDate}
+              companyExperience={experience}
+              key={`${experience.companyName}-${i}`}
             />
           ))}
         </ul>

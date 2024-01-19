@@ -16,50 +16,57 @@
   "jobExperiences": [
     {
       "companyName": "WiserSKILLS",
-      "location": "Paris, France",
-      "positionTitle": "Software Developer",
-      "technologies": [
-        "go",
-        "arangodb",
-        "docker",
-        "kubernetes",
-        "python",
-        "vuejs",
-        "argocd"
-      ],
-      "desc": {
-        "aboutProduct": null,
-        "roleOverview": null,
-        "responsibilities": []
-      },
-      "startDate": "2023-06-01",
-      "endDate": null
-    },
-    {
-      "companyName": "WiserSKILLS",
-      "location": "Paris, France",
-      "positionTitle": "Backend Developer",
-      "technologies": ["go", "arangodb", "vuejs", "docker", "linux"],
-      "desc": {
-        "aboutProduct": null,
-        "roleOverview": null,
-        "responsibilities": []
-      },
-      "startDate": "2022-02-01",
-      "endDate": "2023-06-01"
+      "experiences": [
+        {
+          "positionTitle": "Software Developer",
+          "location": "Paris, France",
+          "technologies": [
+            "go",
+            "arangodb",
+            "docker",
+            "kubernetes",
+            "python",
+            "vuejs",
+            "argocd"
+          ],
+          "desc": {
+            "aboutProduct": null,
+            "roleOverview": null,
+            "responsibilities": []
+          },
+          "startDate": "2023-07-01",
+          "endDate": null
+        },
+        {
+          "positionTitle": "Backend Developer",
+          "location": "Paris, France",
+          "technologies": ["go", "arangodb", "vuejs", "docker", "linux"],
+          "desc": {
+            "aboutProduct": null,
+            "roleOverview": null,
+            "responsibilities": []
+          },
+          "startDate": "2022-02-01",
+          "endDate": "2023-06-01"
+        }
+      ]
     },
     {
       "companyName": "Desstorm",
-      "location": "Peru",
-      "positionTitle": "Web Developer",
-      "technologies": ["javascript", "firebase", "css"],
-      "desc": {
-        "aboutProduct": null,
-        "roleOverview": null,
-        "responsibilities": []
-      },
-      "startDate": "2021-10-01",
-      "endDate": "2021-12-01"
+      "experiences": [
+        {
+          "location": "Peru",
+          "positionTitle": "Web Developer",
+          "technologies": ["javascript", "firebase", "css"],
+          "desc": {
+            "aboutProduct": null,
+            "roleOverview": null,
+            "responsibilities": []
+          },
+          "startDate": "2021-10-01",
+          "endDate": "2021-12-01"
+        }
+      ]
     }
   ],
   "skills": [

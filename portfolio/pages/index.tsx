@@ -75,7 +75,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <JobExperiences jobExperiences={jobExperiences} />
+        <JobExperiences items={jobExperiences} />
 
         {/* <MainSkills skills={skills} />
         <GithubActivity title="Last activity in GitHub" /> */}
