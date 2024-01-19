@@ -91,7 +91,7 @@ export const Reviews = ({ items }: Props) => {
               onClick={handlePlayPauseAction}
               className={styles.review_card_play_pause}
             >
-              {pause ? '⏵' : '⏸'}
+              <span>{pause ? '' : '='}</span>
             </button>
             <button
               onClick={handleReverseAction}
