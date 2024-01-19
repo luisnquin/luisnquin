@@ -1,6 +1,6 @@
-/* .job_experiences_section {
-    margin: 100%;
-} */
+.job_experiences_section h2 {
+    text-align: center;
+}
 
 
 .job_experiences_card,
@@ -10,7 +10,7 @@
 }
 
 .job_experiences_card {
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .job_experiences_list {
