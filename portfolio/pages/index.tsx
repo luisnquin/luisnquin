@@ -25,9 +25,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <ScrollDown className={styles.scrollDown} />
-
         <section id="presentation" className={styles.presentation}>
+          <ScrollDown className={styles.scrollDown} />
+
           <div>
             <h1>Luis Quiñones Requelme</h1>
             <h4>Software Developer</h4>

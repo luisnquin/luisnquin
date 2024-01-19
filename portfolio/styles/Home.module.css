@@ -18,6 +18,7 @@
 }
 
 .presentation {
+	margin-top: 2rem;
 	width: 30rem;
 	text-align: center;
 
@@ -39,5 +40,5 @@
 }
 
 .scrollDown {
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
