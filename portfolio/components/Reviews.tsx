@@ -13,17 +13,19 @@ export const Reviews = ({ items }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [pause, setPause] = useState(false)
 
+  const getNextIndex = (): number => {
+    const nextIndex = currentIndex + (1 % items.length)
+    if (nextIndex >= items.length) {
+      return 0
+    }
+
+    return currentIndex + (1 % items.length)
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (!pause) {
-        setCurrentIndex((prevIndex) => {
-          const nextIndex = prevIndex + (1 % items.length)
-          if (nextIndex >= items.length) {
-            return 0
-          }
-
-          return prevIndex + (1 % items.length)
-        })
+        setCurrentIndex(getNextIndex())
       }
     }, msInterval)
 
@@ -37,9 +39,7 @@ export const Reviews = ({ items }: Props) => {
   }
 
   const handleRightKeyAction = () => {
-    const nextIndex = currentIndex + 1
-
-    setCurrentIndex(nextIndex >= items.length ? 0 : nextIndex)
+    setCurrentIndex(getNextIndex())
   }
 
   const handlePlayPauseAction = () => setPause(!pause)
@@ -64,6 +64,18 @@ export const Reviews = ({ items }: Props) => {
 
           <div className={styles.review_card_control}>
             <span className={styles.review_card_index}>{currentIndex}</span>
+            <span
+              className={styles.review_card_next_index}
+              style={pause ? { backgroundColor: '#dedecc' } : {}}
+            >
+              {getNextIndex()}
+              <span>next</span>
+            </span>
+            <span className={styles.review_card_capacity}>
+              {items.length}
+              <span>cap</span>
+            </span>
+
             <button
               onClick={handleLeftKeyAction}
               className={styles.review_card_arrow_left}

@@ -35,9 +35,32 @@
 }
 
 .review_card_index,
+.review_card_next_index,
 .review_card_arrow_left,
 .review_card_arrow_right,
+.review_card_capacity,
 .review_card_play_pause {
     padding: 2px 5px;
     border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.review_card_next_index,
+.review_card_capacity {
+    position: relative;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.review_card_next_index span,
+.review_card_capacity span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    font-size: 10px;
+}
+
+
+.review_card_capacity span {
+    right: 4px;
 }
