@@ -4,12 +4,12 @@
   "description": "Info about me",
   "workspaces": [
     "portfolio",
-    "cli"
+    "luisnquin"
   ],
   "scripts": {
-    "deploy:cli": "npm --workspace cli publish",
-    "start:cli": "npm --workspace cli run start",
-    "dev:cli": "npm --workspace cli run dev",
+    "deploy:cli": "npm --workspace luisnquin publish",
+    "start:cli": "npm --workspace luisnquin run start",
+    "dev:cli": "npm --workspace luisnquin run dev",
     "build:portfolio": "npm --workspace portfolio run build",
     "dev:portfolio": "npm --workspace portfolio run dev",
     "style": "prettier -w .>/dev/null && gofumpt -w ."
