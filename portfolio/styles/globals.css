@@ -49,6 +49,9 @@ h3 {
 	}
 }
 
+/*
+ https://stackoverflow.com/a/45890842
+*/
 button,
 input[type="submit"],
 input[type="reset"] {
