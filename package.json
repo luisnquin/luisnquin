@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "deploy:cli": "npm --workspace cli publish",
+    "start:cli": "npm --workspace cli run start",
     "dev:cli": "npm --workspace cli run dev",
     "build:portfolio": "npm --workspace portfolio run build",
     "dev:portfolio": "npm --workspace portfolio run dev",
