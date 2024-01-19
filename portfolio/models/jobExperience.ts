@@ -5,12 +5,15 @@
  */
 export interface Experience {
   positionTitle: string
-  location: string
+  location: {
+    type: string
+    place: string
+  }
   technologies: string[]
   desc: {
     aboutProduct?: string
     roleOverview?: string
-    responsibilities: string[]
+    achievements: string[]
   }
   startDate: string
   endDate?: string

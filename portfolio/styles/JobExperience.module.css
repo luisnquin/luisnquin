@@ -1,22 +1,59 @@
-.date_range {
-    font-weight: lighter;
+.company_experiences_card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.company_experience_years {
-    font-weight: lighter;
-    font-size: 14px;
+.company_experiences_card h3 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .company_experiences {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 1rem;
 }
 
-.company_experience_card {
+.company_experiences_year_range {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+
+.company_experiences_item {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
 
-    gap: 1rem;
+.company_experiences_item h4 {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.company_experiences_item h4 span {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.company_experiences_item_technologies {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    list-style: none;
+}
+
+.company_experiences_item_technologies li {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    padding: 1px 2px;
+}
+
+.company_experiences_item_location {
+    font-size: 14px;
 }

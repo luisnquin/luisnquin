@@ -42,13 +42,13 @@ const getYearsLabel = (companyExp: CompanyExperiences): string => {
 
 export const JobExperience = ({ companyExperience: item }: Props) => {
   return (
-    <li className={styles.company_experience_card}>
-      <h4>
+    <li className={styles.company_experiences_card}>
+      <h3>
         {item.companyName}
-        <span className={styles.company_experience_years}>
+        <span className={styles.company_experiences_year_range}>
           {getYearsLabel(item)}
         </span>
-      </h4>
+      </h3>
 
       <ul className={styles.company_experiences}>
         {item.experiences.map((exp) => {
@@ -63,13 +63,46 @@ export const JobExperience = ({ companyExperience: item }: Props) => {
           }
 
           return (
-            <li key={`${item.companyName}${exp.positionTitle}`}>
-              <h5>
+            <li
+              key={`${item.companyName}${exp.positionTitle}`}
+              className={styles.company_experiences_item}
+            >
+              <h4 style={{ fontSize: '15px' }}>
                 {exp.positionTitle}
-                <span className={styles.date_range}>
+                <span>
                   ({formatDate(exp.startDate)} - {formatDate(exp.endDate)})
                 </span>
-              </h5>
+              </h4>
+
+              <span className={styles.company_experiences_item_location}>
+                {exp.location.place} - {exp.location.type}
+              </span>
+
+              <div>
+                <div>{exp.desc?.aboutProduct}</div>
+                <div>{exp.desc?.roleOverview}</div>
+
+                {exp.desc.achievements.length > 0 ? (
+                  <div>
+                    <h5>Achievements</h5>
+                    <ul
+                      className={
+                        styles.company_experiences_item_achievements
+                      }
+                    >
+                      {exp.desc.achievements.map((line) => {
+                        return <li>{line}</li>
+                      })}
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
+
+              <ul className={styles.company_experiences_item_technologies}>
+                {exp.technologies.map((tech) => {
+                  return <li key={tech}>{tech}</li>
+                })}
+              </ul>
             </li>
           )
         })}

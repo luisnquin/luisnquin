@@ -19,12 +19,16 @@
       "experiences": [
         {
           "positionTitle": "Software Developer",
-          "location": "Paris, France",
+          "location": {
+            "place": "Paris, France",
+            "type": "Remote"
+          },
           "technologies": [
             "go",
             "arangodb",
             "docker",
             "kubernetes",
+            "aws",
             "python",
             "vuejs",
             "argocd"
@@ -32,19 +36,27 @@
           "desc": {
             "aboutProduct": null,
             "roleOverview": null,
-            "responsibilities": []
+            "achievements": [
+              "Improvements in the software reliability redifining and improving critical services with E2E, integration and unit tests.",
+              "Migration of services from WebSocket to a REST architecture, achieving that all the platform becomes more scalable.",
+              "Better response time in key features of the company's main products (with x58 times the most notable improvement in response time).",
+              "Configuration, deployment and monitoring of QA, UAT and PROD environments(more than 30 applications)."
+            ]
           },
           "startDate": "2023-06-01",
           "endDate": null
         },
         {
           "positionTitle": "Backend Developer",
-          "location": "Paris, France",
-          "technologies": ["go", "arangodb", "vuejs", "docker", "linux"],
+          "location": {
+            "place": "Paris, France",
+            "type": "Remote"
+          },
+          "technologies": ["go", "arangodb", "vuejs", "aws", "docker", "linux"],
           "desc": {
             "aboutProduct": null,
             "roleOverview": null,
-            "responsibilities": []
+            "achievements": []
           },
           "startDate": "2022-02-01",
           "endDate": "2023-06-01"
@@ -55,13 +67,16 @@
       "companyName": "Desstorm",
       "experiences": [
         {
-          "location": "Peru",
+          "location": {
+            "place": "Peru",
+            "type": "Remote"
+          },
           "positionTitle": "Web Developer",
           "technologies": ["javascript", "firebase", "css"],
           "desc": {
             "aboutProduct": null,
             "roleOverview": null,
-            "responsibilities": []
+            "achievements": []
           },
           "startDate": "2021-10-01",
           "endDate": "2021-12-01"
