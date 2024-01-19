@@ -3,9 +3,8 @@
 }
 
 .main {
-	/* padding: 4rem 0; */
-
-	width: 50%;
+	width: 55%;
+	overflow: hidden;
 	margin: auto;
 
 	display: flex;
@@ -14,31 +13,4 @@
 	align-items: center;
 
 	gap: 5rem;
-
-}
-
-.presentation {
-	margin-top: 2rem;
-	width: 30rem;
-	text-align: center;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1.5rem;
-}
-
-.social_media {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 1.5rem;
-
-	list-style: none;
-}
-
-.scrollDown {
-	margin-top: 1rem;
 }
