@@ -1,4 +1,4 @@
-name: Deploy website about me
+name: CI/CD for CLI
 on:
     push:
         branches:
@@ -13,7 +13,8 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 20
-            - run: npm ci
+            - name: Install node modules
+              run: npm ci
             - uses: JS-DevTools/npm-publish@v1
               with:
                   token: ${{ secrets.NPM_TOKEN }}
@@ -30,5 +31,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 20
+            - name: Install node modules
+              run: npm ci
             - name: Runtime test
               run: npm run start:cli
