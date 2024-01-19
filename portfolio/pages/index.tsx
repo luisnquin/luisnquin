@@ -1,7 +1,7 @@
 import { GithubActivity } from '../components/GithubActivity.jsx'
 import { HeroCommand } from '../components/HeroCommand.jsx'
 import { MainSkills } from '../components/MainSkills.tsx'
-import { ScrollDown } from '../components/ScrollDown.jsx'
+import { ScrollDown } from '../components/ScrollDown.tsx'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -22,37 +22,63 @@ export default function Home() {
           content="My personal portfolio with all my available projects"
         />
       </Head>
+
       <main className={styles.main}>
-        <br />
-        <ScrollDown />
-        <br />
-        <br />
-        <HeroCommand command="npx luisnquin@latest" />
-        <br />
-        <br />
-        <MainSkills skills={skills} />
-        <br /> <br /> <br /> <br /> <br />
-        <a
-          href="https://github.com/luisnquin/nao/actions/workflows/go.yml"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            width={90}
-            height={20}
-            src="https://github.com/luisnquin/nao/actions/workflows/go.yml/badge.svg"
-            alt="repository-actions"
-          />
-        </a>
-        <br />
-        <br />
-        <br />
-        <GithubActivity title="Last activity in GitHub" />
+        <ScrollDown className={styles.scrollDown} />
+
+        <section id="presentation" className={styles.presentation}>
+          <div>
+            <h1>Luis Quiñones Requelme</h1>
+            <h4>Software Developer</h4>
+          </div>
+
+          <HeroCommand command="npx luisnquin@latest" />
+
+          <ul className={styles.social_media}>
+            <li>
+              <a
+                href="https://github.com/luisnquin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://gitlab.com/luisnquin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitLab
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/luisnquin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="job-experiences"></section>
+
+        {/* <MainSkills skills={skills} />
+        <GithubActivity title="Last activity in GitHub" /> */}
       </main>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{' '}
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{' '}
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{' '}
-      <br /> <br /> <br /> <br /> <br />
     </div>
   )
 }
