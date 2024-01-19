@@ -9,7 +9,7 @@ jobs:
     deploy:
         runs-on: ubuntu-20.04
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - uses: actions/setup-node@v3
               with:
                   node-version: 20
@@ -22,3 +22,13 @@ jobs:
                   check-version: true
                   access: public
                   tag: latest
+
+    runtime-test:
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+            - name: Runtime test
+              run: npm run start:cli
