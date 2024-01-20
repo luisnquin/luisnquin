@@ -11,6 +11,7 @@
     "start:cli": "npm --workspace luisnquin run start",
     "dev:cli": "npm --workspace luisnquin run dev",
     "build:portfolio": "npm --workspace portfolio run build",
+    "start:portfolio": "npm --workspace portfolio run start",
     "dev:portfolio": "npm --workspace portfolio run dev",
     "style": "prettier -w .>/dev/null && gofumpt -w .",
     "ts-coverage:portfolio": "npm --workspace portfolio run ts-coverage"
