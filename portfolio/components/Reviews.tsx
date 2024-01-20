@@ -62,7 +62,10 @@ export const Reviews = ({ items }: Props) => {
           ))}
 
           <div className={styles.review_card_control}>
-            <span className={styles.review_card_index}>{currentIndex}</span>
+            <span className={styles.review_card_index}>
+              {currentIndex}
+              <span>index</span>
+            </span>
             <span
               className={styles.review_card_next_index}
               style={pause ? { backgroundColor: '#dedecc' } : {}}
