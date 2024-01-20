@@ -1,4 +1,12 @@
-.game_board {
+.game_board_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.game_board_card {
     position: relative;
     margin: auto;
     border-style: solid;
@@ -7,4 +15,10 @@
 
 .chunk {
     position: absolute;
+}
+
+.game_board_controls {
+    text-align: center;
+    color: #51597D;
+    font-size: 15px;
 }

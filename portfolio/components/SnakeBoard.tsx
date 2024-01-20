@@ -75,31 +75,35 @@ export class SnakeBoard extends React.Component {
 
   render(): ReactElement {
     return (
-      <div
-        id="game-board"
-        className={styles.game_board}
-        style={{
-          width: this.state.width,
-          height: this.state.height,
-          borderWidth: this.state.width / 50,
-        }}
-      >
-        {this.state.snake.map((chunk, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.chunk}
-              style={{
-                width: this.state.blockWidth,
-                height: this.state.blockHeight,
-                left: chunk.x,
-                top: chunk.y,
-                backgroundColor: '#d11b3a',
-              }}
-            ></div>
-          )
-        })}
-      </div>
+      <section className={styles.game_board_section}>
+        <div
+          id="game-board"
+          className={styles.game_board_card}
+          style={{
+            width: this.state.width,
+            height: this.state.height,
+            borderWidth: this.state.width / 50,
+          }}
+        >
+          {this.state.snake.map((chunk, index) => {
+            return (
+              <div
+                key={index}
+                className={styles.chunk}
+                style={{
+                  width: this.state.blockWidth,
+                  height: this.state.blockHeight,
+                  left: chunk.x,
+                  top: chunk.y,
+                  backgroundColor: '#d11b3a',
+                }}
+              ></div>
+            )
+          })}
+        </div>
+
+        <p className={styles.game_board_controls}>/* Controls: A / W / S / D */</p>
+      </section>
     )
   }
 
