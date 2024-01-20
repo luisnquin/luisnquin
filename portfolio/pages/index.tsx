@@ -19,10 +19,6 @@ export default function Home() {
       <Head>
         <title>Portfolio</title>
         <link rel="shortcut icon" href="/favicon.png" />
-        <link
-          href="https://www.nerdfonts.com/assets/css/webfont.css"
-          rel="stylesheet"
-        />
         <meta
           name="description"
           content="My personal portfolio with all my available projects"
