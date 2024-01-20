@@ -32,7 +32,6 @@ interface Props {
 }
 
 export class SnakeBoard extends React.Component {
-  boardElementId: string = 'game-board'
   state: BoardState
   props: Readonly<Props>
 
@@ -57,7 +56,7 @@ export class SnakeBoard extends React.Component {
   render(): ReactElement {
     return (
       <div
-        id={this.boardElementId}
+        id="game-board"
         className={styles.game_board}
         style={{
           width: this.state.width,
@@ -210,19 +209,26 @@ export class SnakeBoard extends React.Component {
     this.setState({ snake })
   }
 
+  convertRemToPixels(rem: number): number {
+    // https://stackoverflow.com/a/42769683
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
+  }
+
   getInitialPercentageWidth(): number {
     return this.props.percentageWidth || 40
   }
 
   getInitialWidth(): number {
-    const board = document.getElementById(this.boardElementId)
-    let width =
-      board.parentElement.offsetWidth * (this.getInitialPercentageWidth() / 100)
-    width -= width % 30
+    // const board = document.getElementById(this.boardElementId)
+    // let width =
+    //   board.parentElement.offsetWidth * (this.getInitialPercentageWidth() / 100)
+    // width -= width % 30
 
-    if (width < 30) return 30
+    // if (width < 30) return 30
 
-    return width
+    // console.log('initial width: ', width)
+
+    return this.convertRemToPixels(17)
   }
 
   handleKeyDown(event: any) /* <- KeyboardEvent */ {
