@@ -10,6 +10,7 @@
     "deploy:cli": "npm --workspace luisnquin publish",
     "start:cli": "npm --workspace luisnquin run start",
     "dev:cli": "npm --workspace luisnquin run dev",
+    "deploy:portfolio": "npm --workspace luisnquin run deploy",
     "build:portfolio": "npm --workspace portfolio run build",
     "start:portfolio": "npm --workspace portfolio run start",
     "dev:portfolio": "npm --workspace portfolio run dev",

@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "vercel deploy",
     "start": "next start",
     "lint": "next lint",
     "ts-coverage": "typescript-coverage-report && xdg-open ./coverage-ts/index.html"
@@ -13,7 +14,8 @@
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vercel": "33.2.0"
   },
   "devDependencies": {
     "@types/node": "20.11.5",
