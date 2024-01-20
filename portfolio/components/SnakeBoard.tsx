@@ -4,7 +4,7 @@ import styles from '../styles/SnakeBoard.module.css'
 import React, { ReactElement } from 'react'
 
 enum Direction {
-  Up = 1,
+  Up = 0,
   Left,
   Down,
   Right,
@@ -16,6 +16,9 @@ interface SnakeChunk {
 }
 
 interface BoardState {
+  /**
+   * @description The current snake {@link Direction}.
+   */
   direction: Direction
   directionChanged: boolean
   width: number
@@ -23,8 +26,22 @@ interface BoardState {
   blockWidth: number
   blockHeight: number
   gameLoopTimeout: number
+  /**
+   * @description The identifier returned by `setTimeout`, it's used to cancel a game loop when the component is erased.
+   */
   timeoutId: number
+  /**
+   * @description The snake chunk positions in the game board.
+   */
   snake: SnakeChunk[]
+  /**
+   * @description The last time the user typed a game key. It's expressed in milliseconds.
+   */
+  lastUserActionAt: number
+  /**
+   * @description The number of iterations(game loop) the bot won't change its direction.
+   */
+  botIdleTicks: number
 }
 
 interface Props {
@@ -32,6 +49,7 @@ interface Props {
 }
 
 export class SnakeBoard extends React.Component {
+  userTimeoutMs: number = 3000
   state: BoardState
   props: Readonly<Props>
 
@@ -50,6 +68,8 @@ export class SnakeBoard extends React.Component {
       gameLoopTimeout: 50,
       timeoutId: 0,
       snake: [],
+      lastUserActionAt: 0,
+      botIdleTicks: 0,
     }
   }
 
@@ -127,6 +147,7 @@ export class SnakeBoard extends React.Component {
 
   gameLoop(): void {
     const timeoutId = setTimeout(() => {
+      this.tryToUseBot()
       this.moveSnake()
       this.setState({ directionChanged: false })
       this.gameLoop()
@@ -135,6 +156,35 @@ export class SnakeBoard extends React.Component {
     this.setState({ timeoutId })
   }
 
+  useBot(): boolean {
+    return Date.now() - this.state.lastUserActionAt > this.userTimeoutMs
+  }
+
+  tryToUseBot(): void {
+    if (!this.useBot()) return
+
+    let { botIdleTicks } = this.state
+
+    if (botIdleTicks === 0) {
+      if (this.setDirection(this.getRandomDirection())) {
+        botIdleTicks = Math.floor(Math.random() * 15)
+        this.setState({ botIdleTicks })
+      }
+    } else {
+      botIdleTicks--
+      this.setState({ botIdleTicks })
+    }
+  }
+
+  getRandomDirection(): Direction {
+    const directions = Object.values(Direction)
+
+    return Math.floor((Math.random() * directions.length) / 2)
+  }
+
+  /**
+   * @description Updates the snake body based on the current position of the head.
+   */
   moveSnake(): void {
     const { snake } = this.state
     let previousPartX = snake[0].x
@@ -190,8 +240,6 @@ export class SnakeBoard extends React.Component {
         ? height - blockHeight
         : snake[0].y - blockHeight
 
-    console.log(snake[0].y)
-
     this.setState({ snake })
   }
 
@@ -224,61 +272,64 @@ export class SnakeBoard extends React.Component {
     return this.convertRemToPixels(17)
   }
 
+  /**
+   * @description Handles a user keyboard event. It's meant to
+   * be used with `window.addEventListener`.
+   */
   handleKeyDown(event: any) /* <- KeyboardEvent */ {
     if (this.state.directionChanged) return
+
+    this.setState({ lastUserActionAt: Date.now() })
 
     /* eslint indent: "off" */
     switch (event.key) {
       case 'ArrowUp':
       case 'w':
       case 'W':
-        this.goUp()
+        this.setDirection(Direction.Up)
         break
       case 'ArrowLeft':
       case 'a':
       case 'A':
-        this.goLeft()
+        this.setDirection(Direction.Left)
         break
       case 'ArrowRight':
       case 'd':
       case 'D':
-        this.goRight()
+        this.setDirection(Direction.Right)
         break
       case 'ArrowDown':
       case 's':
       case 'S':
-        this.goDown()
+        this.setDirection(Direction.Down)
+        break
+    }
+  }
+
+  /**
+   * @description Tries to update the snake direction, if the direction wasn't changed `false` is returned.
+   */
+  setDirection(newDirection: Direction): boolean {
+    const oldDirection = this.state.direction
+
+    if (oldDirection == newDirection) return false
+
+    switch (oldDirection) {
+      case Direction.Left:
+        if (newDirection == Direction.Right) return false
+        break
+      case Direction.Right:
+        if (newDirection == Direction.Left) return false
+        break
+      case Direction.Down:
+        if (newDirection == Direction.Up) return false
+        break
+      case Direction.Up:
+        if (newDirection == Direction.Down) return false
         break
     }
 
-    this.setState({ directionChanged: true })
-  }
-
-  goLeft(): void {
-    this.setDirection(
-      this.state.direction == Direction.Right ? Direction.Right : Direction.Left
-    )
-  }
-
-  goRight(): void {
-    this.setDirection(
-      this.state.direction == Direction.Left ? Direction.Left : Direction.Right
-    )
-  }
-
-  goUp(): void {
-    this.setDirection(
-      this.state.direction == Direction.Down ? Direction.Down : Direction.Up
-    )
-  }
-
-  goDown(): void {
-    this.setDirection(
-      this.state.direction == Direction.Up ? Direction.Up : Direction.Down
-    )
-  }
-
-  setDirection(direction: Direction): void {
-    this.setState({ direction })
+    this.setState({ direction: newDirection, directionChanged: true })
+    return true
   }
 }
