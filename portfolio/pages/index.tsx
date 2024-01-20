@@ -12,8 +12,6 @@ import { Reviews } from '../components/Reviews.tsx'
 
 const { contactEmail, jobExperiences, reviews, technologies } = data
 
-console.log('$ nao cat answer | grep "49 20 6d 69 73 73 20 79 6f 75"')
-
 export default function Home() {
   return (
     <div className={styles.container}>
