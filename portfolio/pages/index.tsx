@@ -7,10 +7,11 @@ import { JobExperiences } from '../components/JobExperiences.tsx'
 import { Presentation } from '../components/Presentation.tsx'
 import { Technologies } from '../components/Technologies.tsx'
 import { SnakeBoard } from '../components/SnakeBoard.tsx'
+import { Interests } from '../components/Interests.tsx'
 import { ContactMe } from '../components/ContactMe.tsx'
 import { Reviews } from '../components/Reviews.tsx'
 
-const { contactEmail, jobExperiences, reviews, technologies } = data
+const { contactEmail, jobExperiences, reviews, technologies, interests } = data
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <JobExperiences items={jobExperiences} />
         <Reviews items={reviews} />
         <Technologies items={technologies} />
+        <Interests items={interests} />
         <ContactMe email={contactEmail} />
         <SnakeBoard />
       </main>

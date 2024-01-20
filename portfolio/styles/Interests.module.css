@@ -1,0 +1,10 @@
+.interests_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.interests_table tbody tr>td {
+    padding: 5px;
+}

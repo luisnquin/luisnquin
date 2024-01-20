@@ -111,5 +111,22 @@
       "desc": " AWS and 󱇶 Google Cloud Providers",
       "iconPath": "/cloud-providers.png"
     }
+  ],
+  "interests": [
+    {
+      "name": "Biomedical Enginnering",
+      "desc": "Placerat at sagittis ad pellentesque condimentum volutpat sollicitudin bibendum eleifend iaculis, non mollis enim nisi quisque",
+      "externalLink": "https://en.wikipedia.org/wiki/Biomedical_engineering"
+    },
+    {
+      "name": "Functional Programming",
+      "desc": "Posuere tristique fringilla aliquam molestie sed iaculis inceptos, velit nisl nec etiam convallis",
+      "externalLink": "https://en.wikipedia.org/wiki/Functional_programming"
+    },
+    {
+      "name": "Nix ecosystem",
+      "desc": "Aliquam erat accumsan ultrices bibendum massa convallis eros quisque interdum et dignissim odio senectus lacinia nascetur ligula",
+      "externalLink": "https://nixos.org/"
+    }
   ]
 }
