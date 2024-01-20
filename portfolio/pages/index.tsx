@@ -31,11 +31,21 @@ export default function Home() {
         <JobExperiences items={jobExperiences} />
         <Reviews items={reviews} />
         <Technologies items={technologies} />
-        <SnakeBoard />
         <ContactMe email={contactEmail} />
+        <SnakeBoard />
       </main>
 
-      <footer>^^</footer>
+      <footer className={styles.footer}>
+        <span>^^</span>
+        <a
+          href="https://github.com/luisnquin/luisnquin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-small-gap"
+        >
+          <span className="nerd-fonts very-small"></span> Source
+        </a>
+      </footer>
     </div>
   )
 }

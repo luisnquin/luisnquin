@@ -80,6 +80,20 @@ input[type="reset"] {
 	background-color: #909090;
 }
 
+.nerd-fonts {
+	font-family: NerdFontsSymbols Nerd Font;
+}
+
+.very-small {
+	font-size: 13px;
+}
+
+.flex-small-gap {
+	display: flex;
+	flex-direction: row;
+	gap: 2px;
+	align-items: center;
+}
 
 table,
 caption,

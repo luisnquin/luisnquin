@@ -21,7 +21,9 @@ export const Presentation = () => {
             href="https://github.com/luisnquin"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex-small-gap"
           >
+            <span className="nerd-fonts very-small"></span>
             GitHub
           </a>
         </li>
@@ -30,7 +32,9 @@ export const Presentation = () => {
             href="https://gitlab.com/luisnquin"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex-small-gap"
           >
+            <span className="nerd-fonts very-small"></span>
             GitLab
           </a>
         </li>
@@ -39,7 +43,9 @@ export const Presentation = () => {
             href="https://linkedin.com/in/luisnquin"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex-small-gap"
           >
+            <span className="nerd-fonts very-small"></span>
             LinkedIn
           </a>
         </li>
@@ -48,7 +54,9 @@ export const Presentation = () => {
             href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex-small-gap"
           >
+            <span className="nerd-fonts very-small"></span>
             Resume
           </a>
         </li>
