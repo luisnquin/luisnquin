@@ -6,9 +6,9 @@ import styles from '../styles/Presentation.module.css'
 export const Presentation = () => {
   return (
     <section id="presentation" className={styles.presentation}>
-      <ScrollDown className={styles.scrollDown} />
+      <ScrollDown className={styles.scroll_down} />
 
-      <div>
+      <div className={styles.whoami}>
         <h1>Luis Quiñones Requelme</h1>
         <h4>Software Developer</h4>
       </div>
