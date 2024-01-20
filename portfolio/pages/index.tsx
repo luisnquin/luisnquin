@@ -28,9 +28,9 @@ export default function Home() {
       <main className={styles.main}>
         <Presentation />
         <JobExperiences items={jobExperiences} />
+        <Interests items={interests} />
         <Reviews items={reviews} />
         <Technologies items={technologies} />
-        <Interests items={interests} />
         <ContactMe email={contactEmail} />
         <SnakeBoard />
       </main>
