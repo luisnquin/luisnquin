@@ -27,3 +27,9 @@
 .scroll_down {
     margin-top: 1rem;
 }
+
+@media screen and (max-width:500px) {
+    .social_media {
+        gap: 10px;
+    }
+}

@@ -34,3 +34,11 @@
 .technologies_list li p {
     font-family: Menlo Regular, 'NerdFontsSymbols Nerd Font';
 }
+
+
+@media screen and (max-width:500px) {
+    .technologies_container {
+        width: 90%;
+        margin: auto;
+    }
+}

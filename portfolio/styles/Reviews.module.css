@@ -88,3 +88,16 @@
 .review_card_capacity span {
     right: 4px;
 }
+
+@media screen and (max-width:1000px) {
+    .review_card {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .reviews_container {
+        width: 95%;
+        margin: auto;
+    }
+}

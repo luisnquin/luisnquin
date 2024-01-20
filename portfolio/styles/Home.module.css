@@ -1,6 +1,6 @@
-.container {
+/* .container {
 	padding: 0 2rem;
-}
+} */
 
 .main {
 	width: 50%;
@@ -23,4 +23,23 @@
 	gap: 2rem;
 
 	padding-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width:1300px) {
+	.main {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width:1000px) {
+	.main {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:500px) {
+	.main {
+		width: unset;
+	}
 }

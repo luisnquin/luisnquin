@@ -22,3 +22,11 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+
+@media screen and (max-width:500px) {
+    .job_experiences_section {
+        width: 95%;
+        margin: auto;
+    }
+}
