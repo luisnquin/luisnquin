@@ -1,6 +1,15 @@
 import { UserCommitsInfo } from '../../models/github'
 import { Repository } from '../../models/github'
 
+interface GetUserRepositoryResponseItem {
+  id: string
+  name: string
+  description: string
+  pushed_at: string
+  language: string
+  svn_url: string
+}
+
 class GitHubService {
   baseUrl: string = 'https://api.github.com'
 
@@ -12,9 +21,9 @@ class GitHubService {
     const url = `${this.baseUrl}/users/${owner}/repos?accept=application/vnd.github.v3+json&per_page=${maxCount}&sort=pushed`
 
     const response = await fetch(url, { signal, method: 'GET' })
-    const data = await response.json()
+    const data: GetUserRepositoryResponseItem[] = await response.json()
 
-    const repositories: Repository[] = data.map((item: any) => {
+    const repositories: Repository[] = data.map((item) => {
       return {
         id: item.id,
         name: item.name,
