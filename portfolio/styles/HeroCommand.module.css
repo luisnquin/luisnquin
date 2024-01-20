@@ -1,22 +1,29 @@
-.wrapper {
+.container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 8px;
 
-	padding: 12px 13px;
-	background-color: rgba(22, 21, 21, 0.89);
+	padding: 11px 13px;
 	border-radius: 5px;
 
 	width: fit-content;
+
+	border: 1px solid rgba(16, 4, 28, 0.6);
+}
+
+.copy_to_clipboard,
+.arrow_right {
+	font-family: NerdFontsSymbols Nerd Font;
 }
 
 .arrow_right {
-	filter: brightness(150%);
+	color: #ababab;
 }
 
 .copy_to_clipboard {
 	filter: brightness(80%);
+	color: #000000d3;
 }
 
 .copy_to_clipboard:hover {
@@ -25,7 +32,7 @@
 }
 
 .text {
-	color: #fff;
+	color: rgba(22, 21, 21, 0.89);
 	font-family: Menlo Regular;
 	font-weight: lighter;
 }
