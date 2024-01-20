@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import styles from '../styles/HeroCommand.module.css'
+import styles from '../styles/HeroCopy.module.css'
 
-export function HeroCommand({ command }) {
+interface Props {
+  text: string
+  isCommand?: boolean
+}
+
+export function HeroCopy({ text, isCommand }: Props) {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(command)
+    navigator.clipboard.writeText(text)
 
     if (!copied) {
       setCopied(true)
@@ -17,8 +22,9 @@ export function HeroCommand({ command }) {
 
   return (
     <div className={styles.container}>
-      <span className={styles.arrow_right}></span>
-      <h4 className={styles.text}>{command}</h4>
+      {isCommand ? <span className={styles.arrow_right}>$</span> : null}
+
+      <h4 className={styles.text}>{text}</h4>
       <button className={styles.copy_to_clipboard} onClick={copyToClipboard}>
         {copied ? '󰄬' : '󰆏'}
       </button>

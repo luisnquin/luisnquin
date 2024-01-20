@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollDown } from './ScrollDown.tsx'
-import { HeroCommand } from './HeroCommand.jsx'
+import { HeroCopy } from './HeroCopy.tsx'
 import styles from '../styles/Presentation.module.css'
 
 export const Presentation = () => {
@@ -13,7 +13,7 @@ export const Presentation = () => {
         <h4>Software Developer</h4>
       </div>
 
-      <HeroCommand command="npx luisnquin@latest" />
+      <HeroCopy isCommand text="npx luisnquin@latest" />
 
       <ul className={styles.social_media}>
         <li>
