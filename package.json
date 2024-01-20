@@ -12,7 +12,8 @@
     "dev:cli": "npm --workspace luisnquin run dev",
     "build:portfolio": "npm --workspace portfolio run build",
     "dev:portfolio": "npm --workspace portfolio run dev",
-    "style": "prettier -w .>/dev/null && gofumpt -w ."
+    "style": "prettier -w .>/dev/null && gofumpt -w .",
+    "ts-coverage:portfolio": "npm --workspace portfolio run ts-coverage"
   },
   "bin": {
     "luisnquin": "./me/cli/src/index.js"
@@ -39,5 +40,8 @@
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.12.3",
     "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "typescript-coverage-report": "0.8.0"
   }
 }
