@@ -86,12 +86,10 @@ export const JobExperience = ({ companyExperience: item }: Props) => {
                   <div>
                     <h5>Achievements</h5>
                     <ul
-                      className={
-                        styles.company_experiences_item_achievements
-                      }
+                      className={styles.company_experiences_item_achievements}
                     >
-                      {exp.desc.achievements.map((line) => {
-                        return <li>{line}</li>
+                      {exp.desc.achievements.map((line, i) => {
+                        return <li key={i}>{line}</li>
                       })}
                     </ul>
                   </div>

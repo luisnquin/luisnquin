@@ -15,8 +15,8 @@ export const JobExperiences = ({ items }: Props) => {
         <ul className={styles.job_experiences_list}>
           {items.map((experience, i) => (
             <JobExperience
-              companyExperience={experience}
               key={`${experience.companyName}-${i}`}
+              companyExperience={experience}
             />
           ))}
         </ul>
