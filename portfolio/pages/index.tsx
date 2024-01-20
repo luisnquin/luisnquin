@@ -6,6 +6,7 @@ import data from '../data.json' assert { type: 'json' }
 import { JobExperiences } from '../components/JobExperiences.tsx'
 import { Presentation } from '../components/Presentation.tsx'
 import { Technologies } from '../components/Technologies.tsx'
+import { SnakeBoard } from '../components/SnakeBoard.tsx'
 import { ContactMe } from '../components/ContactMe.tsx'
 import { Reviews } from '../components/Reviews.tsx'
 
@@ -30,6 +31,7 @@ export default function Home() {
         <JobExperiences items={jobExperiences} />
         <Reviews items={reviews} />
         <Technologies items={technologies} />
+        <SnakeBoard />
         <ContactMe email={contactEmail} />
       </main>
 
