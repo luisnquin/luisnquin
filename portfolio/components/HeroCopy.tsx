@@ -4,9 +4,10 @@ import styles from '../styles/HeroCopy.module.css'
 interface Props {
   text: string
   isCommand?: boolean
+  isContactMail?: boolean
 }
 
-export function HeroCopy({ text, isCommand }: Props) {
+export const HeroCopy = ({ text, isCommand, isContactMail }: Props) => {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = () => {
@@ -24,7 +25,12 @@ export function HeroCopy({ text, isCommand }: Props) {
     <div className={styles.container}>
       {isCommand ? <span className={styles.arrow_right}>$</span> : null}
 
-      <h4 className={styles.text}>{text}</h4>
+      {isContactMail ? (
+        <a href={`mailto:<${text}>`}>{text}</a>
+      ) : (
+        <h4 className={styles.text}>{text}</h4>
+      )}
+
       <button className={styles.copy_to_clipboard} onClick={copyToClipboard}>
         {copied ? '󰄬' : '󰆏'}
       </button>
