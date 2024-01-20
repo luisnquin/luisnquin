@@ -109,7 +109,7 @@ export class SnakeBoard extends React.Component {
     const head: SnakeChunk = { x, y }
     snake.push(head)
 
-    const startSnakeSize = 6
+    const startSnakeSize = 8
 
     for (let i = 1; i < startSnakeSize; i++) {
       x -= blockWidth
@@ -173,39 +173,41 @@ export class SnakeBoard extends React.Component {
   }
 
   moveHeadLeft(): void {
-    const width = this.state.width,
-      blockWidth = this.state.blockWidth,
-      snake = this.state.snake
+    const { width, blockWidth, snake } = this.state
 
-    snake[0].x = snake[0].x <= 0 ? width - blockWidth : snake[0].x - blockWidth
+    snake[0].x =
+      snake[0].x - blockWidth <= 0
+        ? width - blockWidth
+        : snake[0].x - blockWidth
     this.setState({ snake })
   }
 
   moveHeadUp(): void {
-    const height = this.state.height,
-      blockHeight = this.state.blockHeight,
-      snake = this.state.snake
+    const { height, blockHeight, snake } = this.state
 
     snake[0].y =
-      snake[0].y <= 0 ? height - blockHeight : snake[0].y - blockHeight
+      snake[0].y - blockHeight <= 0
+        ? height - blockHeight
+        : snake[0].y - blockHeight
+
+    console.log(snake[0].y)
+
     this.setState({ snake })
   }
 
   moveHeadRight(): void {
-    const width = this.state.width,
-      blockWidth = this.state.blockWidth,
-      snake = this.state.snake
+    const { width, blockWidth, snake } = this.state
 
-    snake[0].x = snake[0].x >= width - blockWidth ? 0 : snake[0].x + blockWidth
+    snake[0].x =
+      snake[0].x >= width - blockWidth * 3 ? 0 : snake[0].x + blockWidth
     this.setState({ snake })
   }
 
   moveHeadDown(): void {
-    const height = this.state.height,
-      blockHeight = this.state.blockHeight,
-      snake = this.state.snake
+    const { height, blockHeight, snake } = this.state
+
     snake[0].y =
-      snake[0].y >= height - blockHeight ? 0 : snake[0].y + blockHeight
+      snake[0].y >= height - blockHeight * 3 ? 0 : snake[0].y + blockHeight
     this.setState({ snake })
   }
 
@@ -219,15 +221,6 @@ export class SnakeBoard extends React.Component {
   }
 
   getInitialWidth(): number {
-    // const board = document.getElementById(this.boardElementId)
-    // let width =
-    //   board.parentElement.offsetWidth * (this.getInitialPercentageWidth() / 100)
-    // width -= width % 30
-
-    // if (width < 30) return 30
-
-    // console.log('initial width: ', width)
-
     return this.convertRemToPixels(17)
   }
 
