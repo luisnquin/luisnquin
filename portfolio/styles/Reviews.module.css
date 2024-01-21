@@ -76,7 +76,7 @@
 .review_card_play_pause span {
     display: inline-block;
     transform: rotate(-90deg);
-    font-family: Menlo Regular, NerdFontsSymbols Nerd Font;
+    font-family: FiraCode Regular, NerdFontsSymbols Nerd Font;
 }
 
 .review_card_index span {

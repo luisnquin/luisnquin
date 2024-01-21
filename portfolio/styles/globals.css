@@ -6,7 +6,7 @@
 
 html,
 body {
-	font-family: Menlo Regular;
+	font-family: FiraCode Regular;
 }
 
 h2 {
@@ -82,16 +82,6 @@ td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
-}
-
-@font-face {
-	font-family: 'Menlo Regular';
-	src: url('/Menlo-Regular.woff');
-}
-
-@font-face {
-	font-family: 'FiraCode Medium';
-	src: url('/FiraCode-Medium.woff2');
 }
 
 @font-face {
