@@ -1,37 +1,37 @@
 name: CI/CD for CLI
 on:
-    push:
-        branches:
-            - main
-        paths:
-            - cli/**
+  push:
+    branches:
+      - main
+    paths:
+      - cli/**
 jobs:
-    deploy:
-        runs-on: ubuntu-20.04
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 20
-            - name: Install node modules
-              run: npm ci
-            - uses: JS-DevTools/npm-publish@v1
-              with:
-                  token: ${{ secrets.NPM_TOKEN }}
-                  registry: https://registry.npmjs.org/
-                  package: ./cli/package.json
-                  check-version: true
-                  access: public
-                  tag: latest
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install node modules
+        run: npm ci
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          registry: https://registry.npmjs.org/
+          package: ./cli/package.json
+          check-version: true
+          access: public
+          tag: latest
 
-    runtime-test:
-        runs-on: ubuntu-20.04
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 20
-            - name: Install node modules
-              run: npm ci
-            - name: Runtime test
-              run: npm run start:cli
+  runtime-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install node modules
+        run: npm ci
+      - name: Runtime test
+        run: npm run start:cli
