@@ -21,7 +21,8 @@ export const Interests = ({ items }: Props): React.JSX.Element => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {item.name}<span className="nerd-fonts very-small"> </span>
+                  {item.name}
+                  <span className="nerd-fonts very-small"> </span>
                 </a>
               </td>
               <td>
