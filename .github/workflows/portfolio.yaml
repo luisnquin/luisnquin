@@ -11,10 +11,24 @@ on:
     paths:
       - portfolio/**
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout v4
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install npm packages(npm ci) required to start project
+        run: |
+          npm ci
+      - name: Deploy portfolio in Vercel
+        run: npm run deploy:portfolio
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout v4
         uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
