@@ -1,24 +1,13 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 html,
 body {
 	font-family: Menlo Regular;
 }
-
-@font-face {
-	font-family: 'Menlo Regular';
-	src: url('/Menlo-Regular.woff');
-}
-
-@font-face {
-	font-family: 'FiraCode Medium';
-	src: url('/FiraCode-Medium.woff2');
-}
-
-@font-face {
-	font-family: 'FiraCode Regular';
-	src: url('/FiraCode-Regular.woff2');
-}
-
-
 
 h2 {
 	font-size: 22px;
@@ -29,21 +18,19 @@ h3 {
 	font-size: 20px;
 }
 
-
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+.nerd-fonts {
+	font-family: NerdFontsSymbols Nerd Font;
 }
 
-@keyframes mover {
-	0% {
-		transform: translateY(0);
-	}
+.very-small {
+	font-size: 13px;
+}
 
-	100% {
-		transform: translateY(6px);
-	}
+.flex-small-gap {
+	display: flex;
+	flex-direction: row;
+	gap: 2px;
+	align-items: center;
 }
 
 /*  https://stackoverflow.com/a/45890842 */
@@ -80,21 +67,7 @@ input[type="reset"] {
 	background-color: #909090;
 }
 
-.nerd-fonts {
-	font-family: NerdFontsSymbols Nerd Font;
-}
-
-.very-small {
-	font-size: 13px;
-}
-
-.flex-small-gap {
-	display: flex;
-	flex-direction: row;
-	gap: 2px;
-	align-items: center;
-}
-
+/* https://stackoverflow.com/a/968922 */
 table,
 caption,
 tbody,
@@ -110,4 +83,29 @@ td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+}
+
+@font-face {
+	font-family: 'Menlo Regular';
+	src: url('/Menlo-Regular.woff');
+}
+
+@font-face {
+	font-family: 'FiraCode Medium';
+	src: url('/FiraCode-Medium.woff2');
+}
+
+@font-face {
+	font-family: 'FiraCode Regular';
+	src: url('/FiraCode-Regular.woff2');
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(6px);
+	}
 }
