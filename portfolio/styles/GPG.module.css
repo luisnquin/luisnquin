@@ -75,3 +75,26 @@
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 2px;
 }
+
+
+@media screen and (max-width:460px) {
+    .gpg_container {
+        width: 80%;
+    }
+
+    .gpg_public_key {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width:412px) {
+    .gpg_container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .gpg_container {
+        width: 60%;
+    }
+}
