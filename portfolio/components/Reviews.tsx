@@ -54,9 +54,13 @@ export const Reviews = ({ items }: Props) => {
               key={index}
               className={`${styles.review_card} ${index === currentIndex ? styles.active : ''}`}
             >
-              <h3>{review.author}</h3>
+              <div>
+                <h3>{review.author}</h3>
+                <span>{review.position}</span>
+              </div>
+
               {review.content.split('\n').map((line, i) => (
-                <p key={i}>{line}</p>
+                <p key={i}>"{line}"</p>
               ))}
             </div>
           ))}

@@ -14,11 +14,13 @@
     padding: 10px;
     max-width: 70%;
 
-    min-height: 10rem;
+    min-height: 11.3rem;
 }
 
 .review_card.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .review_card_wrapper {
