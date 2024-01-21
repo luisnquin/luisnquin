@@ -43,7 +43,8 @@ export default function Home() {
           rel="noopener noreferrer"
           className="flex-small-gap"
         >
-          <span className="nerd-fonts very-small"></span> Source
+          Source
+          <span className="nerd-fonts very-small"> </span>
         </a>
       </footer>
     </div>

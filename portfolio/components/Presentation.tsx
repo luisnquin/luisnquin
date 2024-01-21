@@ -23,8 +23,8 @@ export const Presentation = () => {
             rel="noopener noreferrer"
             className="flex-small-gap"
           >
-            <span className="nerd-fonts very-small"></span>
             GitHub
+            <span className="nerd-fonts very-small"> </span>
           </a>
         </li>
         <li>
@@ -34,8 +34,8 @@ export const Presentation = () => {
             rel="noopener noreferrer"
             className="flex-small-gap"
           >
-            <span className="nerd-fonts very-small"></span>
             GitLab
+            <span className="nerd-fonts very-small"> </span>
           </a>
         </li>
         <li>
@@ -45,8 +45,8 @@ export const Presentation = () => {
             rel="noopener noreferrer"
             className="flex-small-gap"
           >
-            <span className="nerd-fonts very-small"></span>
             LinkedIn
+            <span className="nerd-fonts very-small"> </span>
           </a>
         </li>
         <li>
@@ -56,8 +56,8 @@ export const Presentation = () => {
             rel="noopener noreferrer"
             className="flex-small-gap"
           >
-            <span className="nerd-fonts very-small"></span>
             Resume
+            <span className="nerd-fonts very-small"> </span>
           </a>
         </li>
       </ul>
