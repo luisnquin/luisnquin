@@ -102,7 +102,9 @@ export class SnakeBoard extends React.Component {
           })}
         </div>
 
-        <p className={styles.game_board_controls}>/* Controls: A / W / S / D */</p>
+        <p className={styles.game_board_controls}>
+          /* Controls: A / W / S / D */
+        </p>
       </section>
     )
   }
