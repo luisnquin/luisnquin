@@ -1,7 +1,15 @@
 name: Portfolio built with Next.js
-
-on: [push, pull_request]
-
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - portfolio/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - portfolio/**
 jobs:
   build:
     runs-on: ubuntu-latest
