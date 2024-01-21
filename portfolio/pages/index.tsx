@@ -26,10 +26,6 @@ export default function Home() {
       <Head>
         <title>Portfolio</title>
         <link rel="shortcut icon" href="/favicon.png" />
-        <meta
-          name="description"
-          content="My personal portfolio with all my available projects"
-        />
       </Head>
 
       <main className={styles.main}>
