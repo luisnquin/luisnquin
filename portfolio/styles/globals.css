@@ -99,6 +99,11 @@ td {
 	src: url('/FiraCode-Regular.woff2');
 }
 
+@font-face {
+	font-family: 'NerdFontsSymbols Nerd Font';
+	src: url('/NerdFontsSymbols-Nerd-Font.woff2') format("woff2");
+}
+
 @keyframes mover {
 	0% {
 		transform: translateY(0);

@@ -11,11 +11,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://www.nerdfonts.com/assets/css/webfont.css"
-        />
-
         <meta property="og:title" content={pageData.title}></meta>
         <meta property="og:type" content="website"></meta>
         <meta property="og:url" content={pageData.url}></meta>
