@@ -46,7 +46,6 @@ input[type="reset"] {
 	outline: inherit;
 }
 
-
 /* https://gist.github.com/adamblank/7896758 */
 ::-webkit-scrollbar {
 	width: 10px;

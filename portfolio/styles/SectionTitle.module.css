@@ -1,0 +1,18 @@
+.internal_link {
+    text-decoration: none;
+    position: relative;
+}
+
+.internal_link:hover {
+    text-decoration: underline;
+}
+
+.internal_link:hover:after {
+    position: absolute;
+    right: -22px;
+    top: 2px;
+
+    font-family: NerdFontsSymbols Nerd Font;
+    font-size: 18px;
+    content: '󰌹';
+}

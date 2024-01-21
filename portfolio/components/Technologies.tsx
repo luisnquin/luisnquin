@@ -1,7 +1,7 @@
 import React from 'react'
-// import Image from 'next/image'
-import { Technology } from '../models/technology'
 import styles from '../styles/Technologies.module.css'
+import { Technology } from '../models/technology'
+import { SectionTitle } from './SectionTitle.tsx'
 
 interface Props {
   items: Technology[]
@@ -9,9 +9,10 @@ interface Props {
 
 export const Technologies = ({ items }: Props) => {
   return (
-    <section>
+    <section id="technologies" className={styles.technologies_section}>
+      <SectionTitle title="Technologies" id="technologies" />
+
       <div className={styles.technologies_container}>
-        <h2>Technologies</h2>
         <ul className={styles.technologies_list}>
           {items.map((item) => (
             <li key={item.name}>

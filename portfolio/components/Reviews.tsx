@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import React from 'react'
 import styles from '../styles/Reviews.module.css'
+import { SectionTitle } from './SectionTitle.tsx'
 import { Review } from '../models'
 
 interface Props {
@@ -44,9 +45,9 @@ export const Reviews = ({ items }: Props) => {
   const handlePlayPauseAction = () => setPause(!pause)
 
   return (
-    <section>
+    <section id="recommendations">
       <div className={styles.reviews_container}>
-        <h2>Recommendations</h2>
+        <SectionTitle title="Recommendations" id="recommendations" />
 
         <div className={styles.review_card_wrapper}>
           {items.map((review, index) => (

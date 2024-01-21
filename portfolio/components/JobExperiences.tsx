@@ -1,6 +1,7 @@
 import styles from '../styles/JobExperiences.module.css'
 import { CompanyExperiences } from '../models'
-import { JobExperience } from './JobExperience'
+import { JobExperience } from './JobExperience.tsx'
+import { SectionTitle } from './SectionTitle.tsx'
 
 interface Props {
   items: CompanyExperiences[]
@@ -8,10 +9,10 @@ interface Props {
 
 export const JobExperiences = ({ items }: Props) => {
   return (
-    <section className={styles.job_experiences_section}>
-      <div className={styles.job_experiences_card}>
-        <h2>Experience</h2>
+    <section id="experience" className={styles.job_experiences_section}>
+      <SectionTitle title="Experience" id="experience" />
 
+      <div className={styles.job_experiences_card}>
         <ul className={styles.job_experiences_list}>
           {items.map((experience, i) => (
             <JobExperience

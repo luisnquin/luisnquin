@@ -1,6 +1,7 @@
 import React from 'react'
 import { Interest } from '../models/interest'
 import styles from '../styles/Interests.module.css'
+import { SectionTitle } from './SectionTitle.tsx'
 
 interface Props {
   items: Interest[]
@@ -8,8 +9,8 @@ interface Props {
 
 export const Interests = ({ items }: Props): React.JSX.Element => {
   return (
-    <section className={styles.interests_section}>
-      <h2>Interests</h2>
+    <section id="interests" className={styles.interests_section}>
+      <SectionTitle title="Interests" id="interests" />
 
       <table className={styles.interests_table}>
         <tbody>

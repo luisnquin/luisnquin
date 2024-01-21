@@ -1,3 +1,11 @@
+.technologies_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .technologies_container {
     display: flex;
     flex-direction: column;
@@ -12,7 +20,7 @@
     list-style: none;
 
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     gap: 2rem;
 }
