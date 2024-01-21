@@ -1,9 +1,14 @@
 import React from 'react'
-import { ScrollDown } from './ScrollDown.tsx'
-import { HeroCopy } from './HeroCopy.tsx'
 import styles from '../styles/Presentation.module.css'
+import { ScrollDown } from './ScrollDown.tsx'
+import { GPG } from '../components/GPG.tsx'
+import { HeroCopy } from './HeroCopy.tsx'
 
-export const Presentation = () => {
+interface Props {
+  publicKey: string
+}
+
+export const Presentation = ({ publicKey }: Props) => {
   return (
     <section id="presentation" className={styles.presentation}>
       <ScrollDown className={styles.scroll_down} />
@@ -61,6 +66,8 @@ export const Presentation = () => {
           </a>
         </li>
       </ul>
+
+      <GPG publicKey={publicKey} />
     </section>
   )
 }

@@ -11,7 +11,14 @@ import { Interests } from '../components/Interests.tsx'
 import { ContactMe } from '../components/ContactMe.tsx'
 import { Reviews } from '../components/Reviews.tsx'
 
-const { contactEmail, jobExperiences, reviews, technologies, interests } = data
+const {
+  jobExperiences,
+  technologies,
+  gpgPublicKey,
+  contactEmail,
+  interests,
+  reviews,
+} = data
 
 export default function Home() {
   return (
@@ -26,7 +33,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Presentation />
+        <Presentation publicKey={gpgPublicKey} />
         <JobExperiences items={jobExperiences} />
         <Interests items={interests} />
         <Reviews items={reviews} />
