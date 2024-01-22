@@ -108,6 +108,26 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "title": "luisnquin/nixos-config",
+      "desc": "Configurations for my NixOS computer that I've maintained since 2022",
+      "why": "I've been experimenting with all kinds of setups on other Linux distros like Ubuntu, Debian, PopOS, Kali. I broke my setup too many times and spent a lot of time rebuilding my computer with the necessary work tools and personal settings... NixOS was there as a solution with its reproducibility and ability to roll back to \"x\" generation that I wanted to use. I loved it so much that it has been my main operating system since then.",
+      "repositoryUrl": "https://github.com/luisnquin/nixos-config"
+    },
+    {
+      "title": "luisnquin/senv",
+      "desc": "CLI to switch between .env files that could be easily coupled with other tools",
+      "why": "As I highlighted in my experience, I was in charge of the QA, UAT and PROD environments of my last company. To that, add the fact that I also have a development(local) environment and multiple projects for backend, frontend, and other operations. I found other dotenv switchers, but no simple CLIs and nothing with the same taste and coupling that I could have with this project while moving around in the terminal.",
+      "repositoryUrl": "https://github.com/luisnquin/senv"
+    },
+    {
+      "title": "luisnquin/nao",
+      "desc": "CLI tool to take notes with usage based on coreutils commands",
+      "why": "There are many CLI programs that try to cover the area of \"note taking\", most of them were complex to learn, meaning you have to learn another CLI. I wanted something with subcommands that would be familiar to me, that could be integrated with other programs via pipe taking advantage of the possible output formats that the user could indicate and overall something that would make the user completely forget concept of filesystem while searching for their notes. As a solution for the last point I was very inspired by how images can be managed with the Docker CLI.",
+      "repositoryUrl": "https://github.com/luisnquin/nao"
+    }
+  ],
   "technologies": [
     {
       "name": "Programming Languages",

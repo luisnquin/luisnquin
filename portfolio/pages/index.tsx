@@ -10,6 +10,7 @@ import {
   SnakeBoard,
   ContactMe,
   Interests,
+  Projects,
   Reviews,
   Footer,
 } from '../components'
@@ -21,6 +22,7 @@ const {
   technologies,
   contactEmail,
   interests,
+  projects,
   reviews,
 } = data
 
@@ -37,6 +39,7 @@ export default function Home() {
         <Experience items={companyExperiences} />
         <Interests items={interests} />
         <Reviews items={reviews} />
+        <Projects items={projects} />
         <Technologies items={technologies} />
         <ContactMe email={contactEmail} />
         <SnakeBoard />
