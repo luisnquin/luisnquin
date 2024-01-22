@@ -33,7 +33,7 @@
   "companyExperiences": [
     {
       "companyName": "WiserSKILLS",
-      "about": "Is a product widely used by human resources to make changes in the careers of the employees of their organizations.",
+      "about": "Is a widely used product by human resources to make career enhancements for the employees within their organizations. This tool empowers collaborators to refine and augment their skills based on their current job roles, aspirations and motivations.\nI played a crucial role as a team member in this project, contributing to frontend, backend and production deployments while adhering to Agile and DevOps methodologies.",
       "experiences": [
         {
           "positionTitle": "Software Developer",
@@ -48,8 +48,11 @@
             "kubernetes",
             "aws",
             "python",
+            "linux",
+            "typescript",
             "vuejs",
-            "argocd"
+            "argocd",
+            "nodejs"
           ],
           "desc": {
             "achievements": [
@@ -68,9 +71,22 @@
             "place": "Paris, France",
             "type": "Remote"
           },
-          "technologies": ["go", "arangodb", "vuejs", "aws", "docker", "linux"],
+          "technologies": [
+            "go",
+            "arangodb",
+            "vuejs",
+            "aws",
+            "docker",
+            "linux",
+            "typescript"
+          ],
           "desc": {
-            "achievements": []
+            "achievements": [
+              "Improved the development experience making that the productivity increases by 92.5% in all the cases.",
+              "Configuration, deploying and monitoring tasks of more than 20 deployed servers using ArgoCD, kubernetes and k9s.",
+              "I dealt with multiple cases of race condition issues that have been in the backend before my entry.",
+              "Automation of some common processes for the backend and the DevOps team."
+            ]
           },
           "startDate": "2022-02-01",
           "endDate": "2023-06-01"
@@ -87,9 +103,6 @@
           },
           "positionTitle": "Web Developer",
           "technologies": ["javascript", "firebase", "css"],
-          "desc": {
-            "achievements": []
-          },
           "startDate": "2021-10-01",
           "endDate": "2021-12-01"
         }

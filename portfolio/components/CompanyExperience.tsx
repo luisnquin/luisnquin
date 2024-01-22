@@ -50,7 +50,14 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
         </span>
       </h3>
 
-      {item.about ? <p>{item.about}</p> : null}
+      {item.about
+        ? item.about
+            /* eslint indent: "off" */
+            .split('\n')
+            .map((line) => (
+              <p className={styles.company_experiences_about}>{line}</p>
+            ))
+        : null}
 
       <ul className={styles.company_experiences}>
         {item.experiences.map((exp) => {
@@ -81,7 +88,7 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
               </span>
 
               <div>
-                {exp.desc.achievements.length > 0 ? (
+                {exp.desc?.achievements.length > 0 ? (
                   <div>
                     <h5>Achievements</h5>
                     <ul
