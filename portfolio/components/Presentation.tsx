@@ -18,7 +18,7 @@ export const Presentation = ({ socialNetworks, publicKey }: Props) => {
 
       <div className={styles.whoami}>
         <h1>Luis Quiñones Requelme</h1>
-        <h4>Software Developer</h4>
+        <h2 className={styles.position_title}>Software Developer</h2>
       </div>
 
       <HeroCopy isCommand text="npx luisnquin@latest" />
