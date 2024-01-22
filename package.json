@@ -15,6 +15,8 @@
     "start:portfolio": "npm --workspace portfolio run start",
     "dev:portfolio": "npm --workspace portfolio run dev",
     "style": "prettier -w .>/dev/null && gofumpt -w .",
+    "build:resume": "doc2pdf ~/Documents/resume.docx",
+    "deploy:resume": "S3_BUCKET_NAME=luisnquin-2 S3_OBJECT_NAME=luis-quinones-resume.pdf FILE_PATH=~/Documents/resume.pdf dotenv -- ./scripts/upload-to-s3.sh",
     "ts-coverage:portfolio": "npm --workspace portfolio run ts-coverage"
   },
   "bin": {
@@ -44,6 +46,7 @@
     "standard": "^17.1.0"
   },
   "dependencies": {
+    "dotenv-cli": "7.3.0",
     "typescript-coverage-report": "0.8.0"
   }
 }
