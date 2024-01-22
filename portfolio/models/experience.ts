@@ -10,7 +10,7 @@ export interface Experience {
     place: string
   }
   technologies: string[]
-  desc: {
+  desc?: {
     achievements: string[]
   }
   startDate: string
