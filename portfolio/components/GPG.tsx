@@ -11,13 +11,14 @@ export const GPG = ({ publicKey }: Props): React.JSX.Element => {
 
   return (
     <div className={styles.gpg_container}>
-      <input
-        onClick={handleCheckboxClick}
-        className={styles.gpg_checkbox_input}
-        type="checkbox"
-        id="check_id"
-      ></input>
-      <label className={styles.gpg_checkbox_label} htmlFor="check_id"></label>
+      <label className={styles.gpg_checkbox_label} htmlFor="check_id">
+        <input
+          onClick={handleCheckboxClick}
+          className={styles.gpg_checkbox_input}
+          type="checkbox"
+          id="check_id"
+        ></input>
+      </label>
 
       <textarea
         className={styles.gpg_public_key}
