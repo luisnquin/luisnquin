@@ -10,8 +10,8 @@ interface Props {
 
 export const Projects = ({ items }: Props): React.JSX.Element => {
   return (
-    <section className={styles.section}>
-      <SectionTitle title="Projects" id="projects" />
+    <section id="projects" className={styles.section}>
+      <SectionTitle id="projects" title="Projects" />
 
       <div>
         <ul>
