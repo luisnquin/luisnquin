@@ -159,12 +159,12 @@
   "interests": [
     {
       "name": "Biomedical Enginnering",
-      "desc": "Placerat at sagittis ad pellentesque condimentum volutpat sollicitudin bibendum eleifend iaculis, non mollis enim nisi quisque",
+      "desc": "Fascinated by the intersection of technology and healthcare, I am drawn to the impactful realm of Biomedical Engineering. This field, which leverages software development to enhance modern medicine, has already made significant contributions. I am excited about the potential it holds for the future and aspire to contribute my skills towards advancements in healthcare technology.",
       "externalLink": "https://en.wikipedia.org/wiki/Biomedical_engineering"
     },
     {
       "name": "Functional Programming",
-      "desc": "Posuere tristique fringilla aliquam molestie sed iaculis inceptos, velit nisl nec etiam convallis",
+      "desc": "While I don't impose this paradigm on others, I find beauty in the elegance and composability it offers when creating robust and maintainable software.",
       "externalLink": "https://en.wikipedia.org/wiki/Functional_programming"
     },
     {
