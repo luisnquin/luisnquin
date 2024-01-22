@@ -29,7 +29,7 @@ export const HeroCopy = ({ text, isCommand, isContactMail }: Props) => {
       {isContactMail ? (
         <a href={`mailto:<${text}>`}>{text}</a>
       ) : (
-        <h4 className={styles.text}>{text}</h4>
+        <h3 className={styles.text}>{text}</h3>
       )}
 
       <button className={`${styles.copy_to_clipboard} ${nerdFontsSymbols.variable}`} onClick={copyToClipboard}>
