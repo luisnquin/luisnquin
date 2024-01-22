@@ -1,10 +1,18 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    position: relative;
 
     padding-bottom: 0.5rem;
+    min-height: 3rem;
+}
 
+.footer>div {
+    position: absolute;
+    right: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
 .external_link {
