@@ -4,3 +4,7 @@ about-me/web/public/*
 firebase-debug.log
 **/flake.lock
 **/.env
+**/ideas/
+**/.next/
+**/coverage-ts/
+**/.vercel
