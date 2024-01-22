@@ -1,4 +1,4 @@
-import styles from '../styles/JobExperience.module.css'
+import styles from '../styles/CompanyExperience.module.css'
 import { CompanyExperience as CompExperience } from '../models'
 
 interface Props {
