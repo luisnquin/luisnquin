@@ -37,9 +37,9 @@ export default function Home() {
       <main className={styles.main}>
         <Presentation socialNetworks={socialNetworks} publicKey={publicKey} />
         <Experience items={companyExperiences} />
+        <Projects items={projects} />
         <Interests items={interests} />
         <Reviews items={reviews} />
-        <Projects items={projects} />
         <Technologies items={technologies} />
         <ContactMe email={contactEmail} />
         <SnakeBoard />
