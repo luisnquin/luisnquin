@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/Presentation.module.css'
+import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { ScrollDown } from './ScrollDown.tsx'
 import { GPG } from '../components/GPG.tsx'
 import { HeroCopy } from './HeroCopy.tsx'
@@ -20,7 +21,7 @@ export const Presentation = ({ publicKey }: Props) => {
 
       <HeroCopy isCommand text="npx luisnquin@latest" />
 
-      <ul className={styles.social_media}>
+      <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>
         <li>
           <a
             href="https://github.com/luisnquin"
@@ -29,7 +30,7 @@ export const Presentation = ({ publicKey }: Props) => {
             className="flex-small-gap"
           >
             GitHub
-            <span className="nerd-fonts very-small"> </span>
+            <span className={`${styles.external_link} very-small`}> </span>
           </a>
         </li>
         <li>
@@ -40,7 +41,7 @@ export const Presentation = ({ publicKey }: Props) => {
             className="flex-small-gap"
           >
             GitLab
-            <span className="nerd-fonts very-small"> </span>
+            <span className={`${styles.external_link} very-small`}> </span>
           </a>
         </li>
         <li>
@@ -51,7 +52,7 @@ export const Presentation = ({ publicKey }: Props) => {
             className="flex-small-gap"
           >
             LinkedIn
-            <span className="nerd-fonts very-small"> </span>
+            <span className={`${styles.external_link} very-small`}> </span>
           </a>
         </li>
         <li>
@@ -62,7 +63,7 @@ export const Presentation = ({ publicKey }: Props) => {
             className="flex-small-gap"
           >
             Resume
-            <span className="nerd-fonts very-small"> </span>
+            <span className={`${styles.external_link} very-small`}> </span>
           </a>
         </li>
       </ul>

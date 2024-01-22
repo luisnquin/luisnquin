@@ -1,7 +1,8 @@
 import React from 'react'
-import { Interest } from '../models/interest'
+import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/Interests.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
+import { Interest } from '../models/interest'
 
 interface Props {
   items: Interest[]
@@ -13,7 +14,7 @@ export const Interests = ({ items }: Props): React.JSX.Element => {
       <SectionTitle title="Interests" id="interests" />
 
       <table className={styles.interests_table}>
-        <tbody>
+        <tbody className={`${firaCode.variable} ${nerdFontsSymbols.variable}`}>
           {items.map((item) => (
             <tr key={item.name}>
               <td>
@@ -23,7 +24,10 @@ export const Interests = ({ items }: Props): React.JSX.Element => {
                   rel="noopener noreferrer"
                 >
                   {item.name}
-                  <span className="nerd-fonts very-small"> </span>
+                  <span className={`${styles.external_link} very-small`}>
+                    {' '}
+                    
+                  </span>
                 </a>
               </td>
               <td>

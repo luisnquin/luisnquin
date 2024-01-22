@@ -28,6 +28,10 @@
     margin-top: 1rem;
 }
 
+.external_link {
+    font-family: var(--nerd-fonts-symbols);
+}
+
 @media screen and (max-width:500px) {
     .social_media {
         gap: 10px;

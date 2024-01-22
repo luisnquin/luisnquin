@@ -40,9 +40,8 @@
 }
 
 .technologies_list li p {
-    font-family: FiraCode Regular, 'NerdFontsSymbols Nerd Font';
+    font-family: var(--fira-code), var(--nerd-fonts-symbols);
 }
-
 
 @media screen and (max-width:500px) {
     .technologies_container {

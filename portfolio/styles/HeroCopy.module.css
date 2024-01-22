@@ -11,7 +11,7 @@
 }
 
 .copy_to_clipboard {
-	font-family: NerdFontsSymbols Nerd Font;
+	font-family: var(--nerd-fonts-symbols);
 }
 
 .arrow_right {
@@ -30,6 +30,5 @@
 
 .text {
 	color: rgba(22, 21, 21, 0.89);
-	font-family: FiraCode Regular;
 	font-weight: lighter;
 }

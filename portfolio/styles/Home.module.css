@@ -17,15 +17,6 @@
 	margin-bottom: 5rem;
 }
 
-.footer {
-	display: flex;
-	flex-direction: row;
-	gap: 2rem;
-
-	padding-bottom: 0.5rem;
-}
-
-
 @media screen and (max-width:1300px) {
 	.main {
 		width: 70%;

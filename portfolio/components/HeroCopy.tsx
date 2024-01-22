@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { nerdFontsSymbols } from '../styles/fonts'
 import styles from '../styles/HeroCopy.module.css'
 
 interface Props {
@@ -31,7 +32,7 @@ export const HeroCopy = ({ text, isCommand, isContactMail }: Props) => {
         <h4 className={styles.text}>{text}</h4>
       )}
 
-      <button className={styles.copy_to_clipboard} onClick={copyToClipboard}>
+      <button className={`${styles.copy_to_clipboard} ${nerdFontsSymbols.variable}`} onClick={copyToClipboard}>
         {copied ? '󰄬' : '󰆏'}
       </button>
     </div>

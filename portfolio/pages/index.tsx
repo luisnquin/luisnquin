@@ -10,6 +10,7 @@ import { SnakeBoard } from '../components/SnakeBoard.tsx'
 import { Interests } from '../components/Interests.tsx'
 import { ContactMe } from '../components/ContactMe.tsx'
 import { Reviews } from '../components/Reviews.tsx'
+import { Footer } from '../components/Footer.tsx'
 
 const {
   jobExperiences,
@@ -38,18 +39,7 @@ export default function Home() {
         <SnakeBoard />
       </main>
 
-      <footer className={styles.footer}>
-        <span>^^</span>
-        <a
-          href="https://github.com/luisnquin/luisnquin"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-small-gap"
-        >
-          Source
-          <span className="nerd-fonts very-small"> </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }

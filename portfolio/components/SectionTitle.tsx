@@ -1,4 +1,5 @@
 import styles from '../styles/SectionTitle.module.css'
+import { nerdFontsSymbols } from '../styles/fonts.ts'
 
 interface Props {
   title: string
@@ -7,7 +8,7 @@ interface Props {
 
 export const SectionTitle = ({ title, id }: Props) => {
   return (
-    <h2>
+    <h2 className={nerdFontsSymbols.variable}>
       <a href={`#${id}`} className={styles.internal_link}>
         {title}
       </a>

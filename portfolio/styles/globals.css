@@ -4,22 +4,12 @@
 	margin: 0;
 }
 
-html,
-body {
-	font-family: FiraCode Regular;
-}
-
 h2 {
 	font-size: 22px;
 }
 
-
 h3 {
 	font-size: 20px;
-}
-
-.nerd-fonts {
-	font-family: NerdFontsSymbols Nerd Font;
 }
 
 .very-small {
@@ -84,15 +74,6 @@ td {
 	background: transparent;
 }
 
-@font-face {
-	font-family: 'FiraCode Regular';
-	src: url('/FiraCode-Regular.woff2');
-}
-
-@font-face {
-	font-family: 'NerdFontsSymbols Nerd Font';
-	src: url('/NerdFontsSymbols-Nerd-Font.woff2') format("woff2");
-}
 
 @keyframes mover {
 	0% {
