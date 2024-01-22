@@ -32,7 +32,10 @@ export const HeroCopy = ({ text, isCommand, isContactMail }: Props) => {
         <h3 className={styles.text}>{text}</h3>
       )}
 
-      <button className={`${styles.copy_to_clipboard} ${nerdFontsSymbols.variable}`} onClick={copyToClipboard}>
+      <button
+        className={`${styles.copy_to_clipboard} ${nerdFontsSymbols.variable}`}
+        onClick={copyToClipboard}
+      >
         {copied ? '󰄬' : '󰆏'}
       </button>
     </div>
