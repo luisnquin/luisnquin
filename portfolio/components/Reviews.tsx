@@ -50,21 +50,39 @@ export const Reviews = ({ items }: Props) => {
         <SectionTitle title="Recommendations" id="recommendations" />
 
         <div className={styles.review_card_wrapper}>
-          {items.map((review, index) => (
-            <div
-              key={index}
-              className={`${styles.review_card} ${index === currentIndex ? styles.active : ''}`}
-            >
-              <div>
-                <h3>{review.author}</h3>
-                <span>{review.position}</span>
-              </div>
+          {items.map((review, index) =>
+            review.propaganda ? (
+              <div
+                key={index}
+                className={`${styles.review_card} ${index === currentIndex ? styles.active : ''}`}
+              >
+                <div>
+                  <h3>Your comment can be here</h3>
 
-              {review.content.split('\n').map((line, i) => (
-                <p key={i}>"{line}"</p>
-              ))}
-            </div>
-          ))}
+                  <p>
+                    If we have worked together in the past or present and you
+                    want to share your thoughts about your experience working
+                    with me, you can request to submit a recommendation on my
+                    LinkedIn. I'd love to hear from you. ;)
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div
+                key={index}
+                className={`${styles.review_card} ${index === currentIndex ? styles.active : ''}`}
+              >
+                <div>
+                  <h3>{review.author}</h3>
+                  <span>{review.position}</span>
+                </div>
+
+                {review.content.split('\n').map((line, i) => (
+                  <p key={i}>"{line}"</p>
+                ))}
+              </div>
+            )
+          )}
 
           <div
             className={`${styles.review_card_control} ${firaCode.variable} ${nerdFontsSymbols.variable}`}
