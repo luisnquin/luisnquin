@@ -29,7 +29,46 @@
 }
 
 .text {
+	position: relative;
+	display: inline-block;
+
 	color: rgba(22, 21, 21, 0.89);
 	font-weight: lighter;
 	font-size: 16px;
+}
+
+.text span {
+	visibility: hidden;
+	width: 90%;
+	background-color: #1b1b1bcb;
+	color: #fff;
+	text-align: center;
+	padding: 3px 0;
+	border-radius: 6px;
+	font-size: 15px;
+
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 40%;
+	margin-left: -60px;
+
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.text>span::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.text:hover span {
+	visibility: visible;
+	opacity: 1;
 }

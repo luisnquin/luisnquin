@@ -19,6 +19,7 @@ const {
   gpgPublicKey: publicKey,
   companyExperiences,
   socialNetworks,
+  lastCLIUpdate,
   technologies,
   contactEmail,
   interests,
@@ -27,15 +28,24 @@ const {
 } = data
 
 export default function Home() {
+  const meta = {
+    title: 'Portfolio',
+    favicon: '/favicon.png',
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Portfolio</title>
-        <link rel="shortcut icon" href="/favicon.png" />
+        <title>{meta.title}</title>
+        <link rel="shortcut icon" href={meta.favicon} />
       </Head>
 
       <main className={styles.main}>
-        <Presentation socialNetworks={socialNetworks} publicKey={publicKey} />
+        <Presentation
+          lastCLIUpdate={lastCLIUpdate}
+          socialNetworks={socialNetworks}
+          publicKey={publicKey}
+        />
         <Experience items={companyExperiences} />
         <Projects items={projects} />
         <Interests items={interests} />

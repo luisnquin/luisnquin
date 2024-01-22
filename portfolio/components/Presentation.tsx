@@ -8,10 +8,15 @@ import { HeroCopy } from './HeroCopy.tsx'
 
 interface Props {
   socialNetworks: SocialNetwork[]
+  lastCLIUpdate: string
   publicKey: string
 }
 
-export const Presentation = ({ socialNetworks, publicKey }: Props) => {
+export const Presentation = ({
+  lastCLIUpdate,
+  socialNetworks,
+  publicKey,
+}: Props) => {
   return (
     <section id="presentation" className={styles.presentation}>
       <ScrollDown className={styles.scroll_down} />
@@ -21,7 +26,11 @@ export const Presentation = ({ socialNetworks, publicKey }: Props) => {
         <h2 className={styles.position_title}>Software Developer</h2>
       </div>
 
-      <HeroCopy isCommand text="npx luisnquin@latest" />
+      <HeroCopy
+        isCommand
+        text="npx luisnquin@latest"
+        tooltip={`Last modification: ${lastCLIUpdate}`}
+      />
 
       <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>
         {socialNetworks.map((socialNetwork) => (
