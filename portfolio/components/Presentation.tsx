@@ -3,18 +3,18 @@ import styles from '../styles/Presentation.module.css'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { ScrollDown } from './ScrollDown.tsx'
 import { GPG } from '../components/GPG.tsx'
-import { SocialNetwork } from '../models'
+import { ExternalLink } from '../models'
 import { HeroCopy } from './HeroCopy.tsx'
 
 interface Props {
-  socialNetworks: SocialNetwork[]
+  externalLinks: ExternalLink[]
   lastCLIUpdate: string
   publicKey: string
 }
 
 export const Presentation = ({
   lastCLIUpdate,
-  socialNetworks,
+  externalLinks,
   publicKey,
 }: Props) => {
   return (
@@ -33,15 +33,15 @@ export const Presentation = ({
       />
 
       <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>
-        {socialNetworks.map((socialNetwork) => (
-          <li key={socialNetwork.name}>
+        {externalLinks.map((link) => (
+          <li key={link.name}>
             <a
-              href={socialNetwork.url}
+              href={link.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-small-gap"
             >
-              {socialNetwork.name}
+              {link.name}
               <span className={`${styles.external_link} very-small`}> </span>
             </a>
           </li>

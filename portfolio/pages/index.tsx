@@ -18,7 +18,7 @@ import {
 const {
   gpgPublicKey: publicKey,
   companyExperiences,
-  socialNetworks,
+  externalLinks,
   lastCLIUpdate,
   technologies,
   contactEmail,
@@ -43,7 +43,7 @@ export default function Home() {
       <main className={styles.main}>
         <Presentation
           lastCLIUpdate={lastCLIUpdate}
-          socialNetworks={socialNetworks}
+          externalLinks={externalLinks}
           publicKey={publicKey}
         />
         <Experience items={companyExperiences} />
