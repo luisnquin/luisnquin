@@ -3,13 +3,15 @@ import styles from '../styles/Presentation.module.css'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { ScrollDown } from './ScrollDown.tsx'
 import { GPG } from '../components/GPG.tsx'
+import { SocialNetwork } from '../models'
 import { HeroCopy } from './HeroCopy.tsx'
 
 interface Props {
+  socialNetworks: SocialNetwork[]
   publicKey: string
 }
 
-export const Presentation = ({ publicKey }: Props) => {
+export const Presentation = ({ socialNetworks, publicKey }: Props) => {
   return (
     <section id="presentation" className={styles.presentation}>
       <ScrollDown className={styles.scroll_down} />
@@ -22,50 +24,19 @@ export const Presentation = ({ publicKey }: Props) => {
       <HeroCopy isCommand text="npx luisnquin@latest" />
 
       <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>
-        <li>
-          <a
-            href="https://github.com/luisnquin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-small-gap"
-          >
-            GitHub
-            <span className={`${styles.external_link} very-small`}> </span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://gitlab.com/luisnquin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-small-gap"
-          >
-            GitLab
-            <span className={`${styles.external_link} very-small`}> </span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com/in/luisnquin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-small-gap"
-          >
-            LinkedIn
-            <span className={`${styles.external_link} very-small`}> </span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-small-gap"
-          >
-            Resume
-            <span className={`${styles.external_link} very-small`}> </span>
-          </a>
-        </li>
+        {socialNetworks.map((socialNetwork) => (
+          <li key={socialNetwork.name}>
+            <a
+              href={socialNetwork.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-small-gap"
+            >
+              {socialNetwork.name}
+              <span className={`${styles.external_link} very-small`}> </span>
+            </a>
+          </li>
+        ))}
       </ul>
 
       <GPG publicKey={publicKey} />

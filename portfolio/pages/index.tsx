@@ -13,9 +13,10 @@ import { Reviews } from '../components/Reviews.tsx'
 import { Footer } from '../components/Footer.tsx'
 
 const {
+  socialNetworks,
   jobExperiences,
   technologies,
-  gpgPublicKey,
+  gpgPublicKey: publicKey,
   contactEmail,
   interests,
   reviews,
@@ -30,7 +31,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Presentation publicKey={gpgPublicKey} />
+        <Presentation socialNetworks={socialNetworks} publicKey={publicKey} />
         <JobExperiences items={jobExperiences} />
         <Interests items={interests} />
         <Reviews items={reviews} />
