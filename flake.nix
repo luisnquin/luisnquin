@@ -24,6 +24,10 @@
 
               buildInputs = with pkgs; [
                 nodejs_21
+                coreutils
+                openssl
+                unoconv
+                curl
                 git
               ];
             };
