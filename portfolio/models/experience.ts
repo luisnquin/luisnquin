@@ -22,7 +22,7 @@ export interface Experience {
 /**
  * Represents more than one job experience in a company.
  */
-export interface CompanyExperiences {
+export interface CompanyExperience {
   companyName: string
   about?: string
   experiences: Experience[]

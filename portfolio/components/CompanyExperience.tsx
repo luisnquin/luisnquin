@@ -1,11 +1,11 @@
 import styles from '../styles/JobExperience.module.css'
-import { CompanyExperiences } from '../models'
+import { CompanyExperience as CompExperience } from '../models'
 
 interface Props {
-  companyExperience: CompanyExperiences
+  companyExperience: CompExperience
 }
 
-const getYearsLabel = (companyExp: CompanyExperiences): string => {
+const getYearsLabel = (companyExp: CompExperience): string => {
   let minStartDate: Date, maxEndDate: Date
 
   for (const experience of companyExp.experiences) {
@@ -40,7 +40,7 @@ const getYearsLabel = (companyExp: CompanyExperiences): string => {
   return `(${msdYear} - ${medYear})`
 }
 
-export const JobExperience = ({ companyExperience: item }: Props) => {
+export const CompanyExperience = ({ companyExperience: item }: Props) => {
   return (
     <li className={styles.company_experiences_card}>
       <h3>

@@ -3,20 +3,20 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import data from '../data.json' assert { type: 'json' }
 
-import { JobExperiences } from '../components/JobExperiences.tsx'
 import { Presentation } from '../components/Presentation.tsx'
 import { Technologies } from '../components/Technologies.tsx'
+import { Experience } from '../components/Experience.tsx'
 import { SnakeBoard } from '../components/SnakeBoard.tsx'
-import { Interests } from '../components/Interests.tsx'
 import { ContactMe } from '../components/ContactMe.tsx'
+import { Interests } from '../components/Interests.tsx'
 import { Reviews } from '../components/Reviews.tsx'
 import { Footer } from '../components/Footer.tsx'
 
 const {
-  socialNetworks,
-  jobExperiences,
-  technologies,
   gpgPublicKey: publicKey,
+  companyExperiences,
+  socialNetworks,
+  technologies,
   contactEmail,
   interests,
   reviews,
@@ -32,7 +32,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Presentation socialNetworks={socialNetworks} publicKey={publicKey} />
-        <JobExperiences items={jobExperiences} />
+        <Experience items={companyExperiences} />
         <Interests items={interests} />
         <Reviews items={reviews} />
         <Technologies items={technologies} />
