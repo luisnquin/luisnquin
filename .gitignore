@@ -3,3 +3,4 @@ about-me/web/public/*
 .firebase/
 firebase-debug.log
 **/flake.lock
+**/.env
