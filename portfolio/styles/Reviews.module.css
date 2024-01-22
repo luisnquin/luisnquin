@@ -45,6 +45,7 @@
 .review_card_play_pause {
     padding: 2px 5px;
     border: 1px solid rgba(0, 0, 0, 0.6);
+    font-family: var(--fira-code), var(--nerd-fonts-symbols);
 }
 
 .review_card_index,

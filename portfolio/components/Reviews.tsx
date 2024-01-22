@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { nerdFontsSymbols } from '../styles/fonts.ts'
+import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/Reviews.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
 import { Review } from '../models'
@@ -66,7 +66,9 @@ export const Reviews = ({ items }: Props) => {
             </div>
           ))}
 
-          <div className={`${styles.review_card_control} ${nerdFontsSymbols.variable}`}>
+          <div
+            className={`${styles.review_card_control} ${firaCode.variable} ${nerdFontsSymbols.variable}`}
+          >
             <span className={styles.review_card_index}>
               {currentIndex}
               <span>index</span>
