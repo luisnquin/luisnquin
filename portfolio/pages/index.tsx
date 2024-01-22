@@ -30,14 +30,21 @@ const {
 export default function Home() {
   const meta = {
     title: 'Portfolio',
-    favicon: '/favicon.png',
+    faviconLight: '/favicon.png',
+    faviconDark: '/favicon-dark.png',
   }
 
   return (
     <div className={styles.container}>
       <Head>
         <title>{meta.title}</title>
-        <link rel="shortcut icon" href={meta.favicon} />
+        <link rel="icon" type="image/png" href={meta.faviconDark} />
+        <link
+          rel="icon"
+          type="image/png"
+          href={meta.faviconLight}
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
 
       <main className={styles.main}>
