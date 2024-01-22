@@ -1,4 +1,4 @@
-import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
+import { firaCode } from '../styles/fonts.ts'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
