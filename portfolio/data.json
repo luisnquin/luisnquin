@@ -112,7 +112,7 @@
     {
       "title": "luisnquin/nixos-config",
       "desc": "Configurations for my NixOS computer that I've maintained since 2022",
-      "why": "I've been experimenting with all kinds of setups on other Linux distros like Ubuntu, Debian, PopOS, Kali. I broke my setup too many times and spent a lot of time rebuilding my computer with the necessary work tools and personal settings... NixOS was there as a solution with its reproducibility and ability to roll back to \"x\" generation that I wanted to use. I loved it so much that it has been my main operating system since then.",
+      "why": "I've been experimenting with all kind of setups on other Linux distros like Ubuntu, Debian, PopOS, Kali, etc. I broke my setup too many times and spent a lot of time rebuilding my computer with the necessary work tools and personal settings... NixOS was there as a solution with its reproducibility and ability to roll back to \"x\" generation that I wanted to use. I loved it so much that it has been my main operating system since then.",
       "repositoryUrl": "https://github.com/luisnquin/nixos-config"
     },
     {
