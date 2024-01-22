@@ -1,6 +1,5 @@
 .gpg_container {
     width: 90%;
-    position: relative;
     height: auto;
     border-top: 0;
 
@@ -15,51 +14,10 @@
 
 .gpg_checkbox_label {
     background: #e4e3df;
-    display: block;
     width: 100%;
     height: 20px;
     cursor: pointer;
-    position: absolute;
-    top: 0;
     transition: top .45s cubic-bezier(.44, .99, .48, 1);
-}
-
-.gpg_checkbox_label:before,
-.gpg_checkbox_label:after {
-    display: block;
-}
-
-.gpg_checkbox_label:after {
-    right: 10px;
-    -webkit-animation: sudo .85s linear infinite alternate;
-    animation: sudo .85s linear infinite alternate;
-}
-
-@keyframes sudo {
-    from {
-        -webkit-transform: translateY(-2px);
-        transform: translateY(-2px);
-    }
-
-    to {
-        -webkit-transform: translateY(2px);
-        transform: translateY(2px);
-    }
-}
-
-.gpg_checkbox_input~div {
-    width: 100%;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .45s cubic-bezier(.44, .99, .48, 1);
-}
-
-.gpg_checkbox_input:checked~div {
-    max-height: 300px;
-}
-
-.gpg_checkbox_input:checked+label {
-    top: 100%;
 }
 
 .gpg_public_key {
@@ -69,11 +27,7 @@
 
     resize: none;
     width: 100%;
-
-    /* border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px; */
 }
-
 
 @media screen and (max-width:460px) {
     .gpg_container {
