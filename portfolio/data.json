@@ -52,8 +52,6 @@
             "argocd"
           ],
           "desc": {
-            "aboutProduct": null,
-            "roleOverview": null,
             "achievements": [
               "Improvements in the software reliability redifining and improving critical services with E2E, integration and unit tests.",
               "Migration of services from WebSocket to a REST architecture, achieving that all the platform becomes more scalable.",
@@ -72,8 +70,6 @@
           },
           "technologies": ["go", "arangodb", "vuejs", "aws", "docker", "linux"],
           "desc": {
-            "aboutProduct": null,
-            "roleOverview": null,
             "achievements": []
           },
           "startDate": "2022-02-01",
@@ -92,8 +88,6 @@
           "positionTitle": "Web Developer",
           "technologies": ["javascript", "firebase", "css"],
           "desc": {
-            "aboutProduct": null,
-            "roleOverview": null,
             "achievements": []
           },
           "startDate": "2021-10-01",

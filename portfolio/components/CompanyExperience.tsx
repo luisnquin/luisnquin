@@ -81,9 +81,6 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
               </span>
 
               <div>
-                <div>{exp.desc?.aboutProduct}</div>
-                <div>{exp.desc?.roleOverview}</div>
-
                 {exp.desc.achievements.length > 0 ? (
                   <div>
                     <h5>Achievements</h5>

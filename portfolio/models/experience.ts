@@ -11,8 +11,6 @@ export interface Experience {
   }
   technologies: string[]
   desc: {
-    aboutProduct?: string
-    roleOverview?: string
     achievements: string[]
   }
   startDate: string
