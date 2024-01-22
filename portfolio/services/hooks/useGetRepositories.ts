@@ -3,7 +3,7 @@ import {
   setRepositoriesInStore,
 } from '../store/repositories'
 import { GitHubService } from '../fetchers'
-import { Repository } from '../../models/github/repository.model'
+import { Repository } from '../../models/github'
 import { useState, useEffect } from 'react'
 
 export function useGetRepositories(

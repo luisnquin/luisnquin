@@ -1,5 +1,4 @@
-import { UserCommitsInfo } from '../../models/github'
-import { Repository } from '../../models/github'
+import { Repository, UserCommitsInfo } from '../../models/github'
 
 interface GetUserRepositoryResponseItem {
   id: string

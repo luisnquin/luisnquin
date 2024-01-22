@@ -2,7 +2,7 @@ import React from 'react'
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/Interests.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
-import { Interest } from '../models/interest'
+import { Interest } from '../models'
 
 interface Props {
   items: Interest[]
