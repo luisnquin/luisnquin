@@ -3,9 +3,9 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={firaCode.className}>
+    <div className={firaCode.className}>
       <Component {...pageProps} />
-    </main>
+    </div>
   )
 }
 
