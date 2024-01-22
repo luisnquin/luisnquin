@@ -107,13 +107,13 @@ export const Reviews = ({ items }: Props) => {
               onClick={handleLeftKeyAction}
               className={styles.review_card_arrow_left}
             >
-              ←
+              
             </button>
             <button
               onClick={handleRightKeyAction}
               className={styles.review_card_arrow_right}
             >
-              →
+              
             </button>
             <button
               onClick={handlePlayPauseAction}
