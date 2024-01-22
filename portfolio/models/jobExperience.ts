@@ -24,5 +24,6 @@ export interface Experience {
  */
 export interface CompanyExperiences {
   companyName: string
+  about?: string
   experiences: Experience[]
 }

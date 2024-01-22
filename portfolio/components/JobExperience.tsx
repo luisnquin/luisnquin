@@ -50,6 +50,8 @@ export const JobExperience = ({ companyExperience: item }: Props) => {
         </span>
       </h3>
 
+      {item.about ? <p>{item.about}</p> : null}
+
       <ul className={styles.company_experiences}>
         {item.experiences.map((exp) => {
           const formatDate = (date?: string): string => {
@@ -89,7 +91,11 @@ export const JobExperience = ({ companyExperience: item }: Props) => {
                       className={styles.company_experiences_item_achievements}
                     >
                       {exp.desc.achievements.map((line, i) => {
-                        return <li key={i}>{line}</li>
+                        return (
+                          <li key={i}>
+                            <span>{line}</span>
+                          </li>
+                        )
                       })}
                     </ul>
                   </div>

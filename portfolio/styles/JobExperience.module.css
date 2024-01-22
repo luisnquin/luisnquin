@@ -41,6 +41,17 @@
     font-size: 14px;
 }
 
+.company_experiences_item_achievements>li {
+    list-style: inside;
+}
+
+.company_experiences_item_achievements>li span {
+    position: relative;
+    left: -10px;
+    top: 1px;
+}
+
+
 .company_experiences_item_technologies {
     list-style: none;
     padding: 0;
