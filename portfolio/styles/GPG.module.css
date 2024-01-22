@@ -29,10 +29,6 @@
     display: block;
 }
 
-.gpg_checkbox_label:before {
-    content: 'See GPG public key';
-}
-
 .gpg_checkbox_label:after {
     right: 10px;
     -webkit-animation: sudo .85s linear infinite alternate;
@@ -64,10 +60,6 @@
 
 .gpg_checkbox_input:checked+label {
     top: 100%;
-}
-
-.gpg_checkbox_input:checked+label:before {
-    content: 'Hide';
 }
 
 .gpg_public_key {

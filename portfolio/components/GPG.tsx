@@ -12,6 +12,7 @@ export const GPG = ({ publicKey }: Props): React.JSX.Element => {
   return (
     <div className={styles.gpg_container}>
       <label className={styles.gpg_checkbox_label} htmlFor="check_id">
+        {hide ? 'See GPG public key' : 'Hide'}
         <input
           onClick={handleCheckboxClick}
           className={styles.gpg_checkbox_input}
