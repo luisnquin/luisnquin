@@ -15,6 +15,11 @@ export const Interests = ({ items }: Props): React.JSX.Element => {
 
       <table className={styles.interests_table}>
         <tbody className={`${firaCode.variable} ${nerdFontsSymbols.variable}`}>
+          <tr>
+            <th style={{ width: '22%' }}></th>
+            <th style={{ width: '78%' }}></th>
+          </tr>
+
           {items.map((item) => (
             <tr key={item.name}>
               <td>
