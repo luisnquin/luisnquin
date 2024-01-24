@@ -69,14 +69,14 @@
     font-family: var(--nerd-fonts-symbols);
 }
 
-
-.review_card_play_pause {
-    position: relative;
-}
-
 .review_card_play_pause span {
+    position: relative;
+    left: 1px;
+
     display: inline-block;
     transform: rotate(-90deg);
+    min-height: 20.5px;
+    max-height: 20.5px;
 }
 
 .review_card_index span {
