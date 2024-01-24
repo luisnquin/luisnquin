@@ -99,7 +99,14 @@
 
 @media screen and (max-width:500px) {
     .reviews_container {
-        width: 95%;
+        max-width: 95%;
         margin: auto;
+    }
+}
+
+@media screen and (max-width:315px) {
+    .review_card_arrow_left,
+    .review_card_arrow_right {
+        min-height: 25.5px;
     }
 }
