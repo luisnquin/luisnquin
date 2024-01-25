@@ -1,75 +1,74 @@
 .company_experiences_card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .company_experiences_card h3 {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .company_experiences {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 2rem;
 }
 
 .company_experiences_year_range {
-    font-weight: lighter;
-    font-size: 14px;
+  font-weight: lighter;
+  font-size: 14px;
 }
 
 .company_experiences_about {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .company_experiences_item {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .company_experiences_item h4 {
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .company_experiences_item h4 span {
-    font-weight: lighter;
-    font-size: 14px;
+  font-weight: lighter;
+  font-size: 14px;
 }
 
-.company_experiences_item_achievements>li {
-    list-style: inside;
+.company_experiences_item_achievements > li {
+  list-style: inside;
 }
 
-.company_experiences_item_achievements>li span {
-    position: relative;
-    left: -10px;
-    top: 1px;
+.company_experiences_item_achievements > li span {
+  position: relative;
+  left: -10px;
+  top: 1px;
 }
-
 
 .company_experiences_item_technologies {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
 }
 
 .company_experiences_item_technologies li {
-    width: min-content;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
-    padding: 1px 2px;
+  width: min-content;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  padding: 1px 2px;
 }
 
 .company_experiences_item_location {
-    font-size: 14px;
+  font-size: 14px;
 }

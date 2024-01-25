@@ -1,59 +1,59 @@
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
-	font-size: 22px;
+  font-size: 22px;
 }
 
 h3 {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .very-small {
-	font-size: 13px;
+  font-size: 13px;
 }
 
 .flex-small-gap {
-	display: flex;
-	flex-direction: row;
-	gap: 2px;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
 }
 
 /*  https://stackoverflow.com/a/45890842 */
 button,
-input[type="submit"],
-input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 /* https://gist.github.com/adamblank/7896758 */
 ::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track-piece {
-	background-color: #FFF;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #CBCBCB;
-	outline: 2px solid #FFF;
-	outline-offset: -2px;
-	border: .1px solid #B7B7B7;
+  background-color: #cbcbcb;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 0.1px solid #b7b7b7;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #909090;
+  background-color: #909090;
 }
 
 /* https://stackoverflow.com/a/968922 */
@@ -65,22 +65,21 @@ thead,
 tr,
 th,
 td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-
 @keyframes mover {
-	0% {
-		transform: translateY(0);
-	}
+  0% {
+    transform: translateY(0);
+  }
 
-	100% {
-		transform: translateY(6px);
-	}
+  100% {
+    transform: translateY(6px);
+  }
 }

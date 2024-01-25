@@ -1,39 +1,38 @@
 .reviews_container {
-    text-align: center;
+  text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-
 .review_card {
-    display: none;
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-width: 70%;
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 70%;
 
-    min-height: 11.75rem;
+  min-height: 11.75rem;
 }
 
 .review_card.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .review_card_wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .review_card_control {
-    display: flex;
-    flex-direction: column;
-    width: min-content;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
 }
 
 .review_card_index,
@@ -43,70 +42,70 @@
 .review_card_reverse,
 .review_card_capacity,
 .review_card_play_pause {
-    padding: 2px 5px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    font-family: var(--nerd-fonts-symbols), var(--fira-code);
+  padding: 2px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-family: var(--nerd-fonts-symbols), var(--fira-code);
 }
 
 .review_card_index,
 .review_card_next_index,
 .review_card_capacity {
-    position: relative;
-    padding-bottom: 7px;
-    text-align: center;
+  position: relative;
+  padding-bottom: 7px;
+  text-align: center;
 }
 
 .review_card_index span,
 .review_card_next_index span,
 .review_card_capacity span {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 
-    font-size: 9px;
+  font-size: 9px;
 }
 
 .review_card_reverse {
-    font-family: var(--nerd-fonts-symbols);
+  font-family: var(--nerd-fonts-symbols);
 }
 
 .review_card_play_pause span {
-    position: relative;
-    left: 1px;
+  position: relative;
+  left: 1px;
 
-    display: inline-block;
-    transform: rotate(-90deg);
-    min-height: 20.5px;
-    max-height: 20.5px;
+  display: inline-block;
+  transform: rotate(-90deg);
+  min-height: 20.5px;
+  max-height: 20.5px;
 }
 
 .review_card_index span {
-    right: 0;
+  right: 0;
 }
 
 .review_card_next_index span {
-    right: 2px;
+  right: 2px;
 }
 
 .review_card_capacity span {
-    right: 4px;
+  right: 4px;
 }
 
-@media screen and (max-width:1000px) {
-    .review_card {
-        max-width: unset;
-    }
+@media screen and (max-width: 1000px) {
+  .review_card {
+    max-width: unset;
+  }
 }
 
-@media screen and (max-width:500px) {
-    .reviews_container {
-        max-width: 95%;
-        margin: auto;
-    }
+@media screen and (max-width: 500px) {
+  .reviews_container {
+    max-width: 95%;
+    margin: auto;
+  }
 }
 
-@media screen and (max-width:315px) {
-    .review_card_arrow_left,
-    .review_card_arrow_right {
-        min-height: 25.5px;
-    }
+@media screen and (max-width: 315px) {
+  .review_card_arrow_left,
+  .review_card_arrow_right {
+    min-height: 25.5px;
+  }
 }

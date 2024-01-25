@@ -1,18 +1,18 @@
 .internal_link {
-    text-decoration: none;
-    position: relative;
+  text-decoration: none;
+  position: relative;
 }
 
 .internal_link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .internal_link:hover:after {
-    position: absolute;
-    right: -22px;
-    top: 2px;
+  position: absolute;
+  right: -22px;
+  top: 2px;
 
-    font-family: var(--nerd-fonts-symbols);
-    font-size: 18px;
-    content: '󰌹';
+  font-family: var(--nerd-fonts-symbols);
+  font-size: 18px;
+  content: '󰌹';
 }

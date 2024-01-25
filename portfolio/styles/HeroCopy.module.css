@@ -1,74 +1,74 @@
 .container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
 
-	padding: 11px 13px;
-	border-radius: 5px;
+  padding: 11px 13px;
+  border-radius: 5px;
 
-	border: 1px solid rgba(16, 4, 28, 0.6);
+  border: 1px solid rgba(16, 4, 28, 0.6);
 }
 
 .copy_to_clipboard {
-	font-family: var(--nerd-fonts-symbols);
+  font-family: var(--nerd-fonts-symbols);
 }
 
 .arrow_right {
-	color: #ababab;
+  color: #ababab;
 }
 
 .copy_to_clipboard {
-	filter: brightness(80%);
-	color: #000000d3;
+  filter: brightness(80%);
+  color: #000000d3;
 }
 
 .copy_to_clipboard:hover {
-	cursor: pointer;
-	filter: brightness(100%);
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .text {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 
-	color: rgba(22, 21, 21, 0.89);
-	font-weight: lighter;
-	font-size: 16px;
+  color: rgba(22, 21, 21, 0.89);
+  font-weight: lighter;
+  font-size: 16px;
 }
 
 .text span {
-	visibility: hidden;
-	width: 90%;
-	background-color: #1b1b1bcb;
-	color: #fff;
-	text-align: center;
-	padding: 3px 0;
-	border-radius: 6px;
-	font-size: 15px;
+  visibility: hidden;
+  width: 90%;
+  background-color: #1b1b1bcb;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 6px;
+  font-size: 15px;
 
-	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	left: 40%;
-	margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 40%;
+  margin-left: -60px;
 
-	opacity: 0;
-	transition: opacity 0.3s;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.text>span::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #555 transparent transparent transparent;
+.text > span::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
 .text:hover span {
-	visibility: visible;
-	opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }

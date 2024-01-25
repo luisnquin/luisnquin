@@ -3,34 +3,34 @@
 } */
 
 .main {
-	width: 50%;
-	overflow: hidden;
-	margin: auto;
+  width: 50%;
+  overflow: hidden;
+  margin: auto;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-	gap: 6rem;
+  gap: 6rem;
 
-	margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
-@media screen and (max-width:1300px) {
-	.main {
-		width: 70%;
-	}
+@media screen and (max-width: 1300px) {
+  .main {
+    width: 70%;
+  }
 }
 
-@media screen and (max-width:1000px) {
-	.main {
-		width: 90%;
-	}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 90%;
+  }
 }
 
-@media screen and (max-width:500px) {
-	.main {
-		width: unset;
-	}
+@media screen and (max-width: 500px) {
+  .main {
+    width: unset;
+  }
 }

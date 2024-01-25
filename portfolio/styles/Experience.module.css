@@ -1,32 +1,30 @@
 .job_experiences_section {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .job_experiences_section h2 {
-    text-align: center;
+  text-align: center;
 }
-
 
 .job_experiences_card,
 .job_experiences_list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .job_experiences_card {
-    gap: 2rem;
+  gap: 2rem;
 }
 
 .job_experiences_list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-
-@media screen and (max-width:500px) {
-    .job_experiences_section {
-        width: 95%;
-        margin: auto;
-    }
+@media screen and (max-width: 500px) {
+  .job_experiences_section {
+    width: 95%;
+    margin: auto;
+  }
 }

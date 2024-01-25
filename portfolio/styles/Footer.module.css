@@ -1,20 +1,20 @@
 .footer {
-    position: relative;
+  position: relative;
 
-    padding-bottom: 0.5rem;
-    min-height: 3rem;
+  padding-bottom: 0.5rem;
+  min-height: 3rem;
 }
 
-.footer>div {
-    position: absolute;
-    right: 15px;
+.footer > div {
+  position: absolute;
+  right: 15px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
 
 .external_link {
-    font-family: var(--fira-code), var(--nerd-fonts-symbols);
+  font-family: var(--fira-code), var(--nerd-fonts-symbols);
 }

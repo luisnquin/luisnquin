@@ -1,45 +1,45 @@
 .presentation {
-    /* margin-top: 2rem; */
-    width: 30rem;
-    text-align: center;
+  /* margin-top: 2rem; */
+  width: 30rem;
+  text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .whoami {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .position_title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #212121;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212121;
 }
 
 .social_media {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 
-    list-style: none;
+  list-style: none;
 }
 
 .scroll_down {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .external_link {
-    font-family: var(--nerd-fonts-symbols);
+  font-family: var(--nerd-fonts-symbols);
 }
 
-@media screen and (max-width:500px) {
-    .social_media {
-        gap: 10px;
-    }
+@media screen and (max-width: 500px) {
+  .social_media {
+    gap: 10px;
+  }
 }

@@ -1,51 +1,51 @@
 .technologies_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .technologies_container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 }
 
 .technologies_list {
-    list-style: none;
+  list-style: none;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .technologies_list li {
-    text-align: center;
+  text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .technologies_list li h3 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .technologies_list li p {
-    font-family: var(--fira-code), var(--nerd-fonts-symbols);
+  font-family: var(--fira-code), var(--nerd-fonts-symbols);
 }
 
-@media screen and (max-width:500px) {
-    .technologies_container {
-        width: 90%;
-        margin: auto;
-    }
+@media screen and (max-width: 500px) {
+  .technologies_container {
+    width: 90%;
+    margin: auto;
+  }
 }
