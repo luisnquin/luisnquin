@@ -37,6 +37,21 @@
   ],
   "companyExperiences": [
     {
+      "companyName": "Inversiones.io",
+      "experiences": [
+        {
+          "positionTitle": "Software Developer",
+          "location": {
+            "place": "Lima, Peru",
+            "type": "On-site"
+          },
+          "technologies": ["nestjs", "mysql", "nodejs"],
+          "startDate": "2024-01-01",
+          "endDate": null
+        }
+      ]
+    },
+    {
       "companyName": "WiserSKILLS",
       "about": "Is a widely used product by human resources to make career enhancements for the employees within their organizations. This tool empowers collaborators to refine and augment their skills based on their current job roles, aspirations and motivations.\nI played a crucial role as a team member in this project, contributing to frontend, backend and production deployments while adhering to Agile and DevOps methodologies.",
       "experiences": [
@@ -68,7 +83,7 @@
             ]
           },
           "startDate": "2023-06-01",
-          "endDate": null
+          "endDate": "2023-12-01"
         },
         {
           "positionTitle": "Backend Developer",
