@@ -30,10 +30,10 @@ const getYearsLabel = (companyExp: CompExperience): string => {
     )
   }
 
-  const msdYear = minStartDate.getFullYear() || 0
-  const medYear = maxEndDate.getFullYear() || 0
+  const msdYear = minStartDate?.getUTCFullYear() || 0
+  const medYear = maxEndDate?.getUTCFullYear() || 0
 
-  if (msdYear === medYear) {
+  if (medYear == 0 || msdYear === medYear) {
     return `(${msdYear})`
   }
 
