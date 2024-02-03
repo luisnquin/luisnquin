@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+
 import styles from '../styles/ScrollDown.module.css'
 
 interface Props {

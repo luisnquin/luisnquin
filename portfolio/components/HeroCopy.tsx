@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { nerdFontsSymbols } from '../styles/fonts'
+
 import styles from '../styles/HeroCopy.module.css'
+import { nerdFontsSymbols } from '../styles/fonts'
 
 interface Props {
   text: string

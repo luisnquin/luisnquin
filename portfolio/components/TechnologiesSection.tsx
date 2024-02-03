@@ -2,6 +2,7 @@ import React from 'react'
 
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/TechnologiesSection.module.css'
+
 import { Technology } from '../models/index.ts'
 import { SectionTitle } from './SectionTitle.tsx'
 

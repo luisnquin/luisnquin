@@ -1,7 +1,8 @@
 import styles from '../styles/ExperienceSection.module.css'
+
+import { CompanyExperience as CompExperience } from '../models/index.ts'
 import { CompanyExperience } from './CompanyExperience.tsx'
 import { SectionTitle } from './SectionTitle.tsx'
-import { CompanyExperience as CompExperience } from '../models/index.ts'
 
 interface Props {
   items: CompExperience[]

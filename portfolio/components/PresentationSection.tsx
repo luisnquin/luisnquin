@@ -1,10 +1,12 @@
 import React from 'react'
+
 import styles from '../styles/PresentationSection.module.css'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
-import { ScrollDown } from './ScrollDown.tsx'
-import { GPG } from './GPG.tsx'
+
 import { ExternalLink } from '../models/index.ts'
+import { ScrollDown } from './ScrollDown.tsx'
 import { HeroCopy } from './HeroCopy.tsx'
+import { GPG } from './GPG.tsx'
 
 interface Props {
   externalLinks: ExternalLink[]

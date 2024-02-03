@@ -1,7 +1,9 @@
 import React from 'react'
-import { nerdFontsSymbols } from '../styles/fonts.ts'
-import { SectionTitle } from './SectionTitle.tsx'
+
 import styles from '../styles/ProjectsSection.module.css'
+import { nerdFontsSymbols } from '../styles/fonts.ts'
+
+import { SectionTitle } from './SectionTitle.tsx'
 import { Project } from '../models/index.ts'
 
 interface Props {

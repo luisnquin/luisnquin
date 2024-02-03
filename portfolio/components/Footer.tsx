@@ -1,6 +1,7 @@
-import styles from '../styles/Footer.module.css'
-import { firaCode, nerdFontsSymbols } from '../styles/fonts'
 import React from 'react'
+
+import { firaCode, nerdFontsSymbols } from '../styles/fonts'
+import styles from '../styles/Footer.module.css'
 
 export const Footer = (): React.JSX.Element => {
   return (

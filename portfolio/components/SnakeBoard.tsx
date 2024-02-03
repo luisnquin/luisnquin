@@ -1,7 +1,8 @@
 // Source code based on: https://github.com/MaelDrapier/react-simple-snake
 
-import styles from '../styles/SnakeBoard.module.css'
 import React, { ReactElement } from 'react'
+
+import styles from '../styles/SnakeBoard.module.css'
 
 enum Direction {
   Up = 0,

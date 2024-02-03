@@ -1,5 +1,6 @@
-import styles from '../styles/GPG.module.css'
 import React, { useState } from 'react'
+
+import styles from '../styles/GPG.module.css'
 
 interface Props {
   publicKey: string
