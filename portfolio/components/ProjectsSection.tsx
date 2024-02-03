@@ -2,13 +2,13 @@ import React from 'react'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { SectionTitle } from './SectionTitle.tsx'
 import styles from '../styles/Projects.module.css'
-import { Project } from '../models'
+import { Project } from '../models/index.ts'
 
 interface Props {
   items: Project[]
 }
 
-export const Projects = ({ items }: Props): React.JSX.Element => {
+export const ProjectsSection = ({ items }: Props): React.JSX.Element => {
   return (
     <section id="projects" className={styles.section}>
       <SectionTitle id="projects" title="Projects" />

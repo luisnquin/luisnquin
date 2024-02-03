@@ -4,14 +4,14 @@ import styles from '../styles/Home.module.css'
 import data from '../data.json' assert { type: 'json' }
 
 import {
-  Presentation,
-  Technologies,
-  Experience,
+  TechnologiesSection,
+  PresentationSection,
+  ExperienceSection,
+  InterestsSection,
+  ProjectsSection,
+  ContactSection,
+  ReviewsSection,
   SnakeBoard,
-  ContactMe,
-  Interests,
-  Projects,
-  Reviews,
   Footer,
 } from '../components'
 
@@ -48,17 +48,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Presentation
+        <PresentationSection
           lastCLIUpdate={lastCLIUpdate}
           externalLinks={externalLinks}
           publicKey={publicKey}
         />
-        <Experience items={companyExperiences} />
-        <Projects items={projects} />
-        <Interests items={interests} />
-        <Reviews items={reviews} />
-        <Technologies items={technologies} />
-        <ContactMe email={contactEmail} />
+        <ExperienceSection items={companyExperiences} />
+        <ProjectsSection items={projects} />
+        <InterestsSection items={interests} />
+        <ReviewsSection items={reviews} />
+        <TechnologiesSection items={technologies} />
+        <ContactSection email={contactEmail} />
         <SnakeBoard />
       </main>
 

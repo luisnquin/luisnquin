@@ -7,7 +7,7 @@ interface Props {
   email: string
 }
 
-export const ContactMe = ({ email }: Props) => {
+export const ContactSection = ({ email }: Props) => {
   return (
     <section id="contact-me" className={styles.contact_me}>
       <SectionTitle title="Contact Me" id="contact-me" />

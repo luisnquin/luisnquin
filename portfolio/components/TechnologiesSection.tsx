@@ -2,14 +2,14 @@ import React from 'react'
 
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/Technologies.module.css'
-import { Technology } from '../models'
+import { Technology } from '../models/index.ts'
 import { SectionTitle } from './SectionTitle.tsx'
 
 interface Props {
   items: Technology[]
 }
 
-export const Technologies = ({ items }: Props) => {
+export const TechnologiesSection = ({ items }: Props) => {
   return (
     <section id="technologies" className={styles.technologies_section}>
       <SectionTitle title="Technologies" id="technologies" />

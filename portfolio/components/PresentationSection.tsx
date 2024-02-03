@@ -2,8 +2,8 @@ import React from 'react'
 import styles from '../styles/Presentation.module.css'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { ScrollDown } from './ScrollDown.tsx'
-import { GPG } from '../components/GPG.tsx'
-import { ExternalLink } from '../models'
+import { GPG } from './GPG.tsx'
+import { ExternalLink } from '../models/index.ts'
 import { HeroCopy } from './HeroCopy.tsx'
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   publicKey: string
 }
 
-export const Presentation = ({
+export const PresentationSection = ({
   lastCLIUpdate,
   externalLinks,
   publicKey,

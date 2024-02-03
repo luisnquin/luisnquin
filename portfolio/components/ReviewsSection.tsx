@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
 import styles from '../styles/Reviews.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
-import { Review } from '../models'
+import { Review } from '../models/index.ts'
 
 interface Props {
   items: Review[]
@@ -10,7 +10,7 @@ interface Props {
 
 const msInterval = 3000
 
-export const Reviews = ({ items }: Props) => {
+export const ReviewsSection = ({ items }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [reverse, setReverse] = useState(false)
   const [pause, setPause] = useState(false)
