@@ -54,8 +54,10 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
         ? item.about
             /* eslint indent: "off" */
             .split('\n')
-            .map((line) => (
-              <p className={styles.company_experiences_about}>{line}</p>
+            .map((line, i) => (
+              <p key={i} className={styles.company_experiences_about}>
+                {line}
+              </p>
             ))
         : null}
 
