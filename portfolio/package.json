@@ -10,18 +10,18 @@
     "ts-coverage": "typescript-coverage-report && xdg-open ./coverage-ts/index.html"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.0.5",
+    "@vercel/speed-insights": "^1.0.9",
     "javascript-time-ago": "^2.5.9",
-    "next": "^14.0.4",
+    "next": "^14.1.0",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",
-    "vercel": "33.2.0"
+    "vercel": "33.4.1"
   },
   "devDependencies": {
-    "@types/node": "20.11.5",
-    "@types/react": "18.2.48",
-    "eslint-config-next": "^14.0.4",
+    "@types/node": "20.11.16",
+    "@types/react": "18.2.52",
+    "eslint-config-next": "^14.1.0",
     "typescript": "^5.3.3"
   }
 }
