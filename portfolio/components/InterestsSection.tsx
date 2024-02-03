@@ -1,6 +1,6 @@
 import React from 'react'
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
-import styles from '../styles/Interests.module.css'
+import styles from '../styles/InterestsSection.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
 import { Interest } from '../models/index.ts'
 

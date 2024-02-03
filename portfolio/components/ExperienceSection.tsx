@@ -1,4 +1,4 @@
-import styles from '../styles/Experience.module.css'
+import styles from '../styles/ExperienceSection.module.css'
 import { CompanyExperience } from './CompanyExperience.tsx'
 import { SectionTitle } from './SectionTitle.tsx'
 import { CompanyExperience as CompExperience } from '../models/index.ts'

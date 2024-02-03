@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Presentation.module.css'
+import styles from '../styles/PresentationSection.module.css'
 import { nerdFontsSymbols } from '../styles/fonts.ts'
 import { ScrollDown } from './ScrollDown.tsx'
 import { GPG } from './GPG.tsx'

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { firaCode, nerdFontsSymbols } from '../styles/fonts.ts'
-import styles from '../styles/Reviews.module.css'
+import styles from '../styles/ReviewsSection.module.css'
 import { SectionTitle } from './SectionTitle.tsx'
 import { Review } from '../models/index.ts'
 
