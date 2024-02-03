@@ -6,7 +6,12 @@ import localFont from 'next/font/local'
 export const firaCode = Fira_Code({
   subsets: ['latin'],
   weight: '400',
-  fallback: ['system-ui'],
+  fallback: [
+    // System fonts
+    'Fira-Code',
+    'Arial',
+    'system-ui',
+  ],
   variable: '--fira-code',
 })
 
