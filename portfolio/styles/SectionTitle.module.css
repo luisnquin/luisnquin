@@ -1,6 +1,7 @@
 .internal_link {
   text-decoration: none;
   position: relative;
+  color: #000;
 }
 
 .internal_link:hover {
@@ -9,8 +10,8 @@
 
 .internal_link:hover:after {
   position: absolute;
-  right: -22px;
-  top: 2px;
+  right: -23px;
+  top: 3.5px;
 
   font-family: var(--nerd-fonts-symbols);
   font-size: 18px;
