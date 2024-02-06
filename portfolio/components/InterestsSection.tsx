@@ -12,14 +12,14 @@ interface Props {
 
 export const InterestsSection = ({ items }: Props): React.JSX.Element => {
   return (
-    <section id="interests" className={styles.interests_section}>
+    <section id="interests" className={styles.section}>
       <SectionTitle title="Interests" id="interests" />
 
       <table className={styles.interests_table}>
         <tbody className={`${firaCode.variable} ${nerdFontsSymbols.variable}`}>
           <tr>
-            <th style={{ width: '22%' }}></th>
-            <th style={{ width: '78%' }}></th>
+            <th className={styles.column_header_name}></th>
+            <th className={styles.column_header_desc}></th>
           </tr>
 
           {items.map((item) => (

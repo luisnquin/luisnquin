@@ -1,14 +1,42 @@
-.interests_section {
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.interests_table tbody tr > td {
+.interests_table tbody tr>td {
   padding: 5px;
 }
 
 .external_link {
   font-family: var(--fira-code), var(--nerd-fonts-symbols);
+}
+
+.column_header_name {
+  width: 22%;
+}
+
+.column_header_desc {
+  width: 78%;
+}
+
+@media screen and (max-width: 500px) {
+  .section {
+    width: 90%;
+  }
+
+  .column_header_name {
+    width: 20%;
+  }
+
+  .column_header_desc {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section {
+    width: 95%;
+  }
 }
