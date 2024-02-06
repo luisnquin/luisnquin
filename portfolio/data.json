@@ -147,6 +147,12 @@
       "desc": "CLI tool to take notes with usage based on coreutils commands",
       "why": "There are many CLI programs that try to cover the area of \"note taking\", most of them were complex to learn, meaning you have to learn another CLI. I wanted something with subcommands that would be familiar to me, that could be integrated with other programs via pipe taking advantage of the possible output formats that the user could indicate and overall something that would make the user completely forget concept of filesystem while searching for their notes. As a solution for the last point I was very inspired by how images can be managed with the Docker CLI.",
       "repositoryUrl": "https://github.com/luisnquin/nao"
+    },
+    {
+      "title": "luisnquin/battery-notifier",
+      "desc": "Customizable daemon that reports the battery status of the guest laptop",
+      "why": "I prefer tiling window managers over standard desktop environments because they offer greater customization. As I write this, I'm using Hyprland, a window manager that does not include a built-in battery notifier. Due to the limited options available for user customization, particularly those that prioritize performance, I have developed this program to address this gap.",
+      "repositoryUrl": "https://github.com/luisnquin/battery-notifier"
     }
   ],
   "technologies": [
