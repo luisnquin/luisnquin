@@ -30,7 +30,7 @@ export const ScrollDown = ({ className }: Props) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      [{isHover ? `Just do it, don't hover me 🦭` : 'scroll down'}]
+      [{isHover ? "Don't hover me" : 'scroll down'}]
     </span>
   ) : null
 }
