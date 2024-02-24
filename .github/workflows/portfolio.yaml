@@ -11,8 +11,8 @@ on:
     paths:
       - portfolio/**
 env:
-  committer_name: Luis Quiñones
-  committer_email: lpaandres2020@gmail.com
+  committer_name: Antigen
+  committer_email: antigen.bot0@gmail.com
 jobs:
   deploy:
     runs-on: ubuntu-latest
