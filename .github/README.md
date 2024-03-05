@@ -9,7 +9,7 @@ As a software developer, some topics I'm interested for are:
 - [Cloud Computing](https://www.redhat.com/en/topics/cloud)
 - [Free Software](https://www.fsf.org/about/what-is-free-software)
 
-In the open-source community, I've contributed to projects that resonate with my passions, including [Nixpkgs](https://github.com/nixos/nixpkgs) and [Home manager](https://github.com/nix-community/home-manager).
+In FOSS, I've contributed to projects that resonate with my passions, including [Nixpkgs](https://github.com/nixos/nixpkgs) and [Home manager](https://github.com/nix-community/home-manager).
 
 *Postdata*: My bot account is [antigen-bot](https://github.com/antigen-bot).
 
