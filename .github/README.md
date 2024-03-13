@@ -4,6 +4,7 @@ As a software developer, some topics I'm interested for are:
 
 - [Go](https://go.dev/), [Rust](https://www.rust-lang.org/), [OCaml](https://ocaml.org/) and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) ecosystems
 - [Nix & NixOS](https://nixos.org/)
+- [User interfaces based on text](https://en.wikipedia.org/wiki/Text-based_user_interface)
 - [Biological Enginnering](https://en.wikipedia.org/wiki/Biological_engineering)
 - [Functional Programming](https://en.wikipedia.org/wiki/Functional_programming)
 - [Cloud Computing](https://www.redhat.com/en/topics/cloud)
