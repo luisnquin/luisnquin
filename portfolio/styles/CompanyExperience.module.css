@@ -44,11 +44,11 @@
   font-size: 14px;
 }
 
-.company_experiences_item_achievements > li {
+.company_experiences_item_achievements>li {
   list-style: inside;
 }
 
-.company_experiences_item_achievements > li span {
+.company_experiences_item_achievements>li span {
   position: relative;
   left: -10px;
   top: 1px;
@@ -67,6 +67,7 @@
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   padding: 1px 2px;
+  margin: 0 1.2px;
 }
 
 .company_experiences_item_location {
