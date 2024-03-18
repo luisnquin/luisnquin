@@ -27,7 +27,7 @@ jobs:
         run: |
           npm ci
       - name: Deploy portfolio in Vercel
-        run: npm run deploy:portfolio -- --yes --token=${{secrets.VERCEL_TOKEN}}
+        run: npm run deploy:portfolio -- --prod --yes --token=${{secrets.VERCEL_TOKEN}}
   build:
     runs-on: ubuntu-latest
     steps:
