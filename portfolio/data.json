@@ -45,7 +45,20 @@
             "place": "Lima, Peru",
             "type": "On-site"
           },
-          "technologies": ["nestjs", "mysql", "nodejs"],
+          "technologies": [
+            "nestjs",
+            "go",
+            "typescript",
+            "mysql",
+            "nodejs",
+            "redis",
+            "devops",
+            "github",
+            "aws",
+            "linux",
+            "docker",
+            "nix"
+          ],
           "startDate": "2024-01-01",
           "endDate": null
         }
