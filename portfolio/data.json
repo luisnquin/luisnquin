@@ -171,28 +171,23 @@
   "technologies": [
     {
       "name": "Programming Languages",
-      "desc": " Go,  Python, 󰛦 TypeScript,  OCaml and  Rust",
-      "iconPath": "/programming-languages.png"
+      "desc": " Go,  Python, 󰛦 TypeScript,  OCaml and  Rust"
     },
     {
       "name": "Deployment tools",
-      "desc": "󰡨 Docker, 󱃾 Kubernetes, ArgoCD, etc",
-      "iconPath": "/ci-cd-containerization-tools.png"
+      "desc": "󰡨 Docker, 󱃾 Kubernetes, ArgoCD, etc"
     },
     {
       "name": "Frontend tools",
-      "desc": " React.js, Next.js and 󰡄 Vue.js",
-      "iconPath": "/frontend-tools.png"
+      "desc": " React.js, Next.js and 󰡄 Vue.js"
     },
     {
       "name": "Nix && NixOS",
-      "desc": "󱄅 A reproducible, declarative and reliable package manager and operative system",
-      "iconPath": "/nix-nixos.png"
+      "desc": "󱄅 A reproducible, declarative and reliable package manager and operative system"
     },
     {
       "name": "Cloud Computing",
-      "desc": " AWS and 󱇶 Google Cloud Providers",
-      "iconPath": "/cloud-providers.png"
+      "desc": " AWS and 󱇶 Google Cloud Providers"
     }
   ],
   "interests": [
