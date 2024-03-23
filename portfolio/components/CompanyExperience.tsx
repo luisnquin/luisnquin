@@ -1,6 +1,7 @@
 import styles from '../styles/CompanyExperience.module.css'
 
 import { CompanyExperience as CompExperience } from '../models'
+import Image from 'next/image'
 
 interface Props {
   companyExperience: CompExperience
@@ -27,7 +28,7 @@ const getYearsLabel = (companyExp: CompExperience): string => {
 
   if (!minStartDate && !maxEndDate) {
     throw new Error(
-      `could not get a valid range for '${companyExp.companyName}' company :(`
+      `could not get a valid range for '${companyExp.company.name}' company :(`
     )
   }
 
@@ -42,14 +43,24 @@ const getYearsLabel = (companyExp: CompExperience): string => {
 }
 
 export const CompanyExperience = ({ companyExperience: item }: Props) => {
+  const { logo } = item.company
+
   return (
     <li className={styles.company_experiences_card}>
-      <h3>
-        {item.companyName}
+      <div className={styles.company_experiences_card_header}>
+        {logo ? (
+          <Image
+            width={logo.width ? logo.width : 18}
+            height={logo.height ? logo.height : 18}
+            alt={logo.alt}
+            src={logo.path}
+          />
+        ) : null}
+        <h3>{item.company.name}</h3>
         <span className={styles.company_experiences_year_range}>
           {getYearsLabel(item)}
         </span>
-      </h3>
+      </div>
 
       {item.about
         ? item.about
@@ -76,7 +87,7 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
 
           return (
             <li
-              key={`${item.companyName}${exp.positionTitle}`}
+              key={`${item.company.name}${exp.positionTitle}`}
               className={styles.company_experiences_item}
             >
               <h4 style={{ fontSize: '15px' }}>

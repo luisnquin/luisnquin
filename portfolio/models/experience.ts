@@ -21,7 +21,15 @@ export interface Experience {
  * Represents more than one job experience in a company.
  */
 export interface CompanyExperience {
-  companyName: string
+  company: {
+    name: string
+    logo?: {
+      path: string
+      alt: string
+      width?: number
+      height?: number
+    }
+  }
   about?: string
   experiences: Experience[]
 }

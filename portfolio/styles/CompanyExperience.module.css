@@ -4,11 +4,17 @@
   gap: 0.7rem;
 }
 
-.company_experiences_card h3 {
-  font-size: 18px;
+.company_experiences_card_header {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+
+  position: relative;
+}
+
+.company_experiences_card_header h3 {
+  font-size: 18px;
 }
 
 .company_experiences {

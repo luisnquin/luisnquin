@@ -37,7 +37,13 @@
   ],
   "companyExperiences": [
     {
-      "companyName": "Inversiones.io",
+      "company": {
+        "name": "Inversiones.io",
+        "logo": {
+          "path": "/inversiones-io.png",
+          "alt": "inversiones.io-logo"
+        }
+      },
       "experiences": [
         {
           "positionTitle": "Software Developer",
@@ -65,7 +71,14 @@
       ]
     },
     {
-      "companyName": "WiserSKILLS",
+      "company": {
+        "name": "WiserSKILLS",
+        "logo": {
+          "path": "/wiserskills.png",
+          "alt": "wiserskills-logo",
+          "height": 15
+        }
+      },
       "about": "Is a widely used product by human resources to make career enhancements for the employees within their organizations. This tool empowers collaborators to refine and augment their skills based on their current job roles, aspirations and motivations.\nI played a crucial role as a team member in this project, contributing to frontend, backend and production deployments while adhering to Agile and DevOps methodologies.",
       "experiences": [
         {
@@ -127,7 +140,14 @@
       ]
     },
     {
-      "companyName": "Desstorm",
+      "company": {
+        "name": "Desstorm",
+        "logo": {
+          "path": "/desstorm.svg",
+          "alt": "desstorm-logo",
+          "height": 15
+        }
+      },
       "experiences": [
         {
           "location": {
