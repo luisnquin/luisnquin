@@ -17,7 +17,19 @@
 }
 
 .game_board_controls {
+  margin: auto;
   text-align: center;
   color: #51597d;
   font-size: 15px;
+}
+
+
+.game_board_controls>b {
+  font-weight: normal;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.game_board_controls>span {
+  opacity: 0.5;
 }

@@ -104,7 +104,11 @@ export class SnakeBoard extends React.Component {
         </div>
 
         <p className={styles.game_board_controls}>
-          /* Controls: A / W / S / D */
+          <b>Controls</b>
+          <br />
+          <span>a / w / s / d</span>
+          <br />
+          <span>h / j / k / l (vi)</span>
         </p>
       </section>
     )
@@ -293,21 +297,29 @@ export class SnakeBoard extends React.Component {
       case 'ArrowUp':
       case 'w':
       case 'W':
+      case 'j':
+      case 'J':
         this.setDirection(Direction.Up)
         break
       case 'ArrowLeft':
       case 'a':
       case 'A':
+      case 'h':
+      case 'H':
         this.setDirection(Direction.Left)
         break
       case 'ArrowRight':
       case 'd':
       case 'D':
+      case 'l':
+      case 'L':
         this.setDirection(Direction.Right)
         break
       case 'ArrowDown':
       case 's':
       case 'S':
+      case 'k':
+      case 'K':
         this.setDirection(Direction.Down)
         break
     }
