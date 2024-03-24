@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
-import data from '../data.json' assert { type: 'json' }
+import data from '../data/luis-quinones.json' assert { type: 'json' }
 
 import {
   TechnologiesSection,
