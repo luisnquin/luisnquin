@@ -10,28 +10,30 @@ import { GPG } from './GPG.tsx'
 
 interface Props {
   externalLinks: ExternalLink[]
-  lastCLIUpdate: string
+  cli: { command: string; lastUpdate: string }
+  whoami: { names: string; position: string }
   publicKey: string
 }
 
 export const PresentationSection = ({
-  lastCLIUpdate,
   externalLinks,
   publicKey,
+  whoami,
+  cli,
 }: Props) => {
   return (
     <section id="presentation" className={styles.presentation}>
       <ScrollDown className={styles.scroll_down} />
 
       <div className={styles.whoami}>
-        <h1>Luis Quiñones Requelme</h1>
-        <h2 className={styles.position_title}>Software Developer</h2>
+        <h1>{whoami.names}</h1>
+        <h2 className={styles.position_title}>{whoami.position}</h2>
       </div>
 
       <HeroCopy
         isCommand
-        text="npx luisnquin@latest"
-        tooltip={`Last modification: ${lastCLIUpdate}`}
+        text={cli.command}
+        tooltip={`Last modification: ${cli.lastUpdate}`}
       />
 
       <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>

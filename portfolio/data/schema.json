@@ -4,7 +4,6 @@
   "required": [
     "gpgPublicKey",
     "contactEmail",
-    "lastCLIUpdate",
     "externalLinks",
     "reviews",
     "companyExperiences",
@@ -19,8 +18,29 @@
     "contactEmail": {
       "type": "string"
     },
-    "lastCLIUpdate": {
-      "type": "string"
+    "whoami": {
+      "type": "object",
+      "required": ["names", "position"],
+      "properties": {
+        "names": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        }
+      }
+    },
+    "cli": {
+      "type": "object",
+      "required": ["command", "lastUpdate"],
+      "properties": {
+        "command": {
+          "type": "string"
+        },
+        "lastUpdate": {
+          "type": "string"
+        }
+      }
     },
     "externalLinks": {
       "type": "array",

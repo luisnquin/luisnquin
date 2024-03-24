@@ -19,12 +19,13 @@ const {
   gpgPublicKey: publicKey,
   companyExperiences,
   externalLinks,
-  lastCLIUpdate,
   technologies,
   contactEmail,
   interests,
   projects,
   reviews,
+  whoami,
+  cli,
 } = data
 
 export default function Home() {
@@ -49,9 +50,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <PresentationSection
-          lastCLIUpdate={lastCLIUpdate}
           externalLinks={externalLinks}
           publicKey={publicKey}
+          whoami={whoami}
+          cli={cli}
         />
         <ExperienceSection items={companyExperiences} />
         <ProjectsSection items={projects} />

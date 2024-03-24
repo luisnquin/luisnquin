@@ -2,7 +2,14 @@
   "$schema": "./schema.json",
   "gpgPublicKey": "-----BEGIN PGP PUBLIC KEY BLOCK-----\n\nmDMEZaXVAxYJKwYBBAHaRw8BAQdAyhDlhXA5hnL4V2y6Q4vJEkucMGpRQrJ/p5UD\nMAE6Sce0KEx1aXMgUXVpw7FvbmVzIDxscGFhbmRyZXMyMDIwQGdtYWlsLmNvbT6I\nmQQTFgoAQRYhBDxTz6cvfQw2fEasiNb8kv06CUr4BQJlpdUDAhsDBQkB4TOABQsJ\nCAcCAiICBhUKCQgLAgQWAgMBAh4HAheAAAoJENb8kv06CUr4mMUA+wQH1VxQKn5t\nNCOo7chYneRzDaD2GzF1tRIpUu16AGL/AQCeyfBh81UPHBchVHYq7pRJ+kqS1rUT\nDzinBCMp94p7BLg4BGWl1QMSCisGAQQBl1UBBQEBB0CQLkervjt4XBi9Qwo1w5yF\npss7i9KGKuHrr6En7HQqHAMBCAeIfgQYFgoAJhYhBDxTz6cvfQw2fEasiNb8kv06\nCUr4BQJlpdUDAhsMBQkB4TOAAAoJENb8kv06CUr4O6sBAK/c5cq8/xT5lRJlgfmr\nPp1ZxNf0eGvLUXqMdKNfXgJxAP0Zq+MkjmR6Tce8BkJj0eG4IbdHtx/WyFghbfGh\n4ZDeDg==\n=6RF7\n-----END PGP PUBLIC KEY BLOCK-----",
   "contactEmail": "lpaandres2020@gmail.com",
-  "lastCLIUpdate": "Apr 13, 2023",
+  "whoami": {
+    "names": "Luis Quiñones Requelme",
+    "position": "Software Developer"
+  },
+  "cli": {
+    "command": "npx luisnquin@latest",
+    "lastUpdate": "Apr 13, 2023"
+  },
   "externalLinks": [
     {
       "name": "Github",
