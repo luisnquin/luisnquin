@@ -225,6 +225,16 @@
       "name": "Nix ecosystem",
       "desc": "The reliable and reproducible package manager and operative system.",
       "externalLink": "https://nixos.org/"
+    },
+    {
+      "name": "Fencing",
+      "desc": "Strategy, precision, and athleticism. It's a deport that demands discipline, focus, and finesse. It also perfects both body and mind, offering a combination of competition and personal growth.",
+      "externalLink": "https://en.wikipedia.org/wiki/F%C3%A9d%C3%A9ration_Internationale_d%27Escrime"
+    },
+    {
+      "name": "User interfaces based on text",
+      "desc": "Terminal emulators provide users with a means to interact with their computers at a low level, offering a level of control and productivity that I deeply appreciate. TUI programs have revolutionized the terminal experience, evolving it from a basic typewriter-like interface to a sophisticated user interface, greatly expanding its functionality and usability.",
+      "externalLink": "https://en.wikipedia.org/wiki/Text-based_user_interface"
     }
   ]
 }
