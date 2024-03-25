@@ -1,6 +1,7 @@
 import styles from '../styles/CompanyExperience.module.css'
 
 import { CompanyExperience as CompExperience } from '../models'
+import { nerdFontsSymbols } from '../styles/fonts'
 import Image from 'next/image'
 
 interface Props {
@@ -49,12 +50,20 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
     <li className={styles.company_experiences_card}>
       <div className={styles.company_experiences_card_header}>
         {logo ? (
-          <Image
-            width={logo.width ? logo.width : 18}
-            height={logo.height ? logo.height : 18}
-            alt={logo.alt}
-            src={logo.path}
-          />
+          typeof logo === 'string' ? (
+            <span
+              className={`${nerdFontsSymbols.variable} ${styles.company_experiences_card_header_logo_string}`}
+            >
+              {logo}
+            </span>
+          ) : (
+            <Image
+              width={logo.width ? logo.width : 18}
+              height={logo.height ? logo.height : 18}
+              alt={logo.alt}
+              src={logo.path}
+            />
+          )
         ) : null}
         <h3>{item.company.name}</h3>
         <span className={styles.company_experiences_year_range}>

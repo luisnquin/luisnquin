@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 
-import { nerdFontsSymbols } from '../styles/fonts'
-import styles from '../styles/GPG.module.css'
 import { CopyToClipboard } from './CopyToClipboard'
+import styles from '../styles/GPG.module.css'
 
 interface Props {
   publicKey: string

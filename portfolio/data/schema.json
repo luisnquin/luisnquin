@@ -101,22 +101,29 @@
                 "type": "string"
               },
               "logo": {
-                "type": "object",
-                "required": ["path", "alt"],
-                "properties": {
-                  "path": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "required": ["path", "alt"],
+                    "properties": {
+                      "path": {
+                        "type": "string"
+                      },
+                      "alt": {
+                        "type": "string"
+                      },
+                      "width": {
+                        "type": "number"
+                      },
+                      "height": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  {
                     "type": "string"
-                  },
-                  "alt": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "number"
-                  },
-                  "height": {
-                    "type": "number"
                   }
-                }
+                ]
               }
             }
           },

@@ -17,6 +17,10 @@
   font-size: 18px;
 }
 
+.company_experiences_card_header_logo_string {
+  font-family: var(--nerd-fonts-symbols);
+}
+
 .company_experiences {
   display: flex;
   flex-direction: column;

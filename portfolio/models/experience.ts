@@ -23,12 +23,14 @@ export interface Experience {
 export interface CompanyExperience {
   company: {
     name: string
-    logo?: {
-      path: string
-      alt: string
-      width?: number
-      height?: number
-    }
+    logo?:
+      | string
+      | {
+          path: string
+          alt: string
+          width?: number
+          height?: number
+        }
   }
   about?: string
   experiences: Experience[]
