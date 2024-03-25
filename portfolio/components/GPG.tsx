@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
+import { nerdFontsSymbols } from '../styles/fonts'
 import styles from '../styles/GPG.module.css'
+import { CopyToClipboard } from './CopyToClipboard'
 
 interface Props {
   publicKey: string
@@ -21,6 +23,12 @@ export const GPG = ({ publicKey }: Props): React.JSX.Element => {
           id="check_id"
         ></input>
       </label>
+
+      <CopyToClipboard
+        className={styles.gpg_copy_public_key}
+        text={publicKey}
+        hidden={hide}
+      />
 
       <textarea
         className={styles.gpg_public_key}

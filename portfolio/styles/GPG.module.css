@@ -5,6 +5,8 @@
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .gpg_checkbox_input {
@@ -27,6 +29,19 @@
 
   resize: none;
   width: 100%;
+}
+
+.gpg_copy_public_key {
+  font-family: var(--nerd-fonts-symbols);
+  color: #808080;
+  padding: 5px;
+
+  user-select: none;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 4px;
 }
 
 @media screen and (max-width: 460px) {

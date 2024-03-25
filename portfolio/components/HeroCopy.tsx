@@ -1,7 +1,5 @@
-import { useState } from 'react'
-
+import { CopyToClipboard } from './CopyToClipboard'
 import styles from '../styles/HeroCopy.module.css'
-import { nerdFontsSymbols } from '../styles/fonts'
 
 interface Props {
   text: string
@@ -16,19 +14,6 @@ export const HeroCopy = ({
   isCommand,
   isContactMail,
 }: Props) => {
-  const [copied, setCopied] = useState(false)
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(text)
-
-    if (!copied) {
-      setCopied(true)
-      setTimeout(() => {
-        setCopied(false)
-      }, 4000)
-    }
-  }
-
   return (
     <div className={styles.container}>
       {isCommand ? <span className={styles.arrow_right}>$</span> : null}
@@ -42,12 +27,7 @@ export const HeroCopy = ({
         </h3>
       )}
 
-      <button
-        className={`${styles.copy_to_clipboard} ${nerdFontsSymbols.variable}`}
-        onClick={copyToClipboard}
-      >
-        {copied ? '󰄬' : '󰆏'}
-      </button>
+      <CopyToClipboard text={text} hidden={false} />
     </div>
   )
 }

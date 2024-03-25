@@ -10,22 +10,8 @@
   border: 1px solid rgba(16, 4, 28, 0.6);
 }
 
-.copy_to_clipboard {
-  font-family: var(--nerd-fonts-symbols);
-}
-
 .arrow_right {
   color: #ababab;
-}
-
-.copy_to_clipboard {
-  filter: brightness(80%);
-  color: #000000d3;
-}
-
-.copy_to_clipboard:hover {
-  cursor: pointer;
-  filter: brightness(100%);
 }
 
 .text {
@@ -57,7 +43,7 @@
   transition: opacity 0.3s;
 }
 
-.text > span::after {
+.text>span::after {
   content: '';
   position: absolute;
   top: 100%;
