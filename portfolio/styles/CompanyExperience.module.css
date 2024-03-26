@@ -21,6 +21,12 @@
   font-family: var(--nerd-fonts-symbols);
 }
 
+.company_experiences_card_header_current_job {
+  font-family: var(--nerd-fonts-symbols);
+  font-size: 12px;
+  align-self: center;
+}
+
 .company_experiences {
   display: flex;
   flex-direction: column;

@@ -46,6 +46,8 @@ const getYearsLabel = (companyExp: CompExperience): string => {
 export const CompanyExperience = ({ companyExperience: item }: Props) => {
   const { logo } = item.company
 
+  const isCurrentJob = item.experiences.some((exp) => exp.endDate === null)
+
   return (
     <li className={styles.company_experiences_card}>
       <div className={styles.company_experiences_card_header}>
@@ -69,6 +71,14 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
         <span className={styles.company_experiences_year_range}>
           {getYearsLabel(item)}
         </span>
+
+        {isCurrentJob ? (
+          <span
+            className={`${nerdFontsSymbols.variable} ${styles.company_experiences_card_header_current_job}`}
+          >
+            {'<--'}
+          </span>
+        ) : null}
       </div>
 
       {item.about
@@ -84,8 +94,8 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
 
       <ul className={styles.company_experiences}>
         {item.experiences.map((exp) => {
-          const formatDate = (date?: string): string => {
-            if (!date) return 'Present'
+          const formatDate = (date?: string): string | null => {
+            if (!date) return null
 
             return new Date(date).toLocaleDateString('en-US', {
               year: 'numeric',
@@ -102,7 +112,8 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
               <h4 style={{ fontSize: '15px' }}>
                 {exp.positionTitle}
                 <span>
-                  ({formatDate(exp.startDate)} - {formatDate(exp.endDate)})
+                  ({formatDate(exp.startDate) || 'Unknown'} -{' '}
+                  {formatDate(exp.endDate) || 'Present'})
                 </span>
               </h4>
 
