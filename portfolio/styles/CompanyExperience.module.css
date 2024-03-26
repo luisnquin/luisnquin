@@ -47,6 +47,7 @@
   display: flex;
   align-items: flex-start;
   gap: 5px;
+  flex-direction: column;
 }
 
 .company_experiences_item h4 span {
