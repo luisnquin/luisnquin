@@ -46,6 +46,27 @@
   "companyExperiences": [
     {
       "company": {
+        "name": "NeticShard",
+        "logo": {
+          "path": "/NeticShard.png",
+          "alt": "neticshard-logo"
+        }
+      },
+      "experiences": [
+        {
+          "positionTitle": "Business Development and Software Specialist",
+          "location": {
+            "place": "Latam",
+            "type": "Remote"
+          },
+          "technologies": ["go", "rust", "postgresql"],
+          "startDate": "2024-03-24",
+          "endDate": null
+        }
+      ]
+    },
+    {
+      "company": {
         "name": "Inversiones.io",
         "logo": {
           "path": "/inversiones-io.png",
