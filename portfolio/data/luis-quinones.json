@@ -241,11 +241,11 @@
   "technologies": [
     {
       "name": "Programming Languages",
-      "desc": " Go,  Python, 󰛦 TypeScript,  OCaml and  Rust"
+      "desc": " Go,  Python, 󰛦 TypeScript,  Rust and  OCaml"
     },
     {
       "name": "Deployment tools",
-      "desc": "󰡨 Docker, 󱃾 Kubernetes, ArgoCD, etc"
+      "desc": "󰡨 Docker, 󱃾 Kubernetes, 󱁢 Terraform, ArgoCD, etc"
     },
     {
       "name": "Frontend tools",
