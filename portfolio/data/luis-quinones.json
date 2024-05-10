@@ -72,7 +72,9 @@
             "astro",
             "technical_writing",
             "businness_intel",
-            "nix"
+            "nix",
+            "terraform",
+            "aws"
           ],
           "startDate": "2024-03-24",
           "endDate": null
