@@ -23,7 +23,7 @@ export const TechnologiesSection = ({ items }: Props) => {
               className={`${firaCode.variable} ${nerdFontsSymbols.variable}`}
             >
               <h3>{item.name}</h3>
-              <p>{item.desc}</p>
+              <p dangerouslySetInnerHTML={{ __html: item.desc }}></p>
             </li>
           ))}
         </ul>

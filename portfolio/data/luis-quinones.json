@@ -248,8 +248,12 @@
       "desc": "󰡨 Docker, 󱃾 Kubernetes, 󱁢 Terraform, ArgoCD, etc"
     },
     {
-      "name": "Frontend tools",
-      "desc": " React.js, Next.js and 󰡄 Vue.js"
+      "name": "Frontend stack",
+      "desc": " React.js, <img src=\"/nextjs.png\"/> Next.js,  HTMX and 󰡄 Vue.js"
+    },
+    {
+      "name": "Backend stack",
+      "desc": "󰆧 Echo, <img src=\"/nestjs.svg\"/> NestJS, <img src=\"/fastapi.png\"/> FastAPI and 󱘖 RPC "
     },
     {
       "name": "Cloud Computing",

@@ -43,6 +43,12 @@
   font-family: var(--fira-code), var(--nerd-fonts-symbols);
 }
 
+.technologies_list li p img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 500px) {
   .technologies_container {
     width: 90%;
