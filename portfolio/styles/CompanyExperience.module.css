@@ -95,3 +95,10 @@
   font-size: 14px;
   border: 1px solid rgba(0, 0, 0, 0);
 }
+
+@media screen and (max-width: 500px) {
+  .company_experiences_item_technologies li {
+    padding: 0px 5px;
+    overflow: hidden;
+  }
+}
