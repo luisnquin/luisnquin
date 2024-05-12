@@ -74,7 +74,8 @@
             "businness_intel",
             "nix",
             "terraform",
-            "aws"
+            "aws",
+            "ci/cd"
           ],
           "startDate": "2024-03-24",
           "endDate": null
@@ -113,7 +114,8 @@
             "docker",
             "nix",
             "technical_writing",
-            "infrastructure"
+            "infrastructure",
+            "ci/cd"
           ],
           "startDate": "2024-01-01",
           "endDate": null,
@@ -152,7 +154,8 @@
             "typescript",
             "vuejs",
             "argocd",
-            "nodejs"
+            "nodejs",
+            "ci"
           ],
           "desc": {
             "achievements": [
