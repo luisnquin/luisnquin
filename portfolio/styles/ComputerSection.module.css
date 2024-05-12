@@ -1,0 +1,43 @@
+.computer_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.computer_section h2 {
+    text-align: center;
+}
+
+.computer_specs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.computer_specs table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.computer_specs table tbody {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+
+.computer_specs table tbody tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.computer_specs table tbody tr td,
+.computer_specs table tbody tr th {
+    border-left: 4px solid black;
+    padding: 4px 2rem;
+}
+
+@media screen and (max-width: 515px) {
+    .computer_section {
+        display: none;
+    }
+}

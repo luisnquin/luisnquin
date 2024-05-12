@@ -14,6 +14,7 @@ import {
   SnakeBoard,
   Footer,
 } from '../components'
+import { ComputerSection } from '../components/ComputerSection'
 
 const {
   gpgPublicKey: publicKey,
@@ -22,6 +23,7 @@ const {
   technologies,
   contactEmail,
   interests,
+  computer,
   projects,
   reviews,
   whoami,
@@ -60,6 +62,7 @@ export default function Home() {
         <InterestsSection items={interests} />
         <ReviewsSection items={reviews} />
         <TechnologiesSection items={technologies} />
+        <ComputerSection computer={computer} />
         <ContactSection email={contactEmail} />
         <SnakeBoard />
       </main>

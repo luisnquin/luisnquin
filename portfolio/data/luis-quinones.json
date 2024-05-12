@@ -252,10 +252,6 @@
       "desc": " React.js, Next.js and 󰡄 Vue.js"
     },
     {
-      "name": "Nix && NixOS",
-      "desc": "󱄅 A reproducible, declarative and reliable package manager and operative system"
-    },
-    {
       "name": "Cloud Computing",
       "desc": " Amazon Web Services and 󱇶 Google Cloud"
     }
@@ -286,5 +282,12 @@
       "desc": "Terminal emulators provide users with a means to interact with their computers at a low level, offering a level of control and productivity that I deeply appreciate. TUI programs have revolutionized the terminal experience, evolving it from a basic typewriter-like interface to a sophisticated user interface, greatly expanding its functionality and usability.",
       "externalLink": "https://en.wikipedia.org/wiki/Text-based_user_interface"
     }
-  ]
+  ],
+  "computer": {
+    "kernel": "Linux",
+    "distro": "NixOS",
+    "de": "Hyprland",
+    "shell": "pure zsh with tmux",
+    "features": ["reproducible"]
+  }
 }
