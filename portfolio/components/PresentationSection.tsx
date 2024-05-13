@@ -10,7 +10,7 @@ import { GPG } from './GPG.tsx'
 
 interface Props {
   externalLinks: ExternalLink[]
-  cli: { command: string; lastUpdate: string }
+  cli: { command: string }
   whoami: { names: string; position: string }
   publicKey: string
 }
@@ -30,11 +30,7 @@ export const PresentationSection = ({
         <h2 className={styles.position_title}>{whoami.position}</h2>
       </div>
 
-      <HeroCopy
-        isCommand
-        text={cli.command}
-        tooltip={`Last modification: ${cli.lastUpdate}`}
-      />
+      <HeroCopy isCommand text={cli.command} />
 
       <ul className={`${styles.social_media} ${nerdFontsSymbols.variable}`}>
         {externalLinks.map((link) => (

@@ -32,12 +32,9 @@
     },
     "cli": {
       "type": "object",
-      "required": ["command", "lastUpdate"],
+      "required": ["command"],
       "properties": {
         "command": {
-          "type": "string"
-        },
-        "lastUpdate": {
           "type": "string"
         }
       }
