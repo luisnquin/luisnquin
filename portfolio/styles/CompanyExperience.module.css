@@ -99,6 +99,6 @@
 @media screen and (max-width: 500px) {
   .company_experiences_item_technologies li {
     padding: 0px 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 }
