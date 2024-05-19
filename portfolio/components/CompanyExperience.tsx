@@ -112,8 +112,8 @@ export const CompanyExperience = ({ companyExperience: item }: Props) => {
               <h4 style={{ fontSize: '15px' }}>
                 {exp.positionTitle}
                 <span>
-                  ({formatDate(exp.startDate) || 'Unknown'} -{' '}
-                  {formatDate(exp.endDate) || 'Present'})
+                  ({formatDate(exp.startDate) || 'undefined'} -{' '}
+                  {formatDate(exp.endDate) || 'NaN'})
                 </span>
               </h4>
 
