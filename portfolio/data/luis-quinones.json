@@ -89,7 +89,7 @@
           "alt": "inversiones.io-logo"
         }
       },
-      "about": "Is a financial company located in Peru that links investors with businesses seeking funding. Inversiones.io has the goal and vision to improve the peruvian economy and support PIME's around the country.",
+      "about": "Inversiones.io is a crowdfunding fintech company situated in Peru, dedicated to connecting investors with enterprises in need of funding. Our aspiration is to enhance the Peruvian economy and boost small and medium-sized enterprises around the country.",
       "experiences": [
         {
           "positionTitle": "DevOps Engineer/SRE",
@@ -120,10 +120,14 @@
           "endDate": null,
           "desc": {
             "achievements": [
-              "Implementation of the DevOps philosophy in the organization teams.",
-              "Automation of the deployment process of the main products.",
-              "Investment in company tooling for the infrastructure and development teams.",
-              "Creation of microservices focused on software reliability."
+              "Cost optimization and migration to a more scalable infrastructure for all digital services in the cloud.",
+              "Introducing CI/CD practices to deliver features without developer effort and service downtime in the latest company products and services.",
+              "Planning and development of microservices to save resources and enhancing performance and overall reliability across the platform and intranet.",
+              "Establishment of reproducible infrastructure using Terraform.",
+              "Self-hosted services for management, documentation that enhanced internal company processes.",
+              "Evolving teams through the adoption of DevOps practices, new technologies, industry best practices and modern Git workflows.",
+              "Investment in company tooling for the IT teams.",
+              "Planning and development of new features for the V2 intranet and platform on the backend."
             ]
           }
         }
