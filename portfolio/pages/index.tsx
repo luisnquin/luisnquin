@@ -62,7 +62,7 @@ export default function Home() {
         <InterestsSection items={interests} />
         <ReviewsSection items={reviews} />
         <TechnologiesSection items={technologies} />
-        <ComputerSection computer={computer} />
+        {/* <ComputerSection computer={computer} /> */}
         <ContactSection email={contactEmail} />
         <SnakeBoard />
       </main>
