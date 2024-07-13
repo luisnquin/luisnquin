@@ -12,5 +12,5 @@ $ sudo nix-store --repair --verify --check-contents
 # Real arosual
 $ sudo mkdir -p /mnt && sudo mount /dev/nvme0n1p6 /mnt && sudo mount /dev/nvme0n1p1
 $ sudo nixos-enter
-$ cd /home/$USER/.dotfiles && sudo nixos-rebuild boot --flake .#nyx && poweroff
+$ cd /home/$USER/.dotfiles; unset SUDO_USER && nixos-rebuild boot --flake .#nyx && poweroff
 ```
