@@ -9,7 +9,7 @@ at my startup [@neticlabs](https://neticlabs.com). If you want to find more info
 $ sudo nix-store --repair --verify --check-contents
 
 # contingency plan
-$ sudo mkdir -p /mnt && sudo mount /dev/nvme0n1p6 /mnt && sudo mount /dev/nvme0n1p1
+$ sudo mkdir -p /mnt && sudo mount /dev/nvme0n1p6 /mnt && sudo mount /dev/nvme0n1p1 /mnt/boot
 $ sudo nixos-enter
-$ cd /home/$USER/.dotfiles; unset SUDO_USER && nixos-rebuild boot --flake .#nyx && poweroff
+$ cd /home/luisnquin/.dotfiles; unset SUDO_USER && nixos-rebuild boot --flake .#nyx
 ```
