@@ -1,0 +1,28 @@
+.announcement_bar {
+    background-color: #fffa96;
+    padding: 3px 0;
+    position: relative;
+}
+
+.announcement_bar p {
+    text-align: center;
+    font-family: var(--fira-code);
+    font-size: 14px;
+}
+
+.announcement_bar button {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .announcement_bar p {
+        margin: 0 50px;
+    }
+
+    .announcement_bar button {
+        top: 8px
+    }
+}

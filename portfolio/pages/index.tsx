@@ -8,13 +8,13 @@ import {
   PresentationSection,
   ExperienceSection,
   InterestsSection,
+  AnnouncementBar,
   ProjectsSection,
   ContactSection,
   ReviewsSection,
   SnakeBoard,
   Footer,
 } from '../components'
-import { ComputerSection } from '../components/ComputerSection'
 
 const {
   gpgPublicKey: publicKey,
@@ -23,7 +23,6 @@ const {
   technologies,
   contactEmail,
   interests,
-  computer,
   projects,
   reviews,
   whoami,
@@ -49,6 +48,10 @@ export default function Home() {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
+
+      <header>
+        <AnnouncementBar />
+      </header>
 
       <main className={styles.main}>
         <PresentationSection
