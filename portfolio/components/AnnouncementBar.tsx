@@ -1,4 +1,5 @@
 import { MouseEvent, useEffect, useState } from 'react'
+
 import styles from '../styles/AnnouncementBar.module.css'
 import { firaCode } from '../styles/fonts.ts'
 import { CloseSvg } from './CloseSvg.tsx'
@@ -47,7 +48,7 @@ export const AnnouncementBar = () => {
       style={{ display: closed ? 'none' : 'block' }}
     >
       <p>
-        I'm your most valuable asset? Check out my{' '}
+        I am your most valuable asset? Check out my{' '}
         <a href="https://wishlist.luisquinones.me" target="_blank">
           wishlist
         </a>
