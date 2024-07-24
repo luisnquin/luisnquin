@@ -45,13 +45,13 @@
   "companyExperiences": [
     {
       "company": {
-        "name": "NeticShard",
+        "name": "Netic Labs",
         "logo": {
-          "path": "/NeticShard.png",
-          "alt": "neticshard-logo"
+          "path": "/neticlabs.png",
+          "alt": "neticlabs-logo"
         }
       },
-      "about": "NeticShard aims to enhance DevOps workflows by seamlessly integrating data-driven insights and proactive mental well-being support, aiming to reduce customer dissatisfaction while improving efficiency, resilience, workload management, and happiness in IT teams worldwide.",
+      "about": "Netic Labs aims to enhance DevOps workflows by seamlessly integrating data-driven insights and proactive mental well-being support, aiming to reduce customer dissatisfaction while improving efficiency, resilience, workload management, and happiness in IT teams worldwide.",
       "experiences": [
         {
           "positionTitle": "Business Development and Software Specialist",
