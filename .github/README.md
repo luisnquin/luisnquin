@@ -1,5 +1,5 @@
 
-**Hi!** My name is Luis Quiñones and I am currently a **Software Developer** and I'm working in multiple companies like [@Qompa-Fi](https://qompa.io/), [@chanchitaapp](https://chanchita.app) and much less but not so relevant now in [@INVERSIONESIO](https://inversiones.io).
+**Hi!** My name is Luis Quiñones and I am currently a **Software Developer** and I'm working in multiple companies like [@Qompa](https://qompa.io/), [@chanchitaapp](https://chanchita.app) and much less but not so relevant now in [@INVERSIONESIO](https://inversiones.io).
 
 At FOSS, I only contribute to projects that I actively use at work or system and that resonate with my interests. Mostly projects like [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs), [encoredev/encore](https://github.com/encoredev/encore) and some more related to my work(if possible!).
 
