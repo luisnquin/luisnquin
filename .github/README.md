@@ -1,7 +1,4 @@
-
-**Hi!** I am currently a **Software Developer**.
-
-At FOSS, I only contribute to projects that I actively use at work or system and that resonate with my interests. Mostly
+I only contribute to projects that I actively use at work or system and that resonate with my interests. Mostly
 projects like [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs), [encoredev/encore](https://github.com/encoredev/encore)
 and some more related to my work(if possible!).
 
