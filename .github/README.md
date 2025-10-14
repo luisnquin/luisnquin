@@ -1,7 +1,16 @@
-I only contribute to projects that I actively use at work or system and that resonate with my interests. Mostly
-projects like [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs), [encoredev/encore](https://github.com/encoredev/encore)
-and some more related to my work(if possible!).
 
-If you want to find more information about me you can [go here](https://quinones.pro) or write me at [luis@quinones.pro](mailto:luis@quinones.pro).
+<div style="float: left;">
+  <samp>
+    hi<br><br>
+    i like nix, go and typescript<br>
+    i do some foss and other stuff<br><br>
+    my site:
+    &nbsp;<a href="https://quinones.pro">quinones.pro</a><br><br>
+    my personal email:
+    &nbsp;<a href="mailto:luis@quinones.pro">luis@quinones.pro</a>
+  </samp>
+</div>
+
+<br>
 
 [![pgp](https://img.shields.io/badge/pgp-0xd6fc92fd3a094af8-313131?style=flat&labelColor=545454&color=313131)](https://github.com/luisnquin.gpg)
