@@ -3,8 +3,7 @@
   <samp>
     hi<br><br>
     i like nix, go and typescript<br>
-    i do some foss and other stuff<br>
-    all my nix code is **pure**<br><br>
+    i do some foss and other stuff<br><br>
     my site:
     &nbsp;<a href="https://quinones.pro">quinones.pro</a><br><br>
     my personal email:
