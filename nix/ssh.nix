@@ -1,18 +1,27 @@
 let
   publicKeys = {
+    faraday = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMNOYm8dmSXKjgaBQDWCnSvcsGyiJILX3Vwejmkm150+ faraday";
+    moshi = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKpV17zqf4dGsuaddSslVpHV5APCsEQSXPAnuBSZk5zY moshi";
     nyx = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIXW6vsDRgI/AiOdGnQOTyiz1uLFL0o66u0Ahcw9VWyd luis@quinones.pro";
     rose = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZKS1brwUIxDsIipGgEl/7yS9/hZS9sqOfhn0YIsBgl luis@quinones.pro";
+    rose-legacy-client = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOvNB4XZFchiWUCpdXaNcyoyUi9+7SnGCvrRk2CM129 rose-legacy-client";
+    spectacle = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOy0naPj/yYMQtfKt/geDwWyS16IujRV3UbC4P2xQalE spectacle";
     spectacle-emu = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ3S+kasCN9Y1Eb9S3bOPaLMYx+yfQ/2b/DoPZUlJjav spectacle-emu";
   };
 
   authorizedByHost = {
     nyx = [
+      "faraday"
+      "moshi"
       "rose"
+      "spectacle"
       "spectacle-emu"
     ];
 
     rose = [
       "nyx"
+      "rose-legacy-client"
+      "spectacle"
     ];
   };
 
