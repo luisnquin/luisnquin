@@ -1,27 +1,26 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs:
-    with inputs;
-      flake-utils.lib.eachDefaultSystem (
-        system: {
-          defaultPackage = pkgs.hello;
+  outputs = {nixpkgs, ...}: let
+    systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+    pkgsFor = system:
+      import nixpkgs {
+        config = {
+          allowBroken = false;
+          allowUnfree = true;
+        };
+        inherit system;
+      };
+  in {
+    defaultPackage = forAllSystems (system: (pkgsFor system).hello);
 
-          devShells.default = let
-            pkgs = import nixpkgs {
-              config = {
-                allowBroken = false;
-                allowUnfree = true;
-              };
-              inherit system;
-            };
-          in
-            pkgs.mkShell {
-              inherit system;
-            };
-        }
-      );
+    devShells = forAllSystems (system: {
+      default = (pkgsFor system).mkShell {
+        inherit system;
+      };
+    });
+  };
 }
