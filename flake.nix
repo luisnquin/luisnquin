@@ -15,6 +15,8 @@
         inherit system;
       };
   in {
+    lib.ssh = import ./nix/ssh.nix;
+
     defaultPackage = forAllSystems (system: (pkgsFor system).hello);
 
     devShells = forAllSystems (system: {
