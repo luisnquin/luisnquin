@@ -15,8 +15,6 @@ let
     ];
 
     rose = [
-      "nyx"
-      "dazzle-faraday"
       "dazzle-emu"
     ];
   };
