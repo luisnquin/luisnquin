@@ -1,4 +1,6 @@
 let
+  chimera = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL9xH4LrR9K3lTDtFN4Rysi33AungKN3w2YgjquBDmz3";
+
   publicKeys = {
     termius-faraday = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMNOYm8dmSXKjgaBQDWCnSvcsGyiJILX3Vwejmkm150+ faraday";
     nyx = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIXW6vsDRgI/AiOdGnQOTyiz1uLFL0o66u0Ahcw9VWyd luis@quinones.pro";
@@ -17,6 +19,12 @@ let
     rose = [
       "dazzle-emu"
     ];
+
+    chimera = [
+      "nyx"
+      "termius-faraday"
+      "dazzle-faraday"
+    ];
   };
 
   hostKeys = {
@@ -28,6 +36,9 @@ let
     "git.encore.dev" = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHnYnozNaCKhAsIL0vWc4NEW1XoPXS98pMFivH+PRzwr"
     ];
+
+    "[chimera]:998" = [chimera];
+    "[chimera.local]:998" = [chimera];
   };
 
   perHost = f:
