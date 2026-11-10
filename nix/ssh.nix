@@ -7,6 +7,7 @@ let
     rose = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZKS1brwUIxDsIipGgEl/7yS9/hZS9sqOfhn0YIsBgl luis@quinones.pro";
     dazzle-faraday = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOy0naPj/yYMQtfKt/geDwWyS16IujRV3UbC4P2xQalE";
     dazzle-emu = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ3S+kasCN9Y1Eb9S3bOPaLMYx+yfQ/2b/DoPZUlJjav spectacle-emu";
+    chimera = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKtobOaVrzJaUrOCHJvIWliJQubMYp+UQLJM6/oJxiyo luisnquin@chimera";
   };
 
   authorizedByHost = {
@@ -14,6 +15,7 @@ let
       "termius-faraday"
 	  "dazzle-faraday"
       "rose"
+      "chimera"
     ];
 
     rose = [
@@ -39,6 +41,7 @@ let
 
     "[chimera]:998" = [chimera];
     "[chimera.local]:998" = [chimera];
+    "[nyx]:357" = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOmOBB3kxAzXibpKvqZAkNAkvSNKRPrCePXlxDGB6CT7"];
   };
 
   perHost = f:
