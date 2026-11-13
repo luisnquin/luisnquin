@@ -20,6 +20,8 @@ let
 
     rose = [
       "dazzle-emu"
+      "nyx"
+      "termius-faraday"
     ];
 
     chimera = [
